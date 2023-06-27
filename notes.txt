@@ -1,0 +1,173 @@
+
+nasa api: 
+https://api.nasa.gov/
+
+
+curiosity photos:
+https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=Mmse3giht0jkNDr9PqbdtsAnvxXdRAo0fzrSXcB4
+
+rovers on mars active now: curiosity, perseverance
+
+https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/latest_photos?api_key=Mmse3giht0jkNDr9PqbdtsAnvxXdRAo0fzrSXcB4
+https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=Mmse3giht0jkNDr9PqbdtsAnvxXdRAo0fzrSXcB4
+
+
+were active in the past: opportunity and spirit
+
+https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/latest_photos?api_key=Mmse3giht0jkNDr9PqbdtsAnvxXdRAo0fzrSXcB4
+
+?? - how to set rover ??
+
+const [ rover, setRover ] = useState("perseverance");
+https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=500&api_key=Mmse3giht0jkNDr9PqbdtsAnvxXdRAo0fzrSXcB4
+
+
+perseverance/curiosity differences:
+https://everydayastronaut.com/perseverance-vs-curiosity/
+
+official mars site:
+https://mars.nasa.gov/
+
+opprtunity rover is dead from 2018, was active for 15 years. 
+spirit rover was active for almost 6 years. 
+
+
+
+
+//---------------------------------------------------------------------------------------------------------------------
+
+const rovers = [
+    { id: '', 
+      name: 'perseverance',
+      length: '10 feet ( 3 meters)', 
+      heigth: '7 feet ( 2.2 meters)', 
+      weigth: '2.260 pounds/1.025 kilograms',
+      width: '9 feet ( 2.7 meters)',
+      launchDate: 'July 30, 2020',
+      landingDate: 'Feb. 18, 2021, Jezero Crater, Mar',
+      missionStatus: 'active',
+      lifespan: '',
+      milesTravelled: '	18.62 km (11.57 miles)',
+      wheels: 'Made of aluminum, with cleats for traction and curved titanium spokes for springy support.20.7 inches (52.5 centimeters) in diameter.One full turn of the wheels with no slippage drives the rover 65 inches (1.65 meters).',
+      antena: 'Ultra-High Frequency Antenna,X-band High-Gain Antenna, X-band Low-Gain Antenna',
+      software: 'Operates at up to 200 megahertz speed, 10 times the speed of other rovers.2 GB of flash memory (~8 times as much as other rovers)',
+      powerSystem: 'Carries a radioisotope power system.System produces a dependable flow of electricity using the heat of plutoniums radioactive decay as its "fuel."',
+      missionDescription: '',
+      upgrade: 'It carries 7 primary payload instruments, 19 cameras, and 2 microphones.The rover also carried the mini-helicopter Ingenuity'
+},
+{
+    id: '', 
+    name: 'curiosity',
+    length: '10 feet', 
+    heigth: '7 feet', 
+    weigth: '899 kilograms (1,982 lb)',
+    width: ' 9 feet',
+    launchDate: ' November 26, 2011',
+    landingDate: 'August 6, 2012 at Gale Crater',
+    missionStatus: 'active',
+    lifespan: '',
+    milesTravelled: '30.00 km (18.64 mi)',
+    wheels: 'Curiosity wheels are aluminum and 20 in diameter. They have cleats for traction and structural support. Curving titanium spokes give springy support.',
+    antena: '',
+    software: 'radiation-hardened central processor with PowerPC 750 architecture operating at up to 200 MHz speed, 2GB flash memory, 256 MB of DRAM',
+    powerSystem: 'multi-mission radioisotope thermoelectric generator,',
+    missionDescription: '',
+    upgrade: '',
+},
+
+{
+    id: '',
+    name: 'opportunity',
+    length: '1.6 meters (5.2 ft)', 
+    heigth: '1.5 meters (4.9 ft)', 
+    weigth: '180 kilograms (400 lb)',
+    width: ' 2.3 meters (7.5 ft)',
+    launchDate: 'July 8, 2003',
+    landingDate: 'January 25, 2004',
+    missionStatus: 'complete',
+    lifespan: 'almost 15 years',
+    milesTravelled: '45.16 km (28.06 mi)',
+    wheels: ' ',
+    antena: '',
+    software: '',
+    powerSystem: '"Multi-Mission Radioisotope Thermoelectric Generator" or MMRTG for short. ',
+    missionDescription: '',
+    upgrade: '',
+
+},
+
+{
+    id: '',
+    name: 'spirit',
+    length: '1.6 meters (5.2 ft) ', 
+    heigth: '1.5 meters (4.9 ft)', 
+    weigth: ' 405 pounds or 185 kilograms',
+    width: ' 2.3 meters (7.5 ft)',
+    launchDate: 'June 10, 2003',
+    landingDate: 'January 4, 2004',
+    missionStatus: 'complete',
+    lifespan: '6 years',
+    milesTravelled: '4.8 miles  (7.73 kilometers)',
+    wheels: ' six-wheeled,Each wheel had its own motor. ',
+    antena: 'low-gain and high-gain antenna',
+    software: 'Spirit onboard computer uses a 20 MHz RAD6000 CPU with 128 MB of DRAM and 3 MB of EEPROM',
+    powerSystem: 'Solar arrays generated about 140 watts for up to fourteen hours per sol, while rechargeable lithium ion batteries stored energy for use at night. ',
+    missionDescription: '',
+    upgrade: '',
+
+}
+
+{
+    id:'',
+    name: 'sojourner',
+    length: '65 cm (26-inch)', 
+    heigth: '30 cm (12-inch)', 
+    weigth: '11.5 kilograms (25 lb)  ',
+    width: ' 48 cm (19-inch) ',
+    launchDate: 'December 4, 1996',
+    landingDate: 'July 4, 1997',
+    missionStatus: 'complete',
+    lifespan: '95 days',
+    milesTravelled: '100 metres (330 ft)',
+    wheels: ' wheels were made of aluminum and were 13 cm (5.1 in) in diameter and 7.9 cm (3.1 in) wide. They had serrated, stainless steel tracks ',
+    antena: '',
+    software: 'CPU was an Intel 80C85 with a 2 MHz clock, addressing 64 kilobytes (Kb) of memory, and running a cyclic executive.[31] It had four memory stores; 64 Kb of RAM made by IBM for the main processor',
+    powerSystem: ' solar panels and a non-rechargeable lithium-thionyl chloride (LiSOCl2) battery that could provide 150 watt-hours and allowed limited nocturnal operations. Once the batteries were depleted, the rover could only operate during the day',
+    missionDescription: '',
+    
+
+}
+
+]
+
+// perseverance rover info: https://mars.nasa.gov/mars2020/spacecraft/rover/brains/
+// curiosity rover: https://www.techbriefs.com/component/content/article/tb/pub/features/articles/14715
+//  sojourner, spirit, opportunity mainly from wikipedia
+
+-------------------------------------------------------------------------------------------------------------------
+INTRO content
+h1 - Who's exploring Mars? 
+
+p - 
+
+p - Mars has long been the subject of human interest.
+telescopic observations found two moons, Phobos and Deimos, polar ice caps and the feature now known as Olympus Mons, 
+the Solar System's tallest mountain, which is over 21.9 km (13.6 mi or 72,000 ft) high, as measured by the 
+Mars Orbiter Laser Altimeter (MOLA). 
+
+p - Mars has been explored remotely by spacecraft. 
+Probes sent from Earth, beginning in 1997, have yielded a large increase
+ in knowledge about the Martian system, focused primarily on understanding its geology and
+ habitability potential. Interplanetary journeys are complicated and the exploration of Mars has experienced a 
+ high failure rate, especially the early attempts. Roughly 60% of all spacecraft destined for Mars failed before 
+ completing their missions. However Some missions have met an unexpected success, such as the twins Mars Exploration Rovers,
+Spirit and Opportunity which operated for years beyond their specification.
+
+p - At the moment, there are 3 operational rovers on the surface of Mars, the Curiosity and Perseverance rovers,
+ both operated by the American space agency NASA, as well as the Zhurong rover, part of the 
+  mission by the China National Space Administration (CNSA).
+
+p - There are 7 orbiters surveying the planet. Maven, Odyssey and Mars Reconnaissance Orbiter are sent by NASA, 
+including Ingenuity helicopter, which is scouting sites for Perseverance to study.
+Various sample return missions are being planned  that will pick up the samples
+currently being collected by the Perseverance rover.
