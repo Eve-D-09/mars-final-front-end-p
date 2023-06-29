@@ -1,25 +1,42 @@
-import React from "react";
-import Header from "./Header";
+import React, { useState } from "react";
+import Rovers from "./Rovers";
+import Orbiters from "./Orbiters";
+import Ingenuity from "./Ingenuity";
+import Insight from "./Insight";
+
+
 
 const Messengers = () => {
+
+  const [ roverScreen, setRoverScreen ] = useState();
+
+  const onNavClick = (e) => {
+    e.preventDefault();
+    setRoverScreen(Number(e.target.id));
+  }
+
+
   return (
     <>
-    <Header />
-    <h2>Some h2</h2>
+    
+    <h2>Messengers screen</h2>
       <div>
+        <p>Massengers navigation</p>
         <nav>
-          <a href="/#" id="1"> Rovers</a>
-          <a href="/#" id="2"> Orbiters</a>
-          <a href="/#" id="3"> Ingenuity helicopter</a>
-          <a href="/#" id="4"> Insight </a>
+          <a href="/#" onClick={onNavClick} id="5"> Rovers</a>
+          <a href="/#" onClick={onNavClick} id="6"> Orbiters</a>
+          <a href="/#" onClick={onNavClick} id="7"> Ingenuity helicopter</a>
+          <a href="/#" onClick={onNavClick} id="8"> Insight </a>
         </nav>
       </div>
-      {/* {screenMode === 0 && <p>Rovers</p>}
-      {screenMode === 1 && <p> Orbiters</p>}
-      {screenMode === 2 && <p>Ingenuity helicopter</p>}
-      {screenMode === 3 && <p>Insight </p>} */}
+      { roverScreen === 5 && <Rovers />}
+      { roverScreen === 6 && <Orbiters />}
+      { roverScreen === 7 && <Ingenuity />}
+      { roverScreen === 8 && <Insight />}
     </>
   );
 };
 
 export default Messengers;
+
+

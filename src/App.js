@@ -1,8 +1,10 @@
 import React from "react";
-// import Logo from "./features/counter/components/Logo";
-import Main from "./features/counter/components/Main";
+
+import Header from "./features/counter/components/Header"
+// import Main from "./features/counter/components/Main";
+import Footer from "./features/counter/components/Footer";
 import Loading from "./features/counter/components/Loading";
-// import BestImages from "./features/counter/components/BestImages";
+
 
 
 const App = () => {
@@ -11,11 +13,16 @@ const App = () => {
   
   return (
     <>
-      <Main />
-      <p>Something nice is about to happen</p>
-      {/* <BestImages /> */}
+      <Header />
+      
+      {/* <Main /> */}
+      {/* <p>How app is rendering Main if it's not imported here? </p> */}
+      <Footer />
     </>
   );
 };
 
 export default App;
+
+
+//  Removed Main component, problems when loading in browser

@@ -4,7 +4,7 @@ import Nav from "./Nav";
 
 const Header = () => {
   return (
-    <div>
+    <div >
       <Logo />
       <h1> Mars Messengers </h1>
       {/* <Lang /> */}
