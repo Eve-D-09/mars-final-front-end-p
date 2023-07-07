@@ -11,7 +11,6 @@ export const rovers = [
       width: `9 feet ( 2.7 meters)`,
     },
     distanceTravelled: `11.72 miles / 18.87 km`,
-    
     speed: `0.12 km/h or 0.075 miles`,
     lifespan: `As of June 2023, it's been active 2 years, 4 months`,
     missionDescription: `The rover is searching for microbial fossils in rocks that formed. It is

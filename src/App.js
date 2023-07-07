@@ -1,28 +1,14 @@
 import React from "react";
-
-import Header from "./features/counter/components/Header"
-// import Main from "./features/counter/components/Main";
-import Footer from "./features/counter/components/Footer";
-import Loading from "./features/counter/components/Loading";
-
-
+// import Background from "./features/counter/components/Background";
+import Main from "./features/counter/components/Main";
 
 const App = () => {
-
-  if (!App) return <Loading />;
-  
   return (
     <>
-      <Header />
-      
-      {/* <Main /> */}
-      {/* <p>How app is rendering Main if it's not imported here? </p> */}
-      <Footer />
+      <Main />
+      {/* <Background /> */}
     </>
   );
 };
 
 export default App;
-
-
-//  Removed Main component, problems when loading in browser

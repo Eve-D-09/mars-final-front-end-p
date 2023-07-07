@@ -1,7 +1,7 @@
 export const orbiters = [
     {
-        name: `MAVEN`,
-        lauch: `November 18, 2013, CCAFS Space Launch Complex 41`,
+        name: `Maven`,
+        launch: `November 18, 2013, CCAFS Space Launch Complex 41`,
         insertion: `Sepember 21, 2014, Mars orbit`,
         mission: `MAVEN is currently orbiting Mars and studying the structure and composition of the upper 
         atmosphere of the Red Planet.`,
@@ -33,8 +33,8 @@ export const orbiters = [
     },
 
     {
-        name: `ODYSSEY`,
-        lauch: `April 7, 2001,	Cape Canaveral Air Force Station, Florida`,
+        name: `Odyssey`,
+        launch: `April 7, 2001,	Cape Canaveral Air Force Station, Florida`,
         insertion: `October 24, 2001, Mars orbit`,
         mission: `Still in orbit around Mars, 2001 Mars Odyssey holds the record 
         for the longest continually active spacecraft in orbit around a planet other than Earth.`,
@@ -59,7 +59,7 @@ export const orbiters = [
     },
     {
         name: `Reconnaissance`,
-        lauch: `August 12, 2005, CCAFS Space Launch Complex 41 `,
+        launch: `August 12, 2005, CCAFS Space Launch Complex 41 `,
         insertion: `March 10, 2006, Mars Orbit`,
         mission: `NASA's Mars Reconnaissance Orbiter (MRO) is the second longest-lived spacecraft to orbit Mars,
          after 2001 Mars Odyssey. It has been studying the Red Planet since March 2006.`,

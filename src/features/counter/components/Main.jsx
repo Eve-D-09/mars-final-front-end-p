@@ -1,14 +1,18 @@
 import React from 'react';
-// import Header from "./Header";
-import Intro from "./Intro";
+import Header from "./Header";
+// import Intro from "./Intro";
 import Footer from "./Footer";
+
+
+
 
 
 
 const Main = () => {
     return ( <>
-    {/* <Header /> */}
-    <Intro />
+    <Header />
+    {/* <Intro /> */}
+   
     <Footer />
     </> );
 }

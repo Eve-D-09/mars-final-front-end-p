@@ -2,8 +2,9 @@ export const imageData = [
   {
     imageUrl: `./img/best-images/bluish-sunset.jpg`,
     title: `Blue-ish sunset`,
-    description: `This image of a bizarre-looking formation in a region known as Noctis Labyrinthus, which translates to Labyrinth of the night. The wavy areas around this mesa are sand dunes.
-    Heavily eroded, with clusters of boulders and sand dunes on its surface, this layered mesa is probably comprised of sedimentary deposits that are being exhumed as it erodes. NASA says.`,
+    description: `What's with the blue twilight? Just as colors are made more dramatic in sunsets on Earth, Martian 
+    sunsets would appear bluish to human observers watching from the red planet. Fine dust makes the blue near the
+     Sun's part of the sky much more prominent, while normal daylight makes the Red Planet's familiar rusty dust color more prominent.`,
     taken: ``,
   },
   {
@@ -13,7 +14,6 @@ export const imageData = [
      increase and vaporize ice, the destabilized ice blocks break loose and kick up dust.`,
     taken: `Reconnaissance Orbiter, 2019`,
   },
-  
 
   {
     imageUrl: `./img/best-images/brachiosaurusgill.webp`,
@@ -99,7 +99,7 @@ export const imageData = [
   {
     imageUrl: `./img/best-images/dragon-scales.webp`,
     title: `Dragon scales`,
-    description: `he scaly pattern doesn't come from a mythical creature, but rather through ancient landscape processes involving erosion. 
+    description: `The scaly pattern doesn't come from a mythical creature, but rather through ancient landscape processes involving erosion. 
     The nature of the water responsible for the alteration, and how it interacted with the rock to form the clay, remains poorly understood.`,
     taken: `Reconnaissance orbiter, July 2017`,
   },
@@ -134,7 +134,7 @@ export const imageData = [
     title: `Scratch marks`,
     description: `The space agency says the linear gullies are likely caused by dry ice sliding down sandy dune slopes. `,
     taken: `Reconnaissance Orbiter, 2017`,
-  }, 
+  },
 
   {
     imageUrl: `./img/best-images/mars-lava-coils.webp`,
@@ -213,5 +213,4 @@ export const imageData = [
      It looks like a close-up of cookies-and-cream ice cream. `,
     taken: `ESA ExoMars orbiter`,
   },
-
 ];

@@ -1,33 +1,57 @@
-import React, { useEffect, useCallback } from "react";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { setPlanet, selectPlanet } from "../planetSlice";
+import React, { useCallback, useEffect } from "react";
+// import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
+import { selectRawImages } from "../planetSlice";
+import { getData } from "../../../controllers/dataControllers";
+import {
+  setSearch,
+  selectSearch,
+  setCalendar,
+  selectCalendar,
+} from "../planetSlice";
+import RawImages from "./RawImages";
 import Loading from "./Loading";
 
-const RawImages = () => {
-  const planet = useSelector(selectPlanet);
+const RawImagesAPI = () => {
+  console.log(`raw images component rendered`);
+  const rawImages = useSelector(selectRawImages);
 
   const dispatch = useDispatch();
 
-  const getData = useCallback(async () => {
-    try {
-      const { data } = await axios.get(
-        `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=Mmse3giht0jkNDr9PqbdtsAnvxXdRAo0fzrSXcB4`
+  const search = useSelector(selectSearch);
+  const calendar = useSelector(selectCalendar);
+
+  const gettingData = () => {
+    if (search && calendar) {
+      console.log(`getting new data`);
+      getData(
+        `rawImages`,
+        `get`,
+        `https://api.nasa.gov/mars-photos/api/v1/rovers/${search}/photos?earth_date=${calendar}&api_key=Mmse3giht0jkNDr9PqbdtsAnvxXdRAo0fzrSXcB4`
       );
-
-      dispatch(setPlanet(data));
-    } catch (error) {
-      console.log(error);
     }
-  }, [dispatch]);
+  }
 
-  useEffect(() => {
-    getData();
-  }, [getData]);
+  // const apiCall = useCallback(() => {
+  //   // if (rawImages) return;
 
-  console.log(planet);
+  //   if (search && calendar) {
+  //     console.log(`getting new data`);
+  //     getData(
+  //       `rawImages`,
+  //       `get`,
+  //       `https://api.nasa.gov/mars-photos/api/v1/rovers/${search}/photos?earth_date=${calendar}&api_key=Mmse3giht0jkNDr9PqbdtsAnvxXdRAo0fzrSXcB4`
+  //     );
+  //   }
+  // }, [search, calendar]);
 
-  if (!planet) return <Loading />;
+  // useEffect(() => {
+  //   apiCall();
+  // }, [apiCall]);
+
+  console.log(rawImages);
+
+  if (!gettingData) return <Loading />;
 
   return (
     <>
@@ -36,7 +60,7 @@ const RawImages = () => {
       </div>
       <div>
         <label>Search by rover</label>
-        <select>
+        <select onChange={(e) => dispatch(setSearch(e.target.value))}>
           <option value=""></option>
           <option value="perseverance">Perseverance</option>
           <option value="curiosity">Curiosity</option>
@@ -46,14 +70,21 @@ const RawImages = () => {
       </div>
       <div>
         <label>Search by date</label>
-        <input type="date" id="searchDate" />
+        <input
+          onChange={(e) => dispatch(setCalendar(e.target.value))}
+          type="date"
+          id="searchDate"
+        />
+       {calendar && search && <button onClick={gettingData}>Search</button>}
       </div>
+
+      {rawImages && <RawImages rawImages={rawImages} key={rawImages.id} />}
     </>
   );
 };
 
-export default RawImages;
+export default RawImagesAPI;
 
-// onSelect={(e) => dispatch(setSelect(e.target.value))}
+// https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=Mmse3giht0jkNDr9PqbdtsAnvxXdRAo0fzrSXcB4
 
-
+// https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/photos?earth_date=2021-6-3&api_key=Mmse3giht0jkNDr9PqbdtsAnvxXdRAo0fzrSXcB4

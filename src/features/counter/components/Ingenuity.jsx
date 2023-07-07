@@ -1,7 +1,7 @@
 import React from "react";
 import { ingenuityData } from "../../../myData/ingenuityData";
 
-const Helicopter = () => {
+const Ingenuity = () => {
   const { mission, launch, landing, techSpecs, quickFacts, imageUrl } =
     ingenuityData;
 
@@ -14,10 +14,8 @@ const Helicopter = () => {
           <p>{mission}</p>
         </div>
         <div>
-          <h3>Launched:</h3>
-          <p>{launch}</p>
-          <h3>Landed:</h3>
-          <p>{landing}</p>
+          <p>Launched: {launch}</p>
+          <p>Landed: {landing}</p>
         </div>
         <div>
           <h3>Tech Specs</h3>
@@ -42,4 +40,4 @@ const Helicopter = () => {
   );
 };
 
-export default Helicopter;
+export default Ingenuity;
