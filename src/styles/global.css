@@ -22,12 +22,13 @@ picture {
     --blue-color: #2660a4;
     --verylight-blue: #edf7f6;
     --orange-color: #FF9D6F ;
-    --darker-orange: #c47335;
-    --brown-color: #56351e;
-    --border-radius: 5px;
+    --darker-orange:  #C67B5C;
+    --brown-color: #663926;
+    --border-radius: 7px;
     --font-lost-ages: "Lost-Ages-Regular";
     --queen-sides-light: "Queen-Sides-Light";
     --queen-sides-medium: "Queen-Sides-Medium";
+    --font-lorenza: "Lorenza-sans-serif";
     --padding-light: 7px 5px;
 }
 
@@ -64,6 +65,16 @@ picture {
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: "Lorenza-sans-serif";
+    src: url(./fonts/Lorenza-lgdp5.ttf);
+    font-weight:400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 
 
 /* new tangerine orange  #FF9D6F ; */

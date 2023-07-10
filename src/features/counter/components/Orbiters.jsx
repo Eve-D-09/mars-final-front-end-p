@@ -17,10 +17,10 @@ const Orbiters = () => {
   console.log(filtered);
 
   return (
-    <>
-      <h2>Here will be Orbiters info</h2>
+    <div className="orbitersContainer">
+      <h2>Orbiters over Mars</h2>
 
-      <div>
+      <div className="selectOrbiterContainer">
         <label>
           Choose an orbiter from the drop-down and get the info about it
         </label>
@@ -33,7 +33,7 @@ const Orbiters = () => {
       </div>
 
       <Orbiter filtered={filtered} key={filtered.orbiter} />
-    </>
+    </div>
   );
 };
 

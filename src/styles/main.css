@@ -1,8 +1,7 @@
 .mainContainer {
-    background-image: url(../img/introImages/intro-mars.jpg);
+    /* background-image: url(../img/introImages/intro-mars.jpg); */
+    background-image: url(../img/introImages/home-mars.jpg);
     background-size: cover;
     background-repeat: no-repeat;
    
-   
-    
 }

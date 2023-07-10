@@ -1,6 +1,6 @@
 export const paragraphs = [
   {
-    title: `How do Mars look alike`,
+    title: `How does Mars look alike`,
     content: `A rocky planet, like Earth, that formed around the same time, yet with only half the diameter of Earth, 
     and a far thinner atmosphere, it has a cold and desert-like surface.`,
   },

@@ -5,7 +5,7 @@ export const rovers = [
     landed: `February 18, 2021, Jezero Crater, Mars`,
     missionStatus: `Active`,
     size: {
-      lenght: `10 feet ( 3 meters)`,
+      length: `10 feet ( 3 meters)`,
       heigth: `7 feet ( 2.2 meters)`,
       weigth: `2.260 pounds/1.025 kilograms`,
       width: `9 feet ( 2.7 meters)`,
@@ -47,7 +47,7 @@ export const rovers = [
     landed: `August 6, 2012 at Gale Crater`,
     missionStatus: `Active`,
     size: {
-      lenght: `8.9 feet( 2.7 meters)`,
+      length: `8.9 feet( 2.7 meters)`,
       heigth: `7.2 feet ( 2.2 meters)`,
       weigth: `1982 pounds/899 kg`,
       width: `9.5 feet(2.9 meters)`,
@@ -85,6 +85,7 @@ export const rovers = [
          allows the vehicle to turn in place, a full 360 degrees. `,
         software: `Radiation-hardened central processor,  up to 200 megahertz speed,2 GB of flash memory`,
         powerSystem: `Radioisotope power system. Produces slightly over 100 watts, 2 lithium ion rechargeable batteries`,
+        instruments: ``,
      }
   },
   {
@@ -93,7 +94,7 @@ export const rovers = [
     landed: `January 25, 2004`,
     missionStatus: `Completed`,
     size: {
-      lenght: `1.6 meters (5.2 ft)`,
+      length: `1.6 meters (5.2 ft)`,
       heigth: `1.5 meters (4.9 ft)`,
       weigth: `180 kilograms (400 lb)`,
       width: `2.3 meters (7.5 ft)`,
@@ -119,6 +120,13 @@ export const rovers = [
         to recover when the skies cleared. Unfortunately, the 2018 dust storm blotted out even more sunlight and kept 
         the skies above Opportunity dark about a month longer.`,
     fact6: `Opportunity recorded the first ever video taken of a dust devil on another planet`,
+    },
+    techSpecs: {
+      cameras: ``,
+      wheels: ``,
+      software: ``,
+      powerSystem: ``,
+      instruments: ``,
     }
   },
   {
@@ -127,7 +135,7 @@ export const rovers = [
     landed: `January 4, 2004`,
     missionStatus: `Completed`,
     size: {
-      lenght: `1.6 meters (5.2 ft)`,
+      length: `1.6 meters (5.2 ft)`,
       heigth: `1.5 meters (4.9 ft)`,
       weigth: ` 405 pounds or 185 kilograms`,
       width: `2.3 meters (7.5 ft)`,
@@ -156,14 +164,21 @@ export const rovers = [
       fact5: `Twin rovers were sent to opposite sides of Mars to locations that were suspected of having been affected
          by liquid water in the past.`,
     },
+    techSpecs: {
+      cameras: ``,
+      wheels: ``,
+      software: ``,
+      powerSystem: ``,
+      instruments: ``,
+    }
   },
   {
     name: `Sojourner`,
     launch: `December 4, 1996 `,
     landed: `July 4, 1997`,
-    missionStatus: `Completed`,
+    missionStatus: `Completed`,   
     size: {
-      lenght: `65 cm (26-inch)`,
+      length: `65 cm (26-inch)`,
       heigth: `30 cm (12-inch)`,
       weigth: `11.5 kilograms (25 lb)`,
       width: `48 cm (19-inch) `,
@@ -186,6 +201,13 @@ export const rovers = [
        fantastic images showing the rover trundling between rocks.Compared to the ultra-high-resolution
         images now being sent back by Perseverance, these photos were little more than snapshots taken
         by a tourist camera,`,
+    },
+    techSpecs: {
+      cameras: ``,
+      wheels: ``,
+      software: ``,
+      powerSystem: ``,
+      instruments: ``,
     },
     imageUrl: ``,
   },

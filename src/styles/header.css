@@ -30,14 +30,23 @@
 
 nav a {
     text-decoration: none;
-    padding: 10px;
+    padding: 15px 20px;
     color: black;
-    font-family: var(--queen-sides-medium);
+    font-family: var(--font-lorenza);
+    font-size: 1rem;
+    font-weight:600;
+    height: 10vh;
 }
 
 .navigation:hover button + nav {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 250px;
+    height: 60vh;
     
 }
 

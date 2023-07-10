@@ -35,7 +35,7 @@ const PicOfDay = () => {
       <h2>Astronomy Picture of The Day</h2>
       <p>Every day, since 1990, Hubble Space telescope takes the pictures and sends them back to Earth. </p>
       <p>Since 2022, July, James Webb telescope started his journey into space.</p>
-      <p> Now we can provide you amazing photos from across universe and each day!</p>
+      <p> Now we can provide you amazing photos from across universe each day!</p>
       <button onClick={handleClick}>Show me Picture</button>
       {showPicture && (
         <Picture

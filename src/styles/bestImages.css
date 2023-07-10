@@ -1,11 +1,28 @@
 
+
+.bestImages {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--verylight-blue);
+}
+
+.bestImages h2 {
+    font-family: var(--font-lorenza);
+    text-align: center;
+}
+
 .imageSliderContainer {
     display:flex;
     flex-direction: column;
+   
 }
 
 .sliderButtons {
     display: flex;   
+    justify-content: space-between;
+    position: relative;
+    top: 200px;
+    height: 50px;
 }
 
 .sliderButtons button {
@@ -15,10 +32,38 @@
 
 }
 
+.heartButton {
+    align-self: self-end;
+    position: relative;
+    top: 120px;
+}
+
 .heartButton button {
     border: none;
     background-color: unset;
     width: 45px;
     height: 45px;
+}
+
+.imageDescription {
+    width: 90%;
+    background-color: var(--verylight-blue);;
+    margin: 0 auto;
+    padding: var(--padding-light);
+    position: relative;
+    bottom: 30px;
+    border-radius: var(--border-radius);
+    border: 1px dotted var(--blue-color);
+}
+
+.imageDescription h3 {
+    font-family: var(--font-lorenza);
+    font-size: 1.3rem;
+    border-bottom: 1px dotted var(--blue-color);
+}
+
+.imageDescription p {
+    font-family: var(--queen-sides);
+    font-size: 1.1rem;
 }
 

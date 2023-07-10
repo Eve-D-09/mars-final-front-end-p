@@ -12,7 +12,6 @@ const Timer = () => {
   // const pastFrom = new Date("August, 06, 2012");
   // console.log(pastFrom);
   const pastFrom = useMemo(() => new Date("August, 06, 2012,  01:32:00"), []);
-  
   const now = Date.now();
 
   const timeDiff = now - pastFrom;

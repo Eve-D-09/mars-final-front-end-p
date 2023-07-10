@@ -17,11 +17,11 @@ const Rovers = () => {
   console.log(filtered);
 
   return (
-    <div>
-      <h2>This will be Rovers info</h2>
-
-      <div>
-        <label>Choose a rover from the drop-down and get info about it</label>
+    <div className="roversContainer">
+      <h2> Rovers on Mars</h2>
+     
+      <div className="selectRoverContainer">
+        <label>Select a rover from the drop-down and get info about it</label>
         <select onChange={(e) => dispatch(setRover(e.target.value))}>
           <option value=""></option>
           <option value="Perseverance">Perseverance</option>

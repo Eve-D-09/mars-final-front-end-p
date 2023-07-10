@@ -24,7 +24,7 @@ export const insight = {
         fact6: `InSight was also providing daily weather reports from Mars. This public tool includes stats on temperature, wind, and air
          pressure recorded at InSight's landing site.`,
      },
-     imageUrl: ``,
+     imageUrl: `./img/rovers/insight-lander.jpeg`,
 
 }
 

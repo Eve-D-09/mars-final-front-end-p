@@ -3,6 +3,7 @@ import Rovers from "./Rovers";
 import Orbiters from "./Orbiters";
 import Ingenuity from "./Ingenuity";
 import Insight from "./Insight";
+import MoreInfo from "../../../img/svg/more-grid-small-svgrepo-com.svg";
 
 const Messengers = () => {
   const [roverScreen, setRoverScreen] = useState();
@@ -18,18 +19,10 @@ const Messengers = () => {
       <div className="messengersNav">
         
         <nav>
-          <a href="/#" onClick={onNavClick} id="5">
-            Rovers
-          </a>    
-          <a href="/#" onClick={onNavClick} id="6">
-            Orbiters
-          </a>
-          <a href="/#" onClick={onNavClick} id="7">
-            Ingenuity helicopter
-          </a>
-          <a href="/#" onClick={onNavClick} id="8">
-            Insight
-          </a>
+          <a href="/#" onClick={onNavClick} id="5">Rovers <img src={MoreInfo} alt="dots-for-more-info" /> </a>    
+          <a href="/#" onClick={onNavClick} id="6"> Orbiters  <img src={MoreInfo} alt="dots-for-more-info" /></a>
+          <a href="/#" onClick={onNavClick} id="7"> Ingenuity helicopter  <img src={MoreInfo} alt="dots-for-more-info" /> </a>
+          <a href="/#" onClick={onNavClick} id="8"> Insight  <img src={MoreInfo} alt="dots-for-more-info" /> </a>
         </nav>
       </div>
       {roverScreen === 5 && <Rovers />}
