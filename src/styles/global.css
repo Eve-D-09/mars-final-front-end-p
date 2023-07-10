@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Lost-Ages-Regular","Queen-Sides","Queen-Sides-Light", "Queen-Sides-Medium", sans-serif;
+    font-size: 100%;
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+picture {
+    display: block;
+}
+
+:root {
+    --blue-color: #2660a4;
+    --verylight-blue: #edf7f6;
+    --orange-color: #FF9D6F ;
+    --darker-orange: #c47335;
+    --brown-color: #56351e;
+    --border-radius: 5px;
+    --font-lost-ages: "Lost-Ages-Regular";
+    --queen-sides-light: "Queen-Sides-Light";
+    --queen-sides-medium: "Queen-Sides-Medium";
+    --padding-light: 7px 5px;
+}
+
+/* colors: https://www.schemecolor.com/mars-planet-colors.php */
+
+@font-face {
+    font-family: "Lost-Ages-Regular";
+    src: url(./fonts/LostAgesPersonalUseRegular-Ea0nl.ttf);
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Queen-Sides";
+    src: url(./fonts/Queensides-3z7Ey.ttf);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Queen-Sides-Light";
+    src: url(./fonts/QueensidesLight-ZVj3l.ttf);
+    font-weight: 400;
+    font-style: light;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Queen-Sides-Medium";
+    src: url(./fonts/QueensidesMedium-x30zV.ttf);
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* new tangerine orange  #FF9D6F ; */
+/* old orange --orange-color: #f19953; */

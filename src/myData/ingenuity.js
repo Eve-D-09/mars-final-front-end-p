@@ -1,4 +1,4 @@
-export const ingenuityData = {
+export const ingenuity = {
     mission: `The Ingenuity Mars Helicopter is a small aircraft carried to the surface 
     of the Red Planet attached to the belly of the Perseverance rover. Ingenuity mission 
     is experimental in nature and completely independent of the rover's science mission.It's 

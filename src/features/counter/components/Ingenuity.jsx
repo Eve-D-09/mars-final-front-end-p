@@ -1,9 +1,12 @@
 import React from "react";
-import { ingenuityData } from "../../../myData/ingenuityData";
+import { useSelector} from "react-redux";
+import { selectIngenuity } from "../planetSlice";
 
 const Ingenuity = () => {
+
+  const ingenuity = useSelector(selectIngenuity);
   const { mission, launch, landing, techSpecs, quickFacts, imageUrl } =
-    ingenuityData;
+    ingenuity;
 
   return (
     <>

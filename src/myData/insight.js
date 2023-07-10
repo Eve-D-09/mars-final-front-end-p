@@ -1,4 +1,4 @@
-export const insightData = {
+export const insight = {
     description: `InSight, short for Interior Exploration using Seismic Investigations, 
     Geodesy and Heat Transport, is a Mars lander designed to give the Red Planet its 
     first thorough checkup since it formed 4.5 billion years ago.`,

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from "react";
+import ArrowUp from "../../../img/svg/arrow-up-sm-svgrepo-com.svg";
 
 const ButtonUp = () => {
     const [ buttonUp, setButtonUp ] = useState(false);
@@ -24,9 +25,9 @@ const ButtonUp = () => {
 
 
     return ( <>
-    <div>
+    <div className="buttonUp">
         {buttonUp && (
-            <button onClick={scrollUp}>Back to top</button>
+            <button onClick={scrollUp}><img src={ArrowUp} alt="arrowUp" /></button>
         )}
     </div>
     </> );

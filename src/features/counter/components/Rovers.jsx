@@ -1,5 +1,5 @@
 import React from "react";
-import { rovers } from "../../../myData/roversData";
+import { rovers } from "../../../myData/rovers";
 import { setRover, selectRover } from "../planetSlice";
 import { useDispatch, useSelector } from "react-redux";
 import RoverInfo from "./RoverInfo";
@@ -32,7 +32,7 @@ const Rovers = () => {
         </select>
       </div>
 
-      <RoverInfo filtered={filtered} key={filtered.rover} />
+      <RoverInfo filtered={filtered}  />
     </div>
   );
 };

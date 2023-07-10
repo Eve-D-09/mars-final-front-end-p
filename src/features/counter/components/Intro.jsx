@@ -5,11 +5,10 @@ import Accordion from "./Accordion";
 
 const Intro = () => {
   return (
-    <div>
-      {/* <Background /> */}
+    <div className="introContainer">
       <h2>Who's exploring Mars? </h2>
       <div className="accordion">
-        {paragraphs.map(( paragraph, index ) => {
+        {paragraphs.map((paragraph, index) => {
           return <Accordion key={index} paragraph={paragraph} />;
         })}
       </div>

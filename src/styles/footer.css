@@ -1,0 +1,17 @@
+
+/* default mobile */
+.footerContainer {
+    background-color: var(--orange-color);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    padding: 10px 0 10px;
+
+}
+
+p {
+    font-family: "Queen-Sides", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}

@@ -1,4 +1,13 @@
 
+@import url(./normalise.css);
+@import url(./global.css);
 @import url(./spinner.css);
 @import url(./background.css);
 @import url(./nav.css);
+@import url(./footer.css);
+@import url(./header.css);
+@import url(./main.css);
+@import url(./intro.css);
+@import url(./messengers.css);
+@import url(./picOfDay.css);
+@import url(./bestImages.css);

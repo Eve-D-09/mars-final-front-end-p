@@ -1,0 +1,43 @@
+
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+   
+} 
+
+.headerContainer h1 {
+    font-family: var(--font-lost-ages), sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+    padding: var(--padding-light);
+}
+
+.navigation button {
+    border: none;
+    background: none;
+}
+
+.navigation nav {
+    display: none;
+    background-color: var(--orange-color);
+    border-radius: var(--border-radius);
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+    font-family: var(--queen-sides-medium);
+}
+
+.navigation:hover button + nav {
+    display: flex;
+    flex-direction: column;
+    
+}
+

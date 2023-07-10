@@ -1,13 +1,12 @@
 import React from "react";
-import Logo from "./Logo";
+// import Logo from "./Logo";
 import Nav from "./Nav";
+
 
 const Header = () => {
   return (
-    <div >
-      <Logo />
+    <div className="headerContainer">
       <h1> Mars Messengers </h1>
-      {/* <Lang /> */}
       <Nav />
     </div>
   );

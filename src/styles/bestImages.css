@@ -1,0 +1,24 @@
+
+.imageSliderContainer {
+    display:flex;
+    flex-direction: column;
+}
+
+.sliderButtons {
+    display: flex;   
+}
+
+.sliderButtons button {
+    border: none;
+    border-radius: 50px;
+    background-color: var(--orange-color);
+
+}
+
+.heartButton button {
+    border: none;
+    background-color: unset;
+    width: 45px;
+    height: 45px;
+}
+

@@ -1,8 +1,10 @@
 import React from "react";
-import { insightData } from "../../../myData/insightData";
+import { useSelector } from "react-redux";
+import { selectInsight } from "../planetSlice";
 import ButtonUp from "./ButtonUp";
 
 const Insight = () => {
+   const insight = useSelector(selectInsight);
   const {
     description,
     launch,
@@ -10,7 +12,7 @@ const Insight = () => {
     missionCompleted,
     explanation,
     quickFacts,
-  } = insightData;
+  } = insight;
   return (
     <div>
       <h2>Who is Insight Lander?</h2>

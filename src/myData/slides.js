@@ -1,4 +1,4 @@
-export const imageData = [
+export const slides = [
   {
     imageUrl: `./img/best-images/bluish-sunset.jpg`,
     title: `Blue-ish sunset`,
@@ -6,6 +6,7 @@ export const imageData = [
     sunsets would appear bluish to human observers watching from the red planet. Fine dust makes the blue near the
      Sun's part of the sky much more prominent, while normal daylight makes the Red Planet's familiar rusty dust color more prominent.`,
     taken: ``,
+    id: 1,
   },
   {
     imageUrl: `./img/best-images/avalanche.jpg`,
@@ -13,6 +14,7 @@ export const imageData = [
     description: ` This avalanche plunging down a 1,640-foot-tall (500-meter-tall) cliff. The image  reveals layers at Mars' north pole during spring. As temperatures
      increase and vaporize ice, the destabilized ice blocks break loose and kick up dust.`,
     taken: `Reconnaissance Orbiter, 2019`,
+    id: 2,
   },
 
   {
@@ -21,6 +23,7 @@ export const imageData = [
     description: `Software engineer  Kevin Gill has a knack for finding funny Mars rocks in 
     rover images. He spotted this brachiosaurus-shaped rock.Unfortunately, there's no evidence of real dinosaurs on Mars.`,
     taken: `Snapped by the Perseverance rover in April 2021`,
+    id: 3,
   },
 
   {
@@ -30,6 +33,7 @@ export const imageData = [
     identical in size, said atmospheric scientist Mark Lemmon with the Space Science Institute in Colorado. That's usually happening
      just after the clouds have formed and have all grown at the same rate.`,
     taken: `By Curiosity on march 5, 2021`,
+    id: 4,
   },
 
   {
@@ -39,6 +43,7 @@ export const imageData = [
     working through the possibilities before declaring it was likely a bit of a netting that had blown across Jezero Crater from the
      crash site of the Percy's entry, descent and landing (EDL) system, and insistent winds seems to have spread some debris around.`,
     taken: `Perseverance, July 2022`,
+    id: 5,
   },
 
   {
@@ -47,6 +52,7 @@ export const imageData = [
     description: `t's simply a bit of geology on display from the icy polar region where an impact crater forms the "head" and halo,
      and a sublimation pit (a spot where the ice turned to vapor) formed the "hand" on the left.`,
     taken: `European Space Agency Mars Express, December 2020`,
+    id: 6,
   },
 
   {
@@ -55,6 +61,7 @@ export const imageData = [
     description: `This fantastically funny-looking rock caught the eye of space fans who laughed about its resemblance to a rear end. It
      earned the nickname "butt crack rock."`,
     taken: `Perseverance, February 2021`,
+    id: 7,
   },
 
   {
@@ -63,6 +70,7 @@ export const imageData = [
     description: `Dust devils trackslook like claw marks, and they pop out thanks to the image processing done on this 
     view from the spacecraft's HiRise camera. Mars is a very windy place and dust devils are common. `,
     taken: `Reconnaissance Orbiter, 2018`,
+    id: 8,
   },
 
   {
@@ -72,6 +80,7 @@ export const imageData = [
     lookalike in this collection of pits on Mars. "The south polar residual cap is constantly changing as carbon dioxide sublimates 
     from steep slopes, enlarging pits, and condenses on flat areas, filling pits,`,
     taken: `Reconnaissance Orbiter, May 2021`,
+    id: 9,
   },
   {
     imageUrl: `./img/best-images/happy-face-crater.webp`,
@@ -79,6 +88,7 @@ export const imageData = [
     description: ` The crater is located in the south pole region and the difference in darkness of the features is due to the
      changing frost cover on the ground.`,
     taken: `Reconaissance Orbiter, 2020`,
+    id: 10,
   },
   {
     imageUrl: `./img/best-images/mars-morse-code.webp`,
@@ -86,6 +96,7 @@ export const imageData = [
     description: `The view shows  some strange formations on the surface of the red planet. The dark, raised areas are a series 
     of dunes that look a lot like the dots and dashes of Morse code. `,
     taken: `Reconnaissance Orbiter, February 2016`,
+    id: 11,
   },
 
   {
@@ -94,6 +105,7 @@ export const imageData = [
     description: `There's nothing edible here. These hematite-rich spherules are known by the cute nickname "blueberries" but it's just
      small, BB-sized pebbles.`,
     taken: `Opportunity rover, 2004`,
+    id: 12,
   },
 
   {
@@ -102,6 +114,7 @@ export const imageData = [
     description: `The scaly pattern doesn't come from a mythical creature, but rather through ancient landscape processes involving erosion. 
     The nature of the water responsible for the alteration, and how it interacted with the rock to form the clay, remains poorly understood.`,
     taken: `Reconnaissance orbiter, July 2017`,
+    id: 13,
   },
 
   {
@@ -112,6 +125,7 @@ export const imageData = [
     Heavily eroded, with clusters of boulders and sand dunes on its surface, this layered mesa is probably comprised of 
     sedimentary deposits that are being exhumed as it erodes.`,
     taken: `Reconnaissance Orbiter, 2017`,
+    id: 14,
   },
   {
     imageUrl: `./img/best-images/strange-patterns.webp`,
@@ -119,6 +133,7 @@ export const imageData = [
     description: `The dark slug-like sand dunes. scientists suggest the neat piles could have been caused by a "frost heave" 
     process with freeze-and-thaw cycles pushing the rocks into tidy shapes. A similar process has been observed here on Earth. `,
     taken: `Reconnaissance orbiter, 2018`,
+    id: 15,
   },
 
   {
@@ -127,6 +142,7 @@ export const imageData = [
     description: `The pit is located in the region of the planet's south pole. The late-summer, low-sun timing of the image really makes 
     the circle stand out from the surrounding landscape.`,
     taken: `Reconnaissance Orbiter, 2017`,
+    id: 16,
   },
 
   {
@@ -134,6 +150,7 @@ export const imageData = [
     title: `Scratch marks`,
     description: `The space agency says the linear gullies are likely caused by dry ice sliding down sandy dune slopes. `,
     taken: `Reconnaissance Orbiter, 2017`,
+    id: 17,
   },
 
   {
@@ -142,6 +159,7 @@ export const imageData = [
     description: `These lovely spiral patterns aren't petroglyphs. The swirls are known as lava coils. "When two lava flows in opposite 
     directions mingle and swirl, the coils are the hardened results,`,
     taken: `Reconnaissance Orbiter`,
+    id: 18,
   },
 
   {
@@ -151,6 +169,7 @@ export const imageData = [
      this image. As this process happens, gas moves through channels until it reaches the surface and vents out. These vents show up as the 
      dark streaks because they carry dust and dirt up to the surface.`,
     taken: `Reconnaissance Orbiter`,
+    id: 19,
   },
 
   {
@@ -158,6 +177,7 @@ export const imageData = [
     title: `Dragon feature`,
     description: `Part of the canyon floor and wall rock in southwestern Melas Chasma on Mars meanders in a pattern resembling a dragon.`,
     taken: `Reconnaissance Orbiter, 2007`,
+    id: 20,
   },
   {
     imageUrl: `./img/best-images/blue-structures.jpeg`,
@@ -165,6 +185,7 @@ export const imageData = [
     description: `Image covers an area of the pole about 19 miles (30 kilometers) wide — vast sand dunes line up in golden drifts, warmed 
     by the sun on one side and chilled in the darkness on the other. Using a special infrared camera aboard the Mars Odyssey orbite. `,
     taken: `Odyssey orbiter, 2001`,
+    id: 21,
   },
 
   {
@@ -175,6 +196,7 @@ export const imageData = [
     These layered sediments are of great interest because they are very regular in thicknesses, suggesting some sort of periodic 
     process such as climate change associated with Mars orbital variations.`,
     taken: `Reconnaissance Orbiter, 2019`,
+    id: 22, 
   },
 
   {
@@ -184,6 +206,7 @@ export const imageData = [
     the terrain where the crater formed is dusty, the fresh crater appears blue in the enhanced color of the image, due to removal of
      the reddish dust in that area.`,
     taken: `Reconnaissance Orbiter, 2018`,
+    id: 23,
   },
   {
     imageUrl: `./img/best-images/san-dunes-covered-frost.jpg`,
@@ -194,6 +217,7 @@ export const imageData = [
     from a solid to a gas in a shift called sublimation. In the process, fantastic formations are created on the ground, ranging 
     from spider-like intertwining lines to scattered polka dots.`,
     taken: `Reconnaissance orbiter, 2023`,
+    id: 24,
   },
 
   {
@@ -204,6 +228,7 @@ export const imageData = [
      result of seasonal freezing of carbon dioxide from the Martian atmosphere.
     The average thickness of the dry ice layer is on average small and does not exceed a meter. `,
     taken: `Reconnaissance Orbiter, 2012`,
+    id: 25, 
   },
 
   {
@@ -212,5 +237,6 @@ export const imageData = [
     description: `The spacecraft's CaSSIS camera snapped a squiggly collection of dunes with darker patches showing through.
      It looks like a close-up of cookies-and-cream ice cream. `,
     taken: `ESA ExoMars orbiter`,
+    id: 26,
   },
 ];

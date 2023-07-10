@@ -1,4 +1,22 @@
-.navigation button {
+/* .navigation button {
     border: none;
     background: none;
 }
+
+nav {
+    
+    display: flex;
+    flex-direction: column;
+    background-color: var(--orange-color);
+    border-radius: var(--border-radius);
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+}
+
+.navigation button:hover nav {
+    display: initial;
+} */

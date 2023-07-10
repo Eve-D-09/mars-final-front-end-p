@@ -1,4 +1,4 @@
-export const introImages = [
+export const intro = [
   `./img/introImages/intro-mars.jpg`,
   `./img/introImages/intro-mars2.webp`,
   `./img/introImages/intro-mars3.jpg`,

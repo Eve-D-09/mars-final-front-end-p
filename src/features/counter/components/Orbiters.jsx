@@ -1,5 +1,5 @@
 import React from "react";
-import { orbiters } from "../../../myData/orbitersData";
+import { orbiters } from "../../../myData/orbiters";
 import { setOrbiter, selectOrbiter } from "../planetSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Orbiter from "./Orbiter";

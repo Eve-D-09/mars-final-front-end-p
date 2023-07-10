@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonUp from "./ButtonUp";
 
 const Picture = (props) => {
   const { today, explanation, title, img } = props;
@@ -6,15 +7,16 @@ const Picture = (props) => {
   return (
     <>
       <div className="dayPicture">
-        <div>
+        <div className="picture">
           <img src={img} alt={title} />
         </div>
-        <div>
+        <div className="pictureContent">
           <h2>{title}</h2>
           <p>{explanation}</p>
           <p>{today}</p>
         </div>
       </div>
+      <ButtonUp />
     </>
   );
 };

@@ -7,7 +7,7 @@ const RoverInfo = (props) => {
     <>
       {rovers.map((rover) => {
         return (
-          <div>
+          <div key={rover.name}>
             <h3> Here's {rover.name}</h3>
             <p> Was launched {rover.launch}</p>
             <p> Landed on Mars {rover.landed}</p>

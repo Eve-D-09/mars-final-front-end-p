@@ -4,10 +4,10 @@ import { useSelector } from "react-redux";
 // import axios from "axios";
 import Picture from "./Picture";
 import Loading from "./Loading";
-import Logo from "./Logo";
 import { getData } from "../../../controllers/dataControllers";
+// import ButtonUp from "./ButtonUp";
 
-// import "./App.css";
+
 
 const PicOfDay = () => {
   const [showPicture, setShowPicture] = useState(false);
@@ -31,8 +31,12 @@ const PicOfDay = () => {
   };
 
   return (
-    <>
-      <button onClick={handleClick}>Show me Picture of the Day</button>
+    <div className="picOfDayContainer">
+      <h2>Astronomy Picture of The Day</h2>
+      <p>Every day, since 1990, Hubble Space telescope takes the pictures and sends them back to Earth. </p>
+      <p>Since 2022, July, James Webb telescope started his journey into space.</p>
+      <p> Now we can provide you amazing photos from across universe and each day!</p>
+      <button onClick={handleClick}>Show me Picture</button>
       {showPicture && (
         <Picture
           today={picOfDay.date}
@@ -41,8 +45,8 @@ const PicOfDay = () => {
           img={picOfDay.url}
         />
       )}
-      <Logo />
-    </>
+     
+    </div>
   );
 };
 

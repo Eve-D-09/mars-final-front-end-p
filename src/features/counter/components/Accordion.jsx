@@ -8,11 +8,12 @@ const Accordion = ({ paragraph }) => {
 
   return (
     <div>
-      <div className="accordionTitle" onClick={() => setIsActive (!isActive)}>
-        <div>{title}</div>
-        <div>{isActive ? "-" : "+"}</div>
-        {isActive && <div className="accordionContent">{content}</div>}
+      <div className="accordionBody" onClick={() => setIsActive (!isActive)}>
+        <p>{title}</p>
+        <p>{isActive ? "-" : "+"}</p>
+        {/* {isActive && <div className="accordionContent">{content}</div>} */}
       </div>
+      {isActive && <div className="accordionContent">{content}</div>}
     </div>
   );
 };
