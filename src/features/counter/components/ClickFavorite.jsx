@@ -1,4 +1,4 @@
-import React, { useState }from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import Heart from "../../../img/svg/heart-like-svgrepo-com.svg";
 import { toggleClicked } from "../planetSlice";

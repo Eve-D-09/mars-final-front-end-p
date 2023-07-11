@@ -38,7 +38,7 @@ const Insight = () => {
           <li>{quickFacts.fact6}</li>
         </ul>
         <div>
-          <img src={imageUrl} alt="insight-lander-image" />
+          <img src={imageUrl} alt="insight-lander" />
         </div>
       </div>
       <ButtonUp />

@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { useSelector } from "react-redux";
-import { setScreenMode, selectScreenMode } from "../planetSlice";
+import {  selectScreenMode } from "../planetSlice";
 import Home from "./Home";
 import PicOfDay from "./PicOfDayAPI";
 import Messengers from "./Messengers";

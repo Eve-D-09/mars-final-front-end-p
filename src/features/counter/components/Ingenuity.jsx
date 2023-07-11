@@ -34,7 +34,7 @@ const Ingenuity = () => {
         </ul>
       </div>
       <div className="helicopterImage">
-        <img src={imageUrl} alt="helicopter-image" />
+        <img src={imageUrl} alt="helicopter" />
       </div>
     </div>
   );

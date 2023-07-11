@@ -1,6 +1,6 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setScreenMode, selectScreenMode } from "../planetSlice";
+import { useDispatch } from "react-redux";
+import { setScreenMode } from "../planetSlice";
 
 import MenuIcon from "../../../img/svg/menu-dots-svgrepo-com.svg";
 
