@@ -18,7 +18,7 @@ const RawImages = (props) => {
     <div className="rawImagesBox">
       {rawImages.map((image, index) => {
         console.log(index);
-        if (index > 10) return;
+        if (index > 10) return null;
         return (
           <>
             <div className="rawImagesContainer">

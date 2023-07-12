@@ -1,8 +1,8 @@
 import React from "react";
 
 // import Messengers from "./Messengers";
-import { useSelector, useDispatch } from "react-redux";
-import { selectScreenMode, setScreenMode } from "../planetSlice";
+import {  useDispatch } from "react-redux";
+import { setScreenMode } from "../planetSlice";
 
 const RoverInfo = (props) => {
   // const screenMode = useSelector(selectScreenMode);
