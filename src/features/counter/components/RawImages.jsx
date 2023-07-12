@@ -1,12 +1,24 @@
 import React from "react";
 import ButtonUp from "./ButtonUp";
+// import { useDispatch} from "react-redux";
+// import { setToastMessage } from "../planetSlice";
 
 const RawImages = (props) => {
   const rawImages = [...props.rawImages];
-  rawImages.length = 20;
+  // rawImages.length = 20;
+
+  // const dispatch = useDispatch();
+  // console.log(rawImages.length);
+
+  // if( rawImages.length === 0) {
+  //   dispatch(setToastMessage("We are sorry, Rover was on vacations this particular day"));
+  // }
+
   return (
     <div className="rawImagesBox">
-      {rawImages.map((image) => {
+      {rawImages.map((image, index) => {
+        console.log(index);
+        if (index > 10) return;
         return (
           <>
             <div className="rawImagesContainer">

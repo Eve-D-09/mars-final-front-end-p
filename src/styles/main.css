@@ -7,6 +7,13 @@
     background-color: #f7d4c3;
 }
 
-/* .screenContainer {
-    background-color: #f7d4c3;
-} */
+
+
+.insightScreen {
+    /* background-color: #f7d4c3; */
+    background-color: #d9b7a5;
+}
+
+.ingenuityScreen {
+    background-color: #d9b7a5;
+}

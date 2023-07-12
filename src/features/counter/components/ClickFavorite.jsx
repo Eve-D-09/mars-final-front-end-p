@@ -16,11 +16,14 @@ const ClickFavorite = (props) => {
      
     };
 
+    const color  =  liked ? "#fc037b" : "#0352fc";
+
    console.log(liked, id);
   return (
     <div className="heartButton">
       <button  onClick={onHeartClick} >
-        { liked ? <p>Liked</p> : <img src={Heart} alt="heart-icon" /> }
+        { liked ? <p>Liked</p> : <img src={Heart} alt="heart-icon" fill= {{ color }}/> }
+        
       </button>
     </div>
   );
@@ -28,4 +31,7 @@ const ClickFavorite = (props) => {
 
 export default ClickFavorite;
 
-// {clicked ? "#fc037b" : "#0352fc"}
+// {clicked ? "#fc037b" : "#0352fc"} #24a0c9
+
+// { liked ? <p>Liked</p> : <img src={Heart} alt="heart-icon" style= {{ color }}/> }
+// const color = toggleClicked.includes(id) ? "#fc037b" : "#0352fc";
