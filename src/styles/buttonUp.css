@@ -1,0 +1,8 @@
+.buttonUp button {
+    position: fixed;
+    bottom: 80px;
+    right: 25px;
+    background-color: var(--blue-color);
+    opacity: 0.9;
+    border: none;
+}

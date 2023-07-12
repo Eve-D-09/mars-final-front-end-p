@@ -33,28 +33,43 @@
 .roversContainer, 
 .orbitersContainer {
     width: 90%;
+    /* height: 75vh; */
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: var(--orange-color);
     opacity: 0.8;
     margin: 0 auto;
-    padding: 10px;
+    padding: 50px 10px;
+    
+}
+
+.roversContainer h2, 
+.orbitersContainer h2 {
+    text-align: center;
+    background-color: var(--orange-color);
+    width: 250px;
+    margin: 0 auto;
+    padding: 10px 0;
     border-radius: var(--border-radius);
+    
 }
 
 .selectRoverContainer, 
 .selectOrbiterContainer {
-    width: 90%;
+    /* width: 90%; */
+    width: 275px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    background-color: var(--orange-color);
+    border-radius: var(--border-radius);
+    padding: 10px 5px;
 }
 
 .roversContainer *, 
 .orbitersContainer * {
     font-family: var(--font-lorenza);
-    padding: var(--padding-light); 
+    /* padding: var(--padding-light);  */
     
 }
 
@@ -79,8 +94,61 @@
     font-family: var(--queen-sides-medium);
 }
 
+.roverInfo li, 
+.orbiterInfo li {
+   list-style: none;
+   padding: 10px 5px;
+}
+
+.roverInfo ul, 
+.orbiterInfo ul {
+    padding: 0;
+}
+
+.roverInfo h3, 
+.orbiterInfo h3 {
+   font-family: var(--font-lorenza);
+}
+
+.roverInfo,
+.orbiterInfo {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.roverInfo > div, 
+.orbiterInfo > div {
+    padding: 10px 10px;
+    margin: 10px 0;
+    border-radius: var(--border-radius);
+}
+
+.roverPrimaryInfo, .roverMission, .roverQuickFacts, .roverTechSpec {
+    background-color: var(--orange-color);
+}
+
+.linkBack a {
+    text-decoration: none;
+    font-family: var(--font-lorenza);
+    color: white;
+    background-color: var(--blue-color);
+    padding: 10px 20px;
+    opacity: 1;
+    border-radius: var(--border-radius);
+    display: block;
+    width: 200px;
+    text-align: center;
+}
+
 .selectOrbiterContainer h3, p, li {
     font-family: var(--queen-sides-medium);
+}
+
+.orbiterPrimaryInfo, .orbiterFacts {
+    background-color: var(--orange-color);
 }
 
 .orbiterPrimaryInfo p, 

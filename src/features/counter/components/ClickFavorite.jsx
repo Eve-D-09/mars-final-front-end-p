@@ -20,7 +20,7 @@ const ClickFavorite = (props) => {
   return (
     <div className="heartButton">
       <button  onClick={onHeartClick} >
-        { liked ? <p>Liked</p> : <img src={Heart } alt="heart-icon" /> }
+        { liked ? <p>Liked</p> : <img src={Heart} alt="heart-icon" /> }
       </button>
     </div>
   );

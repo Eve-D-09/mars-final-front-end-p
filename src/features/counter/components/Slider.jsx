@@ -33,18 +33,10 @@ const Slider = () => {
 
   return (
     <div className="imageSliderContainer">
-      <ClickFavorite
-        id={slides[currentSlide].id}
-        liked={slides[currentSlide].liked}
-      />
+      {/* <ClickFavorite id={slides[currentSlide].id} liked={slides[currentSlide].liked}/> */}
       <div className="sliderButtons">
-        <button onClick={prevSlide}>
-          <img src={ArrowLeft} alt="arrow-left" />
-        </button>
-        {/* <p> {index + 1} of {slides.length} </p> */}
-        <button onClick={nextSlide}>
-          <img src={ArrowRight} alt="arrow-right" />
-        </button>
+        <button onClick={prevSlide}> <img src={ArrowLeft} alt="arrow-left" /> </button>
+        <button onClick={nextSlide}> <img src={ArrowRight} alt="arrow-right" /> </button>
       </div>
       {/* <div className="imageSlider"> */}
       {slides.map((slide, index) => {
@@ -52,10 +44,15 @@ const Slider = () => {
           <>
             {index === currentSlide && (
               <div className="slide">
-                <p> {index + 1} of {slides.length} </p>
-                <img src={slide.imageUrl} alt={slide.title} />
+                <p>{index + 1} | {slides.length}</p>
+                <div className="slideImage">
+                  <img src={slide.imageUrl} alt={slide.title} />
+                </div>
                 <div className="imageDescription">
-                  <h3>{slide.title}</h3>
+                  <div className="imageTitle">
+                    <ClickFavorite id={slides[currentSlide].id} liked={slides[currentSlide].liked} />
+                    <h3>{slide.title}</h3>
+                  </div>
                   <p>{slide.description}</p>
                 </div>
               </div>

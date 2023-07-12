@@ -9,6 +9,11 @@ import Messengers from "./Messengers";
 import RawImagesAPI from "./RawImagesAPI";
 import BestImages from "./BestImages";
 
+import Rovers from "./Rovers";
+import Orbiters from "./Orbiters";
+import Ingenuity from "./Ingenuity";
+import Insight from "./Insight";
+
 
 
 const Main = () => {
@@ -19,13 +24,18 @@ const Main = () => {
       <div className="header">
         <Header />
       </div>
-      <>
+      <div className="screenContainer">
         {screenMode === 0 && <Home />}
         {screenMode === 1 && <PicOfDay />}
         {screenMode === 2 && <Messengers />}
         {screenMode === 3 && <RawImagesAPI />}
         {screenMode === 4 && <BestImages />}
-      </>
+
+        {screenMode === 5 && <Rovers />}
+        {screenMode === 6 && <Orbiters />}
+        {screenMode === 7 && <Ingenuity />}
+        {screenMode === 8 && <Insight />}
+      </div>
       <div className="footer">
         <Footer />
       </div>

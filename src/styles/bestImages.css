@@ -14,14 +14,30 @@
 .imageSliderContainer {
     display:flex;
     flex-direction: column;
-   
+    position: relative;
+}
+
+.slideImage {
+    width: 90%;
+    height: 50vh;
+    margin: 0 auto;
+}
+
+.slideImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
 }
 
 .sliderButtons {
+    width: 100%;
     display: flex;   
     justify-content: space-between;
-    position: relative;
-    top: 200px;
+    position: absolute;
+    /* top: 200px;
+    height: 50px; */
+    top: 150px;
     height: 50px;
 }
 
@@ -33,9 +49,10 @@
 }
 
 .heartButton {
-    align-self: self-end;
+    /* align-self: self-end;
     position: relative;
-    top: 120px;
+    top: 120px; */
+    border-bottom: none;
 }
 
 .heartButton button {
@@ -56,14 +73,25 @@
     border: 1px dotted var(--blue-color);
 }
 
+.imageTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px dotted var(--blue-color);
+}
+
 .imageDescription h3 {
     font-family: var(--font-lorenza);
     font-size: 1.3rem;
-    border-bottom: 1px dotted var(--blue-color);
+    /* border-bottom: 1px dotted var(--blue-color); */
 }
 
 .imageDescription p {
     font-family: var(--queen-sides);
     font-size: 1.1rem;
 }
+
+/* .slide img {
+
+} */
 

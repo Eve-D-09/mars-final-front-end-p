@@ -17,7 +17,6 @@ const ButtonUp = () => {
 
     const scrollUp = () => {
         window.scrollTo({
-            // check what height is navbar, if f.e its 150, set top: 150,
             top: 0, 
             behaviour: "smooth",
         })

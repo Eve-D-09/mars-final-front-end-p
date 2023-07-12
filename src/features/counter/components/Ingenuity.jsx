@@ -1,8 +1,16 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { selectIngenuity } from "../planetSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { selectIngenuity, setScreenMode } from "../planetSlice";
 
 const Ingenuity = () => {
+
+  const dispatch = useDispatch();
+
+  const onNavClick = (e) => {
+    e.preventDefault();
+    dispatch(setScreenMode(Number(e.target.id)));
+  };
+  
   const ingenuity = useSelector(selectIngenuity);
   const { mission, launch, landing, techSpecs, quickFacts, imageUrl } =
     ingenuity;
@@ -35,6 +43,9 @@ const Ingenuity = () => {
       </div>
       <div className="helicopterImage">
         <img src={imageUrl} alt="helicopter" />
+      </div>
+      <div className="linkBack">
+        <a href="/#" onClick={onNavClick} id="2"> Back to Messengers </a>
       </div>
     </div>
   );

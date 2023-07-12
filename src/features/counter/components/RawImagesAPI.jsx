@@ -32,22 +32,7 @@ const RawImagesAPI = () => {
     }
   }
 
-  // const apiCall = useCallback(() => {
-  //   // if (rawImages) return;
 
-  //   if (search && calendar) {
-  //     console.log(`getting new data`);
-  //     getData(
-  //       `rawImages`,
-  //       `get`,
-  //       `https://api.nasa.gov/mars-photos/api/v1/rovers/${search}/photos?earth_date=${calendar}&api_key=Mmse3giht0jkNDr9PqbdtsAnvxXdRAo0fzrSXcB4`
-  //     );
-  //   }
-  // }, [search, calendar]);
-
-  // useEffect(() => {
-  //   apiCall();
-  // }, [apiCall]);
 
   console.log(rawImages);
 
@@ -55,10 +40,11 @@ const RawImagesAPI = () => {
 
   return (
     <>
+    <div className="searchContainer">
       <div>
         <h2> Search raw unprocessed photos</h2>
       </div>
-      <div>
+      <div className="searchInputContainer">
         <label>Search by rover</label>
         <select onChange={(e) => dispatch(setSearch(e.target.value))}>
           <option value=""></option>
@@ -68,17 +54,14 @@ const RawImagesAPI = () => {
           <option value="spirit">Spirit</option>
         </select>
       </div>
-      <div>
+      <div className="searchInputContainer">
         <label>Search by date</label>
-        <input
-          onChange={(e) => dispatch(setCalendar(e.target.value))}
-          type="date"
-          id="searchDate"
-        />
+        <input onChange={(e) => dispatch(setCalendar(e.target.value))} type="date" id="searchDate"/>
        {calendar && search && <button onClick={gettingData}>Search</button>}
       </div>
-
-      {rawImages && <RawImages rawImages={rawImages} key={rawImages.id} />}
+      {/* {rawImages && <RawImages rawImages={rawImages} key={rawImages.id} />} */}
+    </div>
+    {rawImages && <RawImages rawImages={rawImages} key={rawImages.id} />}
     </>
   );
 };

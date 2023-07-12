@@ -3,5 +3,10 @@
     background-image: url(../img/introImages/home-mars.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-   
+    height: auto;
+    background-color: #f7d4c3;
 }
+
+/* .screenContainer {
+    background-color: #f7d4c3;
+} */

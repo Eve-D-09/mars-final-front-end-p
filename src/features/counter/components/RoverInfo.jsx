@@ -1,6 +1,18 @@
 import React from "react";
 
+// import Messengers from "./Messengers";
+import { useSelector, useDispatch } from "react-redux";
+import { selectScreenMode, setScreenMode } from "../planetSlice";
+
 const RoverInfo = (props) => {
+  // const screenMode = useSelector(selectScreenMode);
+  const dispatch = useDispatch();
+
+  const onNavClick = (e) => {
+    e.preventDefault();
+    dispatch(setScreenMode(Number(e.target.id)));
+  };
+
   const rovers = [...props.filtered];
 
   return (
@@ -13,8 +25,13 @@ const RoverInfo = (props) => {
               <p> Was launched {rover.launch}</p>
               <p> Landed on Mars: {rover.landed}</p>
               <p> Rover drives max at {rover.speed}</p>
-              <p> It's size is {rover.size.length} length,{rover.size.heigth} heigth, weigth's {rover.size.weigth} and is {rover.size.width} wide.</p>
-              <p>He travelled {rover.distanceTravelled}.</p>
+              <p>
+                
+                It's size is {rover.size.length} length,{rover.size.heigth}
+                heigth, weigth's {rover.size.weigth} and is {rover.size.width}
+                wide.
+              </p>
+              <p>He travells {rover.distanceTravelled}.</p>
             </div>
             <div className="roverMission">
               <p>{rover.missionDescription}</p>
@@ -36,6 +53,11 @@ const RoverInfo = (props) => {
               <p>{rover.techSpecs.software}</p>
               <p>{rover.techSpecs.powerSystem}</p>
               <p>{rover.techSpecs.instruments}</p>
+            </div>
+
+            {/* <button onClick={screenMode === 2 && <Messengers />}>get back to messengers</button> */}
+            <div className="linkBack">
+              <a href="/#" onClick={onNavClick} id="2"> Back to Messengers </a>
             </div>
           </div>
         );
