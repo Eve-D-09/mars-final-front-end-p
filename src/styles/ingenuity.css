@@ -33,9 +33,17 @@
     font-family: var(--queen-sides-medium);
     font-weight:700;
     list-style: none;
+    line-height: 1.3rem;
 }
 
 .helicopterQuickFacts ul {
     padding: 0;
+}
+
+.helicopterQuickFacts li {
+    display: flex;
+    gap: 10px;
+    padding: var(--padding-light);
+    line-height: 1.3rem;
 }
 

@@ -18,11 +18,13 @@ const RawImagesAPI = () => {
     today.getMonth() > 9 ? today.getMonth() + 1 : "0" + (today.getMonth() + 1);
   const day = today.getDate() > 9 ? today.getDate() : "0" + today.getDate();
   console.log(day);
+
+
   const dateRanges = {
-    perseverance: ["2021-07-01", `${today.getFullYear()}-${month}-${day}`],
-    curiosity: ["2010-01-01", `${today.getFullYear()}-${month}-${day}`],
-    opportunity: ["2004-01-01", "2018-01-01"],
-    spirit: ["2004-01-01", "2010-01-01"],
+    perseverance: ["2021-02-18", `${today.getFullYear()}-${month}-${day}`],
+    curiosity: ["2012-08-06", `${today.getFullYear()}-${month}-${day}`],
+    opportunity: ["2004-01-25", "2018-06-10"],
+    spirit: ["2004-01-04", "2010-03-01"],
   };
   console.log(dateRanges);
   const rawImages = useSelector(selectRawImages);

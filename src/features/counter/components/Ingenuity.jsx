@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectIngenuity, setScreenMode } from "../planetSlice";
+import ThreeDots from "../../../img/svg/threedots-svgrepo-com-horizontal.svg";
 
 const Ingenuity = () => {
 
@@ -34,11 +35,11 @@ const Ingenuity = () => {
       <div className="helicopterQuickFacts">
         <h3>Quick facts</h3>
         <ul>
-          <li>{quickFacts.fact1}</li>
-          <li>{quickFacts.fact2}</li>
-          <li>{quickFacts.fact3}</li>
-          <li>{quickFacts.fact4}</li>
-          <li>{quickFacts.fact5}</li>
+          <li><img src={ThreeDots} alt="three-dots" />{quickFacts.fact1}</li>
+          <li><img src={ThreeDots} alt="three-dots" />{quickFacts.fact2}</li>
+          <li><img src={ThreeDots} alt="three-dots" />{quickFacts.fact3}</li>
+          <li><img src={ThreeDots} alt="three-dots" />{quickFacts.fact4}</li>
+          <li><img src={ThreeDots} alt="three-dots" />{quickFacts.fact5}</li>
         </ul>
       </div>
       <div className="helicopterImage">

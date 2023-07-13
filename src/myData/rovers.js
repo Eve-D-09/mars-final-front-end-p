@@ -104,7 +104,11 @@ export const rovers = [
     speed: `0.18 km/h or 0.11 miles`,
     lifespan: `14 years, 11 months`,
     missionDescription: `Opportunity was the second of the two twin rovers launched 
-        in 2003 to land on Mars and begin traversing the Red Planet in search of signs of ancient water.`,
+        in 2003 to land on Mars and begin traversing the Red Planet in search of signs of ancient water.
+        Mission highlights included the initial 90-sol mission, finding meteorites such as Heat Shield Rock 
+        (Meridiani Planum meteorite), and over two years of exploring and studying Victoria crater. The rover
+         survived moderate dust storms and in 2011 reached Endeavour crater, which has been considered as
+          a second landing site.`,
     quickFacts: {
     fact1: ` Rover stopped communicating with Earth when a severe Mars-wide dust storm blanketed its 
             location in June 2018. After more than a thousand commands to restore contact, engineers in the
@@ -143,7 +147,7 @@ export const rovers = [
     distanceTravelled: `4.8 miles  (7.73 kilometers)`,
     
     speed: `0.18 km/h or 0.11 miles`,
-    lifespan: `6 years, 2 months`,
+    lifespan: `6 years, 2 months, 19 days `,
     missionDescription: `One of two rovers launched in 2003 to explore Mars and 
         search for signs of past life, Spirit far outlasted her planned 90-day mission, 
         lasting over six years. Among her myriad discoveries, Spirit found evidence that

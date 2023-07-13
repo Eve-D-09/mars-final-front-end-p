@@ -18,25 +18,35 @@
 
 .insightInfo, .insightMission, .insightQuickFacts {
     background-color: var(--blue-color);
+    box-shadow: rgba(37, 13, 75, 0.3) 0px 19px 38px, rgba(9, 7, 26, 0.219) 0px 25px 25px;
+    border: 1px solid #2a4d99;
 }
 
 .insightContainer p, 
 .insightContainer li {
     font-family: var(--queen-sides-medium);
     list-style: none;
+    line-height: 1.3rem;
 }
 
 .insightContainer h2,
 .insightContainer h3 {
     text-align: center; 
     font-family: var(--font-lorenza);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 
 .insightQuickFacts ul {
     padding: 0;
 }
 
-/* .screenContainer {
-    background-color: #e2cfc5;
-} */
+.insightQuickFacts li {
+    display: flex;
+    gap: 10px;
+    padding: var(--padding-light);
+    line-height: 1.3rem;
+}
+
+.insightQuickFacts svg {
+    background-color: white;
+}

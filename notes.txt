@@ -16,7 +16,7 @@ were active in the past: opportunity and spirit
 
 https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/latest_photos?api_key=Mmse3giht0jkNDr9PqbdtsAnvxXdRAo0fzrSXcB4
 
-?? - how to set rover ??
+ set rover 
 
 const [ rover, setRover ] = useState("perseverance");
 https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?sol=500&api_key=Mmse3giht0jkNDr9PqbdtsAnvxXdRAo0fzrSXcB4
@@ -29,7 +29,7 @@ official mars site:
 https://mars.nasa.gov/
 
 opprtunity rover is dead from 2018, was active for 15 years. 
-spirit rover was active for almost 6 years. 
+spirit rover was active for  6 years. 
 
 
 
@@ -143,6 +143,9 @@ const rovers = [
 // perseverance rover info: https://mars.nasa.gov/mars2020/spacecraft/rover/brains/
 // curiosity rover: https://www.techbriefs.com/component/content/article/tb/pub/features/articles/14715
 //  sojourner, spirit, opportunity mainly from wikipedia
+
+// https://solarsystem.nasa.gov/missions/spirit/in-depth/
+https://solarsystem.nasa.gov/missions/opportunity/in-depth/
 
 -------------------------------------------------------------------------------------------------------------------
 INTRO content
