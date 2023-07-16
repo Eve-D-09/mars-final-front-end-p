@@ -5,11 +5,13 @@ import "./styles/index.css";
 import ToastComponent from "./features/counter/components/ToastComponent";
 
 
+
 const App = () => {
   return (
     <>
       <Main />
       <ToastComponent />
+     
     </>
   );
 };

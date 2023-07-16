@@ -1,6 +1,6 @@
 .mainContainer {
   /* background-image: url(../img/introImages/intro-mars.jpg); */
-  background-image: url(../img/introImages/home-mars.jpg);
+  background-image: url(../img/img-for-interval/home-mars.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: auto;
@@ -9,12 +9,6 @@
 
 .insightScreen {
   background: rgb(255, 157, 111);
-  /* background: linear-gradient(
-    90deg,
-    rgba(255, 157, 111, 1) 0%,
-    rgba(231, 181, 160, 0.989233193277311) 54%,
-    rgba(153, 133, 122, 1) 100%
-  ); */
   background: linear-gradient(
     90deg,
     rgba(255, 157, 111, 1) 0%,
@@ -28,12 +22,6 @@
 }
 
 .picOfDayScreen {
-  /* background: linear-gradient(
-    90deg,
-    rgba(255, 157, 111, 1) 0%,
-    rgba(228, 188, 172, 0.989233193277311) 54%,
-    rgba(153, 133, 122, 1) 100%
-  ); */
   background: linear-gradient(
     90deg,
     rgba(242, 218, 208, 0.989233193277311) 52%,
@@ -41,3 +29,14 @@
   );
   
 }
+
+.messengersScreen {
+  background: rgba(201, 188, 183, 0.989) 52%;
+}
+
+
+
+
+
+
+

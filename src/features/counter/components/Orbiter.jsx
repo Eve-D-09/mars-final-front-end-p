@@ -1,6 +1,7 @@
 import React from "react";
 import {useDispatch} from "react-redux";
 import { setScreenMode} from "../planetSlice";
+import ThreeDots from "../../../img/svg/threedots-svgrepo-com-horizontal.svg";
 
 const Orbiter = (props) => {
   const dispatch = useDispatch();
@@ -26,11 +27,11 @@ const Orbiter = (props) => {
             <div className="orbiterFacts">
               <h3>Some facts about {orbiter.name}</h3>
                <ul>
-                <li>{orbiter.facts.fact1}</li>
-                <li>{orbiter.facts.fact2}</li>
-                <li>{orbiter.facts.fact3}</li>
-                <li>{orbiter.facts.fact4}</li>
-                <li>{orbiter.facts.fact5}</li>
+                <li><img src={ThreeDots} alt="three-dots" />{orbiter.facts.fact1}</li>
+                <li><img src={ThreeDots} alt="three-dots" />{orbiter.facts.fact2}</li>
+                <li><img src={ThreeDots} alt="three-dots" />{orbiter.facts.fact3}</li>
+                <li><img src={ThreeDots} alt="three-dots" />{orbiter.facts.fact4}</li>
+                <li><img src={ThreeDots} alt="three-dots" />{orbiter.facts.fact5}</li>
                </ul>
             </div>
             <div className="linkBack">

@@ -2,8 +2,10 @@
 .messengersComp {
     display: flex;
     flex-direction: column;
-    margin: 50px 0 50px;
+    /* margin: 60px 0 60px; */
+    padding: 60px 0 60px;
     gap: 20px;
+    height: auto;
 }
 
 .messengersNav nav {
@@ -17,6 +19,7 @@
 .messengersNav a {
     background-color: var(--orange-color);
     border-radius: var(--border-radius);
+    /* border: 1px solid #2a4d99; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,13 +35,14 @@
 
 .roversContainer, 
 .orbitersContainer {
-    width: 90%;
+    /* width: 90%; */
     /* height: 75vh; */
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 20px;
     opacity: 0.8;
-    margin: 0 auto;
+    margin: 60px 0;
     padding: 50px 10px;
     
 }
@@ -92,6 +96,7 @@
 .roverInfo h3, .roverInfo p, 
 .roverInfo li {
     font-family: var(--queen-sides-medium);
+    opacity: 1;
 }
 
 .roverInfo li, 
@@ -130,6 +135,12 @@
     background-color: var(--orange-color);
 }
 
+.roverQuickFacts li, .orbiterFacts  li{
+    display: flex;
+    gap: 10px;
+    padding: var(--padding-light);
+}
+
 .linkBack a {
     text-decoration: none;
     font-family: var(--font-lorenza);
@@ -145,6 +156,7 @@
 
 .selectOrbiterContainer h3, p, li {
     font-family: var(--queen-sides-medium);
+    
 }
 
 .orbiterPrimaryInfo, .orbiterFacts {

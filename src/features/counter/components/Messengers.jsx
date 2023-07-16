@@ -4,6 +4,7 @@ import React from "react";
 // import Ingenuity from "./Ingenuity";
 // import Insight from "./Insight";
 import MoreInfo from "../../../img/svg/more-grid-small-svgrepo-com.svg";
+import Interval from "./Interval";
 
 import {useDispatch} from "react-redux";
 import { setScreenMode} from "../planetSlice";
@@ -28,7 +29,7 @@ const Messengers = () => {
 
   return (
     <div className="messengersComp">
-      <h2>Messengers screen</h2>
+      <h2>Operating on Mars</h2>
       <div className="messengersNav">
         
         <nav>
@@ -42,6 +43,9 @@ const Messengers = () => {
       {roverScreen === 6 && <Orbiters />}
       {roverScreen === 7 && <Ingenuity />}
       {roverScreen === 8 && <Insight />} */}
+      <div className="intervalModul">
+        <Interval />
+      </div>
     </div>
   );
 };

@@ -29,8 +29,8 @@ const Insight = () => {
         <h2>Who is Insight Lander?</h2>
         <div className="insightInfo">
           <p>{description}</p>
-          <p>Launched:{launch}</p>
-          <p>Landed:{landed}</p>
+          <p>Launched: {launch}</p>
+          <p>Landed: {landed}</p>
         </div>
         <div className="insightMission">
           <h3>What happened to Insight?</h3>

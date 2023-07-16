@@ -24,7 +24,7 @@ const Main = () => {
       <>
         {screenMode === 0 && <Home />}
         <div className="picOfDayScreen">{screenMode === 1 && <PicOfDay />}</div>
-        {screenMode === 2 && <Messengers />}
+        <div className="messengersScreen">{screenMode === 2 && <Messengers />}</div>
         {screenMode === 3 && <RawImagesAPI />}
         {screenMode === 4 && <BestImages />}
 

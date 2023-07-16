@@ -1,5 +1,5 @@
 import React from "react";
-
+import ThreeDots from "../../../img/svg/threedots-svgrepo-com-horizontal.svg";
 // import Messengers from "./Messengers";
 import {  useDispatch } from "react-redux";
 import { setScreenMode } from "../planetSlice";
@@ -39,11 +39,11 @@ const RoverInfo = (props) => {
             <div className="roverQuickFacts">
               <h3>Quick Facts about {rover.name}</h3>
               <ul>
-                <li>{rover.quickFacts.fact1}</li>
-                <li>{rover.quickFacts.fact2}</li>
-                <li>{rover.quickFacts.fact3}</li>
-                <li>{rover.quickFacts.fact4}</li>
-                <li>{rover.quickFacts.fact5}</li>
+                <li><img src={ThreeDots} alt="three-dots" />{rover.quickFacts.fact1}</li>
+                <li><img src={ThreeDots} alt="three-dots" />{rover.quickFacts.fact2}</li>
+                <li><img src={ThreeDots} alt="three-dots" />{rover.quickFacts.fact3}</li>
+                <li><img src={ThreeDots} alt="three-dots" />{rover.quickFacts.fact4}</li>
+                <li><img src={ThreeDots} alt="three-dots" />{rover.quickFacts.fact5}</li>
               </ul>
             </div>
             <div className="roverTechSpec">

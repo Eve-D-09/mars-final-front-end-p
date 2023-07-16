@@ -1,29 +1,30 @@
 .searchContainer {
-    width: 320px;
+    /* width: 320px; */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
     justify-content: flex-start;
-    padding: 20px 10px;
+    padding: 50px 0 50px;
 }
 
 .searchContainer h2 {
     font-family: var(--font-lost-ages);
     margin: 0;
-    width: 100%;
-    
+   word-break: keep-all;
+   text-align: center;
 }
 
 .searchContainer div:first-of-type {
-    width: 100%;
+    width: 90%;
 }
 
 .searchContainer > div {
      background-color: var(--orange-color);
      padding: 20px 10px;
       border-radius: var(--border-radius);
+     
 }
 
 .searchContainer label {
@@ -63,10 +64,13 @@
 }
 
 .rawImagesContainer {
-    width: 90%;
+    /* width: 90%; */
     height: auto;
-    margin: 0 auto;
-    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px 0 20px;
 }
 
 .rawImagesTitle {
@@ -98,8 +102,9 @@
   background-color: var(--verylight-blue);
   border-radius: var(--border-radius);
   /* border: 2px solid black; */
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
+  
 }
 
 
