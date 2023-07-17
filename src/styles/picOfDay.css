@@ -36,8 +36,7 @@
 }
 
 .dayPicture {
-    margin: 25px 0;
-    
+    margin: 25px 0; 
 }
 
 .pictureContent {
@@ -61,6 +60,12 @@
     opacity: 1;
 }
 
+.pictureContent p:last-of-type {
+    background-color: var(--darker-orange);
+    padding: 10px;
+    border-radius: var(--border-radius);
+}
+
 .pictureContent h2 {
     margin-bottom: 10px;
 }
@@ -76,4 +81,44 @@
 .picture {
     width: 100%;
     height: auto;
+}
+
+/* ------------------------------------------- */
+
+@media (min-width: 600px) {
+    .picOfDayContainer {
+        width: 75%;
+        height: max-content;
+        padding: 150px 0 150px;
+        /* margin-bottom: 100px; */
+        /* margin: 50px 0 100px; */
+         /* margin-bottom: calc(100px + 10vh); */
+    }
+
+    .picOfDayContainer h2 {
+        font-size: 2rem;
+    }
+
+    .dayPicture {
+        width: 500px;
+    }
+
+    .picOfDayResult {
+        width: 500px;
+        margin: 0 auto;
+        padding-bottom: 40px;
+    }
+
+
+    .picOfDayContainer p {
+        font-size: 1.4rem;
+        padding: 15px 20px;
+    }
+
+    .picOfDayContainer button {
+        font-size: 1.4rem;
+        width: 200px;
+    }
+    
+
 }

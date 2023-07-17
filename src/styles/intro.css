@@ -1,12 +1,19 @@
-
+.homeContainer {
+  display: flex;
+  justify-content: flex-start;
+  /* margin-bottom: 50px; */
+  margin-bottom: calc(60px + 10vh);
+  
+}
 
 .introContainer {
   width: 300px;
-  margin: 50px 0 50px 25px;
+  margin: 50px 0 50px 20px;
   background-color: var(--orange-color);
   opacity: 0.7;
   border-radius: var(--border-radius);
   padding: var(--padding-light);
+  
 }
 
 .introContainer h2 {
@@ -37,3 +44,32 @@
   font-family: var(--font-lorenza);
   font-size: 1rem;
 }
+
+
+/* tablets 600x990 px */
+@media (min-width: 600px) {
+    .homeContainer {
+      height: 80vh;
+    }
+
+    .introContainer {
+      height: max-content;
+      margin-top: 70px;
+      margin-left: 50px;
+      width: 450px;
+      margin-bottom: calc(60px + 10vh);
+    }
+
+    .introContainer h2 {
+      font-size: 1.8rem;
+    }
+
+    .accordionBody p, 
+    .accordionContent p {
+      font-size: 1.4rem;
+    }
+
+
+}
+
+

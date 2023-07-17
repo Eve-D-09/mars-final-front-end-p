@@ -5,6 +5,7 @@ import React from "react";
 // import Insight from "./Insight";
 import MoreInfo from "../../../img/svg/more-grid-small-svgrepo-com.svg";
 import Interval from "./Interval";
+import Timer from "./Timer";
 
 import {useDispatch} from "react-redux";
 import { setScreenMode} from "../planetSlice";
@@ -30,8 +31,8 @@ const Messengers = () => {
   return (
     <div className="messengersComp">
       <h2>Operating on Mars</h2>
+      <Timer />
       <div className="messengersNav">
-        
         <nav>
           <a href="/#" onClick={onNavClick} id="5">Rovers <img src={MoreInfo} alt="dots-for-more-info" /> </a>    
           <a href="/#" onClick={onNavClick} id="6"> Orbiters  <img src={MoreInfo} alt="dots-for-more-info" /></a>

@@ -7,6 +7,8 @@
   background-color: #f7d4c3;
 }
 
+
+
 .insightScreen {
   background: rgb(255, 157, 111);
   background: linear-gradient(
@@ -27,6 +29,7 @@
     rgba(242, 218, 208, 0.989233193277311) 52%,
     rgba(218, 161, 129, 1) 100%
   );
+  
   
 }
 

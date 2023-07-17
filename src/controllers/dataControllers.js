@@ -12,7 +12,7 @@ export const getData = async (type, verb, url) => {
       if ( data.photos.length > 0) {
         store.dispatch(setRawImages(data.photos))
       } else {
-        store.dispatch(setToastMessage("We are sorry, Rover was on vacations this particular day"));
+        store.dispatch(setToastMessage("We are sorry, Rover was on holidays today"));
       }
     } else if (type === `picOfDay`) {
       store.dispatch(setPicOfDay(data));
@@ -22,4 +22,8 @@ export const getData = async (type, verb, url) => {
   }
 };
 
-
+// if (data) {
+  // store.dispatch(setPicOfDay(data));
+// } else {
+  // store.dispatch(setToastMessage("We are sorry, there is no picture today"));
+// }

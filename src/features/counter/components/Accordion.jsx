@@ -25,7 +25,7 @@ const Accordion = ({ paragraph }) => {
         </p>
         {/* {isActive && <div className="accordionContent">{content}</div>} */}
       </div>
-      {isActive && <div className="accordionContent">{content}</div>}
+      {isActive && <div className="accordionContent"><p>{content}</p></div>}
     </div>
   );
 };

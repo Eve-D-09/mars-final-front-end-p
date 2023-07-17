@@ -1,0 +1,43 @@
+.timerContainer {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.timerContainer  h3 {
+    font-family: var(--font-lorenza);
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0;
+    padding: var(--padding-light);
+    
+}
+
+.timeCount {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px dotted var(--blue-color);
+    border-top: 2px dotted var(--blue-color);
+}
+
+.timeCount p {
+    margin: 0;
+    padding: var(--padding-light);
+    font-family: var(--queen-sides-light);
+    width: auto;
+}
+
+.timeCount p span {
+    width: 25px;
+}
+
+@media (min-width: 500px) {
+    .timeCount p {
+        width: 60px;
+    }
+
+    
+}

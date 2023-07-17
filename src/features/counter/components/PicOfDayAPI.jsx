@@ -31,13 +31,25 @@ const PicOfDay = () => {
   };
 
   return (
+    <>
     <div className="picOfDayContainer">
       <h2>Astronomy Picture of The Day</h2>
       <p>Every day, since 1990, Hubble Space telescope takes the pictures and sends them back to Earth. </p>
       <p>Since 2022, July, James Webb telescope started his journey into space.</p>
       <p> Now we can provide you amazing photos from across universe each day!</p>
       <button onClick={handleClick}>Show me Picture</button>
-      {showPicture && (
+      {/* {showPicture && (
+        <Picture
+          today={picOfDay.date}
+          title={picOfDay.title}
+          explanation={picOfDay.explanation}
+          img={picOfDay.url}
+        />
+      )} */}
+     
+    </div>
+    <div className="picOfDayResult">
+    {showPicture && (
         <Picture
           today={picOfDay.date}
           title={picOfDay.title}
@@ -45,8 +57,8 @@ const PicOfDay = () => {
           img={picOfDay.url}
         />
       )}
-     
     </div>
+    </>
   );
 };
 

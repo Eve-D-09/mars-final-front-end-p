@@ -18,8 +18,8 @@ const Timer = () => {
 
   const getTime = useCallback(() => {
     setYears(Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 31 * 12)));
-    setMonths(Math.floor(timeDiff / (1000 * 60 * 60 * 24  * 31 * 11)));
-    setDays(Math.floor((timeDiff / (1000 * 60 * 60 * 24)) % 365));
+    setMonths(Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 31 * 11)));
+    setDays(Math.floor((timeDiff / (1000 * 60 * 60 * 24)) % 30));
     setHours(Math.floor((timeDiff / (1000 * 60 * 60)) % 24));
     setMinutes(Math.floor((timeDiff / 1000 / 60) % 60));
     setSeconds(Math.floor((timeDiff / 1000) % 60));
@@ -31,15 +31,19 @@ const Timer = () => {
   });
 
   return (
-    <>
-      <p>Since Curiosity landed on Mars: </p>
-      <p>{years} years</p>
-      <p>{months} months</p>
-      <p>{days} days </p>
-      <p>{hours} hours </p>
-      <p>{minutes} minutes </p>
-      <p>{seconds} seconds </p>
-    </>
+    <div className="timerContainer">
+      <div>
+        <h3>Since Curiosity landed on Mars: </h3>
+      </div>
+      <div className="timeCount">
+        <p>{years} y</p>
+        <p>{months} m</p>
+        <p>{days} d </p>
+        <p>{hours} h </p>
+        <p>{minutes} min </p>
+        <p>{seconds} <span>sec</span> </p>
+      </div>
+    </div>
   );
 };
 
