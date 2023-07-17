@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectInsight, setScreenMode } from "../planetSlice";
 // import ButtonUp from "./ButtonUp";
-import ThreeDots from "../../../img/svg/threedots-svgrepo-com-horizontal.svg";
+import ThreeDotsWhite from "../../../img/svg/three-dots-horizontal-white.svg";
 
 const Insight = () => {
   const dispatch = useDispatch();
@@ -40,12 +40,12 @@ const Insight = () => {
         <div className="insightQuickFacts">
           <h3>Quick facts</h3>
           <ul>
-            <li><img src={ThreeDots} alt="three-dots" />{quickFacts.fact1}</li>
-            <li><img src={ThreeDots} alt="three-dots" />{quickFacts.fact2}</li>
-            <li><img src={ThreeDots} alt="three-dots" />{quickFacts.fact3}</li>
-            <li><img src={ThreeDots} alt="three-dots" />{quickFacts.fact4}</li>
-            <li><img src={ThreeDots} alt="three-dots" />{quickFacts.fact5}</li>
-            <li><img src={ThreeDots} alt="three-dots" />{quickFacts.fact6}</li>
+            <li><img src={ThreeDotsWhite} alt="three-dots" />{quickFacts.fact1}</li>
+            <li><img src={ThreeDotsWhite} alt="three-dots" />{quickFacts.fact2}</li>
+            <li><img src={ThreeDotsWhite} alt="three-dots" />{quickFacts.fact3}</li>
+            <li><img src={ThreeDotsWhite} alt="three-dots" />{quickFacts.fact4}</li>
+            <li><img src={ThreeDotsWhite} alt="three-dots" />{quickFacts.fact5}</li>
+            <li><img src={ThreeDotsWhite} alt="three-dots" />{quickFacts.fact6}</li>
           </ul>
         </div>
         <div>

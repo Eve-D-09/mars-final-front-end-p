@@ -1,171 +1,295 @@
-
 .messengersComp {
-    display: flex;
-    flex-direction: column;
-    /* margin: 60px 0 60px; */
-    padding: 60px 0 60px;
-    gap: 20px;
-    height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  /* margin: 60px 0 60px; */
+  padding: 60px 0 60px;
+  gap: 20px;
+  height: auto;
 }
 
 .messengersNav nav {
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-    gap: 10px;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 
 .messengersNav a {
-    background-color: var(--orange-color);
-    border-radius: var(--border-radius);
-    /* border: 1px solid #2a4d99; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 250px;
-    height: 50px;
-    margin: 0 auto;
+  background-color: var(--orange-color);
+  border-radius: var(--border-radius);
+  /* border: 1px solid #2a4d99; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  height: 50px;
+  margin: 0 auto;
+  box-shadow: rgba(87, 103, 196, 0.3) 0px 10px 20px,
+    rgba(136, 130, 223, 0.219) 0px 15px 15px;
 }
 
 .messengersComp h2 {
-    font-family: var(--font-lost-ages), sans-serif;
-    margin: 0 auto;
+  font-family: var(--font-lost-ages), sans-serif;
+  margin: 0 auto;
 }
 
-.roversContainer, 
+.roversContainer,
 .orbitersContainer {
-    /* width: 90%; */
-    /* height: 75vh; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    opacity: 0.8;
-    margin: 60px 0;
-    padding: 50px 10px;
-    
+  /* width: 90%; */
+  /* height: calc(50px + 5vh); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  opacity: 0.85;
+  margin: 50px 0 300px;
+  /* padding: 50px 10px; */
 }
 
-.roversContainer h2, 
+.roversContainer h2,
 .orbitersContainer h2 {
-    text-align: center;
-    background-color: var(--orange-color);
-    width: 250px;
-    margin: 0 auto;
-    padding: 10px 0;
-    border-radius: var(--border-radius);
-    
+  text-align: center;
+  background-color: var(--orange-color);
+  width: 250px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-radius: var(--border-radius);
 }
 
-.selectRoverContainer, 
+.selectRoverContainer,
 .selectOrbiterContainer {
-    /* width: 90%; */
-    width: 275px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    background-color: var(--orange-color);
-    border-radius: var(--border-radius);
-    padding: 10px 5px;
+  /* width: 90%; */
+  width: 275px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: var(--orange-color);
+  border-radius: var(--border-radius);
+  padding: 10px 5px;
 }
 
-.roversContainer *, 
+.roversContainer *,
 .orbitersContainer * {
-    font-family: var(--font-lorenza);
-    /* padding: var(--padding-light);  */
-    
+  font-family: var(--font-lorenza);
+  /* padding: var(--padding-light);  */
 }
 
-.roversContainer label, 
+.roversContainer label,
 .selectOrbiterContainer label {
-    font-family: var(--font-lorenza);
-    font-size: 1.1rem;
-    margin: var(--padding-light);
+  font-family: var(--font-lorenza);
+  font-size: 1.1rem;
+  margin: var(--padding-light);
 }
 
-.roversContainer select, 
+.roversContainer select,
 .selectOrbiterContainer select {
-    border-radius: var(--border-radius);
-    border-color: var(--blue-color);
-    width: 250px;
-    height: 50px;
-    margin: 0 auto;
+  border-radius: var(--border-radius);
+  border-color: var(--blue-color);
+  width: 250px;
+  height: 50px;
+  margin: 0 auto;
 }
 
-.roverInfo h3, .roverInfo p, 
+.roverInfo h3,
+.roverInfo p,
 .roverInfo li {
-    font-family: var(--queen-sides-medium);
-    opacity: 1;
+  font-family: var(--queen-sides-medium);
+  opacity: 1;
 }
 
-.roverInfo li, 
+.roverInfo li,
 .orbiterInfo li {
-   list-style: none;
-   padding: 10px 5px;
+  list-style: none;
+  padding: 10px 5px;
 }
 
-.roverInfo ul, 
+.roverInfo ul,
 .orbiterInfo ul {
-    padding: 0;
+  padding: 0;
 }
 
-.roverInfo h3, 
+.roverInfo h3,
 .orbiterInfo h3 {
-   font-family: var(--font-lorenza);
+  font-family: var(--font-lorenza);
 }
 
 .roverInfo,
 .orbiterInfo {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    align-items: center;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
 }
 
-.roverInfo > div, 
+.roverInfo > div,
 .orbiterInfo > div {
-    padding: 10px 10px;
-    margin: 10px 0;
-    border-radius: var(--border-radius);
+  padding: 10px 10px;
+  margin: 10px 0;
+  border-radius: var(--border-radius);
 }
 
-.roverPrimaryInfo, .roverMission, .roverQuickFacts, .roverTechSpec {
-    background-color: var(--orange-color);
+.roverPrimaryInfo,
+.roverMission,
+.roverQuickFacts,
+.roverTechSpec {
+  background-color: var(--orange-color);
 }
 
-.roverQuickFacts li, .orbiterFacts  li{
-    display: flex;
-    gap: 10px;
-    padding: var(--padding-light);
+.roverQuickFacts li,
+.orbiterFacts li {
+  display: flex;
+  gap: 10px;
+  padding: var(--padding-light);
 }
 
 .linkBack a {
-    text-decoration: none;
-    font-family: var(--font-lorenza);
-    color: white;
-    background-color: var(--blue-color);
-    padding: 10px 20px;
-    opacity: 1;
-    border-radius: var(--border-radius);
-    display: block;
-    width: 200px;
+  text-decoration: none;
+  font-family: var(--font-lorenza);
+  color: white;
+  background-color: var(--blue-color);
+  padding: 10px 20px;
+  opacity: 1;
+  border-radius: var(--border-radius);
+  display: block;
+  width: 200px;
+  text-align: center;
+}
+
+.selectOrbiterContainer h3,
+p,
+li {
+  font-family: var(--queen-sides-medium);
+}
+
+.orbiterPrimaryInfo,
+.orbiterFacts {
+  background-color: var(--orange-color);
+}
+
+.orbiterPrimaryInfo p,
+.orbiterFacts li {
+  font-family: var(--queen-sides-medium);
+}
+
+/* ------------------------------------------------------------------------------- */
+
+/* box-shadow: rgba(13, 22, 75, 0.3) 0px 19px 38px, rgba(51, 41, 189, 0.219) 0px 25px 25px; */
+
+@media (min-width: 600px) {
+  .messengersNav {
+    width: 75%;
+    margin: 0 auto;
+  }
+  .messengersNav nav {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .messengersNav a {
+    width: 350px;
+  }
+
+  .messengersComp h2 {
+    font-size: 2rem;
+  }
+
+  .roverInfo h3,
+  .orbiterInfo h3 {
+    font-size: 1.5rem;
     text-align: center;
+  }
+
+  .roverInfo p,
+  .orbiterInfo p {
+    font-size: 1.3rem;
+    padding: 5px 10px;
+    line-height: 1.8;
+  }
+
+  .roverQuickFacts li,
+  .orbiterFacts li {
+    font-size: 1.3rem;
+    padding: 5px 10px;
+    line-height: 1.5;
+  }
+
+  .roverQuickFacts li img,
+  .orbiterFacts li img {
+    align-self: flex-start;
+  }
 }
 
-.selectOrbiterContainer h3, p, li {
-    font-family: var(--queen-sides-medium);
+/* ----------------------------------------------------------------------------------- */
+
+@media (min-width: 800px) {
+  .roversContainer h2,
+  .orbitersContainer h2 {
+    font-size: 1.8rem;
+    width: 375px;
+  }
+
+  .selectRoverContainer,
+  .selectOrbiterContainer {
+    width: 375px;
+    padding: 15px 10px;
+  }
+
+  .selectRoverContainer label,
+  .selectOrbiterContainer label {
+    font-size: 1.3rem;
+  }
+
+  .roversContainer select,
+  .selectOrbiterContainer select {
+    width: 300px;
+  }
+
+  .roverPrimaryInfo h3,
+  .orbiterPrimaryInfo h3 {
+    font-size: 1.6rem;
+  }
+
+  .roverInfo, .orbiterInfo {
+        width: 80%;
+  }
+}
+
+/* --------------------------------------------------------------------------- */
+@media (min-width: 990px) {
+  .messengersNav nav {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    gap: 20px;
+  }
+
+  .messengersNav a {
+    height: 70px;
+    font-size: 1.5rem;
+  }
+
+  .roversContainer,
+.orbitersContainer {
+    margin-top: 250px;
+}
+}
+
+/* --------------------------------------------------------------------------------- */
+@media (min-width: 1200px) {
+    .roverInfo, .orbiterInfo {
+        width: 75%;
+  }
+
+  .linkBack a {
+    width: 300px;
+    padding: 20px 20px;
+    font-size: 1.2rem;
+    opacity: 1;
     
+  }
 }
-
-.orbiterPrimaryInfo, .orbiterFacts {
-    background-color: var(--orange-color);
-}
-
-.orbiterPrimaryInfo p, 
-.orbiterFacts li  {
-    font-family: var(--queen-sides-medium);
-}
-
 

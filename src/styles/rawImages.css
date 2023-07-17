@@ -1,12 +1,18 @@
+
+.searchWrapper {
+    padding: 100px 0 150px;
+}
+
 .searchContainer {
-    /* width: 320px; */
+    width: 95%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    justify-content: flex-start;
-    padding: 50px 0 50px;
+    padding: 25px 0 25px;
+    border-radius: var(--border-radius);
+    box-shadow: rgba(79, 129, 170, 0.3) 0px 10px 15px, rgba(105, 140, 185, 0.219) 0px 15px 15px;
 }
 
 .searchContainer h2 {
@@ -99,13 +105,92 @@
 }
 
 .rawImagesBox {
-  background-color: var(--verylight-blue);
+  background-color: #e9f3fd;
+  /* #ced9e4 */
   border-radius: var(--border-radius);
+  box-shadow: rgba(79, 129, 170, 0.3) 0px 10px 15px, rgba(105, 140, 185, 0.219) 0px 15px 15px;
   /* border: 2px solid black; */
   width: 90%;
   margin: 0 auto;
   
 }
+
+/* ------------------------------------------------------- */
+
+@media (min-width: 390px) {
+    .searchContainer div:first-of-type {
+        width: 350px;
+    }
+
+    .searchContainer {
+        width: 390px;
+        padding-bottom: 100px;
+        padding-top: 50px;
+    }
+    .rawImagesBox {
+        width: 85%;
+        padding-bottom: 20px;
+        
+    }
+
+    
+}
+
+/* ---------------------------------------------------------- */
+@media (min-width: 600px) {
+    .searchContainer {
+        width: 400px;
+        /* padding-bottom: 150px; */
+    }
+
+    .rawImagesBox {
+        width: 75%;
+    }
+}
+
+
+/* ----------------------------------------------------------- */
+@media (min-width: 990px) {
+    .searchContainer {
+        width: 400px;
+    }
+    .rawImagesBox {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
+
+    .rawImagesContainer {
+        flex-basis: 32%;
+        border: 1px solid #bfdbf7;
+        border-radius: var(--border-radius);
+    }
+
+}
+
+/* --------------------------------------------------------------------- */
+
+@media (min-width: 1400px) {
+    .rawImagesBox {
+        width: 1250px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .rawImagesBox {
+        width: 1500px;
+       
+    }
+    .rawImagesContainer {
+        width: 400px;
+        flex-basis: 25%;
+    }
+}
+
+
 
 
 

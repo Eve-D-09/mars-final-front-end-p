@@ -17,16 +17,19 @@
 }
 
 .insightInfo, .insightMission, .insightQuickFacts {
-    background-color: var(--blue-color);
+    /* background-color: var(--blue-color); */
+    background-color: rgb(23, 77, 179);
     box-shadow: rgba(37, 13, 75, 0.3) 0px 19px 38px, rgba(9, 7, 26, 0.219) 0px 25px 25px;
     border: 1px solid #2a4d99;
 }
 
 .insightContainer p, 
-.insightContainer li {
+.insightContainer li,
+.insightContainer h3 {
     font-family: var(--queen-sides-medium);
     list-style: none;
     line-height: 1.3rem;
+    color: white;
 }
 
 .insightContainer h2,
@@ -34,6 +37,7 @@
     text-align: center; 
     font-family: var(--font-lorenza);
     font-size: 1.5rem;
+    
 }
 
 .insightQuickFacts ul {
@@ -43,10 +47,38 @@
 .insightQuickFacts li {
     display: flex;
     gap: 10px;
+    align-items: flex-start;
     padding: var(--padding-light);
     line-height: 1.3rem;
 }
 
-.insightQuickFacts svg {
-    background-color: white;
+
+
+
+
+/* -------------------------------------------------- */
+
+@media (min-width: 600px) {
+    .insightContainer h2 {
+        font-size: 1.8rem;
+    }
+
+    .insightContainer p,
+    .insightQuickFacts li {
+        line-height: 1.5;
+        padding: 10px 25px;
+    }
+
+}
+
+@media (min-width: 990px) {
+    .insightContainer {
+        width: 75%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .insightContainer {
+        width: 950px;
+    }
 }

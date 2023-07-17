@@ -4,7 +4,7 @@ import React from "react";
 // import Ingenuity from "./Ingenuity";
 // import Insight from "./Insight";
 import MoreInfo from "../../../img/svg/more-grid-small-svgrepo-com.svg";
-import Interval from "./Interval";
+// import Interval from "./Interval";
 import Timer from "./Timer";
 
 import {useDispatch} from "react-redux";
@@ -19,7 +19,7 @@ const Messengers = () => {
   // };
 
   // ------------------------------------------------------------------------
-  // remove this between if does not work
+  
   const dispatch = useDispatch();
 
   const onNavClick = (e) => {
@@ -44,9 +44,9 @@ const Messengers = () => {
       {roverScreen === 6 && <Orbiters />}
       {roverScreen === 7 && <Ingenuity />}
       {roverScreen === 8 && <Insight />} */}
-      <div className="intervalModul">
+      {/* <div className="intervalModul">
         <Interval />
-      </div>
+      </div> */}
     </div>
   );
 };

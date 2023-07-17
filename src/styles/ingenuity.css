@@ -47,3 +47,66 @@
     line-height: 1.3rem;
 }
 
+.helicopterQuickFacts li img {
+    align-self: flex-start;
+    
+}
+
+/* ------------------------------------------------------------------ */
+@media (min-width: 600px) {
+    .helicopterWrapper {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .helicopterContainer {
+        box-shadow: rgba(13, 22, 75, 0.3) 0px 10px 20px, rgba(51, 41, 189, 0.219) 0px 15px 15px;
+    }
+
+
+    .helicopterContainer h2 {
+        font-size: 1.8rem;
+    }
+
+    .helicopterContainer p, 
+    .helicopterQuickFacts li {
+        font-size: 1.3rem;
+        line-height: 1.8;
+    }
+
+    .helicopterContainer h3 {
+        font-size: 1.5rem;
+    }
+
+    .helicopterContainer .linkBack a {
+        width: 250px;
+        background-color: rgb(21, 83, 197);
+        font-size: 1.3rem;
+}
+}
+
+/* ----------------------------------------------------------------- */
+
+@media (min-width: 800px) {
+    .helicopterContainer {
+        width: 75%;
+    }
+
+    .helicopterContainer > div {
+        padding: 10px 25px;
+    }
+
+    
+}
+
+@media (min-width: 990px) {
+    .helicopterContainer {
+        width: 70%;
+    }
+}
+
+@media (min-width: 990px) {
+    .helicopterContainer {
+        width: 950px;
+    }
+}
+

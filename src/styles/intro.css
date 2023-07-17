@@ -72,4 +72,36 @@
 
 }
 
+@media (min-width: 990px) {
+    .homeContainer {
+      margin-bottom: calc(70px + 10vh);
+    }
+     .introContainer {
+      margin-top: 120px;
+     }
+
+     .accordionBody {
+      padding: 15px 10px;
+    }
+
+    .accordionContent p {
+      padding: 10px 15px;
+      margin: 0;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .introContainer {
+      width: 500px;
+      margin-left: 100px;
+    }
+
+}
+
+@media (min-width: 1400px) {
+     .introContainer {
+      margin-left: 140px;
+     }
+}
 

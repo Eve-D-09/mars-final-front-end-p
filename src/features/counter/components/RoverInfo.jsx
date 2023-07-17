@@ -31,7 +31,7 @@ const RoverInfo = (props) => {
                 heigth, weigth's {rover.size.weigth} and is {rover.size.width}
                 wide.
               </p>
-              <p>He travells {rover.distanceTravelled}.</p>
+              <p>It travelled {rover.distanceTravelled}.</p>
             </div>
             <div className="roverMission">
               <p>{rover.missionDescription}</p>

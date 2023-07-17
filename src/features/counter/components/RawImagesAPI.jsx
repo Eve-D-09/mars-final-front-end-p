@@ -19,7 +19,6 @@ const RawImagesAPI = () => {
   const day = today.getDate() > 9 ? today.getDate() : "0" + today.getDate();
   console.log(day);
 
-
   const dateRanges = {
     perseverance: ["2021-02-18", `${today.getFullYear()}-${month}-${day}`],
     curiosity: ["2012-08-06", `${today.getFullYear()}-${month}-${day}`],
@@ -51,34 +50,38 @@ const RawImagesAPI = () => {
 
   return (
     <>
-      <div className="searchContainer">
-        <div>
-          <h2> Search raw unprocessed photos</h2>
+      <div className="searchWrapper">
+        <div className="searchContainer">
+          <div>
+            <h2> Search raw unprocessed photos</h2>
+          </div>
+          <div className="searchInputContainer">
+            <label>Search by rover</label>
+            <select onChange={(e) => dispatch(setSearch(e.target.value))}>
+              <option value=""></option>
+              <option value="perseverance">Perseverance</option>
+              <option value="curiosity">Curiosity</option>
+              <option value="opportunity">Opportunity</option>
+              <option value="spirit">Spirit</option>
+            </select>
+          </div>
+          <div className="searchInputContainer">
+            <label>Search by date</label>
+            {search && (
+              <input
+                onChange={(e) => dispatch(setCalendar(e.target.value))}
+                type="date"
+                id="searchDate"
+                min={dateRanges[search][0]}
+                max={dateRanges[search][1]}
+              />
+            )}
+            {calendar && search && (
+              <button onClick={gettingData}>Search</button>
+            )}
+          </div>
+          {/* {rawImages && <RawImages rawImages={rawImages} key={rawImages.id} />} */}
         </div>
-        <div className="searchInputContainer">
-          <label>Search by rover</label>
-          <select onChange={(e) => dispatch(setSearch(e.target.value))}>
-            <option value=""></option>
-            <option value="perseverance">Perseverance</option>
-            <option value="curiosity">Curiosity</option>
-            <option value="opportunity">Opportunity</option>
-            <option value="spirit">Spirit</option>
-          </select>
-        </div>
-        <div className="searchInputContainer">
-          <label>Search by date</label>
-          {search && (
-            <input
-              onChange={(e) => dispatch(setCalendar(e.target.value))}
-              type="date"
-              id="searchDate"
-              min={dateRanges[search][0]}
-              max={dateRanges[search][1]}
-            />
-          )}
-          {calendar && search && <button onClick={gettingData}>Search</button>}
-        </div>
-        {/* {rawImages && <RawImages rawImages={rawImages} key={rawImages.id} />} */}
       </div>
       {rawImages && <RawImages rawImages={rawImages} key={rawImages.id} />}
     </>

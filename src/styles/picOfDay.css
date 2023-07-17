@@ -122,3 +122,94 @@
     
 
 }
+
+@media (min-width: 990px) {
+    .picOfDayResult {
+        width: 75%;
+    }
+
+    .dayPicture {
+        width: 100%;
+    }
+
+    .pictureContent p:first-of-type, 
+    .pictureContent p:last-of-type  {
+         line-height: 1.7;
+         font-size: 1.4rem;
+         padding: 10px 20px;
+    }
+
+    .pictureContent h2 {
+        font-size: 1.7rem;
+        text-align: center;
+       
+    }
+}
+
+@media (min-width: 1200px) {
+    .picOfDayContainer {
+        width: 60%;
+    }
+    .picOfDayContainer h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 1300px) {
+    .picOfDayResult {
+        width: 70%;
+    }
+
+    .pictureContent {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .dayPicture {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1400px) {
+    .picOfDayResult {
+        width: 950px;
+    }
+
+    .pictureContent {
+        width: 900px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .picOfDayResult {
+        width: 1400px;
+    }
+
+    .dayPicture {
+        display: flex;
+        height: auto;
+    }
+
+    .picture {
+        width: 65%;
+    }
+
+    .picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .pictureContent {
+        width: 35%;
+        /* position: unset; */
+        bottom: 0;
+        right: 25px;
+    }
+
+    .picOfDayContainer h2 {
+        font-size: 2rem;
+    }
+}
+
