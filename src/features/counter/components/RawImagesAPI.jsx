@@ -80,7 +80,7 @@ const RawImagesAPI = () => {
               <button onClick={gettingData}>Search</button>
             )}
           </div>
-          {/* {rawImages && <RawImages rawImages={rawImages} key={rawImages.id} />} */}
+         
         </div>
       </div>
       {rawImages && <RawImages rawImages={rawImages} key={rawImages.id} />}

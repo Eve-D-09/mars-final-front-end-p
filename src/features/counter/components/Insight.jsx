@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { selectInsight, setScreenMode } from "../planetSlice";
-// import ButtonUp from "./ButtonUp";
+
 import ThreeDotsWhite from "../../../img/svg/three-dots-horizontal-white.svg";
 
 const Insight = () => {
@@ -57,7 +57,7 @@ const Insight = () => {
             Back to Messengers
           </a>
         </div>
-        {/* <ButtonUp /> */}
+       
       </div>
     </div>
   );

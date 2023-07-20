@@ -31,14 +31,24 @@ export const rovers = [
         fact6: `Perseverance is equipped with 23 cameras, a laser, and upgraded instruments.`,
      },
      techSpecs: {
-        cameras: `Total 23 cameras focusing on different tasks, images resolution is 0.82 milliradians per pixel.`,
+        cameras: `Total 23 cameras focusing on different tasks, images resolution is 0.82 milliradians per pixel.
+        Mastcam-Z, a stereoscopic imaging system with the ability to zoom.`,
         wheels: `Rover has 6 wheels, each with its own individual motor.Size of 20.7 inch (52.5 cm) in 
         diameter.Made of titanium. 2 front and 2 rear wheels also have individual steering motors 
         which allows the vehicle to turn in place, a full 360 degrees.`,
-        software: `Radiation-hardened central processor, perates at up to 200 megahertz speed, 2 gb of flash memory.`,
+        software: `The rover's computer uses the BAE Systems RAD750 radiation-hardened single board computer 
+        based on a ruggedized PowerPC G3 microprocessor (PowerPC 750). The computer contains 128 megabytes of 
+        volatile DRAM, and runs at 133 MHz. The flight software runs on the VxWorks Operating System, is written 
+        in C and is able to access 4 gigabytes of NAND non-volatile memory on a separate card.`,
         powerSystem: `It carries a radioisotope power system, converts heat from the natural 
-        radioactive decay of plutonium into electricity and charges 2 primary batteries.`,
-        instruments: `Upgraded Robotic arm, bigger wheels, 23 hi-res cameras, 2 microphones, 3 antennas for communication, sampling tubes.`
+        radioactive decay of plutonium into electricity and charges 2 primary batteries.
+        Unlike solar panels, the  thermoelectric power generator provides engineers with significant flexibility in operating the rover's 
+        instruments even at night, during dust storms, and through winter.`,
+        instruments: `Upgraded Robotic arm, bigger wheels, 23 hi-res cameras, 2 microphones, 3 antennas for communication, 
+        sampling tubes. The primary UHF antenna can send data from the rover at a maximum rate of two megabits per second. Two slower
+         X-band antennas provide communications redundancy. Perseverance's arm is longer and stronger, measuring 2.1 m (6 ft 11 in). 
+         The arm hosts an elaborate rock-coring and sampling mechanism to store geologic samples from the Martian surface in 
+         sterile caching tubes. There is also a secondary arm hidden below the rover that helps store the chalk-sized samples.`
      }
   },
   {
@@ -82,10 +92,18 @@ export const rovers = [
     techSpecs: {
         cameras: `Has 17 cameras with specific set of optics. Image Resolution from 0.82 to 2.1 milliradians per pixel`,
         wheels: ` Curiosity has 6 aluminium wheels measure 20 inches in diameter.Individual steering motors 
-         allows the vehicle to turn in place, a full 360 degrees. `,
-        software: `Radiation-hardened central processor,  up to 200 megahertz speed,2 GB of flash memory`,
-        powerSystem: `Radioisotope power system. Produces slightly over 100 watts, 2 lithium ion rechargeable batteries`,
-        instruments: ``,
+         allows the vehicle to turn in place, a full 360 degrees. Each wheel has cleats and is independently actuated and geared,
+          providing for climbing in soft sand and scrambling over rocks. Each front and rear wheel can be independently steered, 
+          allowing the vehicle to turn in place as well as execute arcing turns.`,
+        software: `The two identical on-board rover computers, called Rover Compute Element (RCE) contain radiation hardened
+         memory to tolerate the extreme radiation from space and to safeguard against power-off cycles. The computers run the
+          VxWorks real-time operating system (RTOS). Each computer's memory includes 256 kB of EEPROM, 256 
+          MB of DRAM, and 2 GB of flash memory.`,
+        powerSystem: `Radioisotope power system. The power source generates 9 MJ (2.5 kWh) of electrical energy each day, 
+        much more than the solar panels of the now retired Mars Exploration Rovers, which generated about 2.1 MJ (0.58 kWh) each day. 
+        The electrical output from the MMRTG charges two rechargeable lithium-ion batteries. This enables the power subsystem to 
+        meet peak power demands of rover activities when the demand temporarily exceeds the generator's steady output level. `,
+        instruments: `Chemistry and Camera (ChemCam), Rover Environment Monitoring Station and Radiation Assessment Detector.`,
      }
   },
   {
@@ -126,11 +144,18 @@ export const rovers = [
     fact6: `Opportunity recorded the first ever video taken of a dust devil on another planet`,
     },
     techSpecs: {
-      cameras: ``,
-      wheels: ``,
-      software: ``,
-      powerSystem: ``,
-      instruments: ``,
+      cameras: `Panoramic, navigation, miniature thermal emission spectrometer and 2 Hazcams (Hazard Avoidance) with 120 degree of view 
+      that provided additional data about rover sorroundings.`,
+      wheels: `Made of aluminum, 10 inches (0.25 meters) in diameter, 6 motors, all-wheel-drive. 
+      To keep mass down, Opportunity wheels skins are just 0.02 inch thick. Longest drive in one day: 721 ft.`,
+      software: ` Opportunity's onboard computer uses a 20 MHz RAD6000 CPU with 128 MB of DRAM, 3 MB of DRAM and 3 MB of EEPROM. The rover's 
+      operating temperature ranges from -40 to +40 °C (-40 to 104 °F) and radioisotope heaters provide a base level of heating,
+       assisted by electrical heaters when necessary.`,
+      powerSystem: `The rover used a combination of solar cells and a rechargeable chemical battery.
+      At the start of the mission the solar panels could provide up to around 900 watt-hours (Wh) to recharge the battery 
+      and power system in one Sol, but this could vary due to a variety of factors like seasonal winter and dust storms.`,
+      instruments: `Robotic arm, microscopic imager, a rock-grinding tool, and infrared, gamma-ray, and alpha-particle spectrometers
+       that analyzed the rocks, soil, and dust. `,
     }
   },
   {
@@ -169,11 +194,16 @@ export const rovers = [
          by liquid water in the past.`,
     },
     techSpecs: {
-      cameras: ``,
-      wheels: ``,
-      software: ``,
-      powerSystem: ``,
-      instruments: ``,
+      cameras: `Panoramic, Navigational, 2 Hazcams, Microscopic imager - obtained close-up, high-resolution images of rocks and soils.  `,
+      wheels: `Six wheels on a rocker-bogie system enabled mobility over rough terrain. Each wheel had its own motor. 
+      The vehicle was steered at front and rear and was designed to operate safely at tilts of up to 30 degrees`,
+      software: ` Spirit's onboard computer uses a 20 MHz RAD6000 CPU with 128 MB of DRAM and 3 MB of EEPROM. The rover's 
+      operating temperature ranges from -40 to +40 °C (-40 to 104 °F) and radioisotope heaters provide a base level of 
+      heating, assisted by electrical heaters when necessary.`,
+      powerSystem: `The rover uses a combination of solar cells and a rechargeable chemical battery. This class of rover
+       has two rechargeable lithium batteries. Global dust storms in 2007 reduced power levels for Opportunity and Spirit 
+       so much they could only run for a few minutes each day.`,
+      instruments: `Magnets for collecting magnetic dust particles, rock abrasion tool, alpha particle x-ray spectrometer. `,
     }
   },
   {
@@ -207,14 +237,26 @@ export const rovers = [
         by a tourist camera,`,
     },
     techSpecs: {
-      cameras: ``,
-      wheels: ``,
-      software: ``,
-      powerSystem: ``,
-      instruments: ``,
+      cameras: `The rover was imaged on Mars by the base station's IMP camera system, which also helped determine where
+       the rover should go. The rover had two monochrome cameras in front and a color camera at the rear. Each front
+        camera had an array 484 pixels high by 768 wide. `,
+      wheels: `The rover's wheels were made of aluminum and were 13 cm (5.1 in) in diameter and 7.9 cm (3.1 in) wide. 
+      They had serrated, stainless steel tracks that could generate a pressure of 1.65 kPa (0.239 psi) in optimal conditions
+       on soft ground.[25] No such need arose during the operational phase. Each wheel was driven by its own independent motor.
+        The first and third wheels were used for steering. A six-wheel-steering configuration was considered, but this was too 
+        heavy.As the rover rotated on itself, it drew a 74 cm (29 in) wide circle.`,
+      software: `Sojourner's central processing unit (CPU) was an Intel 80C85 with a 2 MHz clock, addressing 64 kilobytes (Kb) of memory, 
+      and running a cyclic executive. It had four memory stores; 64 Kb of RAM made by IBM for the main processor, 16 Kb of radiation-hardened 
+      PROM made by Harris, 176 Kb of non-volatile storage made by Seeq Technology, and 512 Kb of temporary data storage made by Micron. 
+      The electronics were housed inside the rover's warm electronics box (WEB).`,
+      powerSystem: `Sojourner had solar panels and a non-rechargeable lithium-thionyl chloride battery that 
+      could provide 150 watt-hours and allowed limited nocturnal operations. Once the batteries were depleted,
+       the rover could only operate during the day. `,
+      instruments: `The Ultra high frequency (UHF) radio modems operated in half-duplex mode, meaning they could either send or receive data
+       but not both at the same time. The data was communicated in bursts of 2 kB.`,
     },
     imageUrl: ``,
   },
 ];
 
-//  the link to count from past to know: https://codepen.io/RyanNiu/pen/GNYbwY dateCountUP
+

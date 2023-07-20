@@ -33,12 +33,12 @@ const Slider = () => {
 
   return (
     <div className="imageSliderContainer">
-      {/* <ClickFavorite id={slides[currentSlide].id} liked={slides[currentSlide].liked}/> */}
+     
       <div className="sliderButtons">
         <button onClick={prevSlide}> <img src={ArrowLeft} alt="arrow-left" /> </button>
         <button onClick={nextSlide}> <img src={ArrowRight} alt="arrow-right" /> </button>
       </div>
-      {/* <div className="imageSlider"> */}
+      
       {slides.map((slide, index) => {
         return (
           <>

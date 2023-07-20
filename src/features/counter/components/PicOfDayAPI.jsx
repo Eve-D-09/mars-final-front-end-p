@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { selectPicOfDay } from "../planetSlice";
 import { useSelector } from "react-redux";
-// import axios from "axios";
 import Picture from "./Picture";
 import Loading from "./Loading";
 import { getData } from "../../../controllers/dataControllers";
-// import ButtonUp from "./ButtonUp";
+
 
 
 
@@ -22,7 +21,7 @@ const PicOfDay = () => {
     );
   }, [ ]);
 
-  // console.log(picOfDay);
+ 
 
   if (!picOfDay) return <Loading />;
 
@@ -38,14 +37,7 @@ const PicOfDay = () => {
       <p>Since 2022, July, James Webb telescope started his journey into space.</p>
       <p> Now we can provide you amazing photos from across universe each day!</p>
       <button onClick={handleClick}>Show me Picture</button>
-      {/* {showPicture && (
-        <Picture
-          today={picOfDay.date}
-          title={picOfDay.title}
-          explanation={picOfDay.explanation}
-          img={picOfDay.url}
-        />
-      )} */}
+     
      
     </div>
     <div className="picOfDayResult">

@@ -6,7 +6,7 @@ const Picture = (props) => {
 
   return (
     <div className="dayPicture">
-      {/* <div className="dayPicture"> */}
+      
         <div className="picture">
           <img src={img} alt={title} />
         </div>
@@ -15,7 +15,7 @@ const Picture = (props) => {
           <p>{explanation}</p>
           <p>{today}</p>
         </div>
-      {/* </div> */}
+      
       <ButtonUp />
     </div>
   );

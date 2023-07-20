@@ -7,7 +7,7 @@ import MenuIcon from "../../../img/svg/menu-dots-svgrepo-com.svg";
 const Nav = () => {
   
 
-  // const [isNavOpen, setIsNavOpen ] = useState(false);
+  
 
   const dispatch = useDispatch();
 
@@ -16,16 +16,13 @@ const Nav = () => {
     dispatch(setScreenMode(Number(e.target.id)));
   };
 
-  // const onButtonClick = () => {
-  //   setIsNavOpen(!isNavOpen);
-  // };
+ 
 
   return (
     <>
      
       <div className="navigation">
-        {/* <button onClick={onButtonClick}><img src={MenuIcon} alt="menuIcon" /></button> */}
-        {/* { isNavOpen && ( */}
+       
         
         <img src={MenuIcon} alt="menuIcon" />
         <nav>
@@ -36,7 +33,7 @@ const Nav = () => {
           <a href="/#" onClick={onNavClick} id="3"> Raw Images <img src={ArrowRight} alt="arrow-right"  /></a>
           <a href="/#" onClick={onNavClick} id="4"> Best Images <img src={ArrowRight} alt="arrow-right"  /></a>
         </nav>
-        {/* )} */}
+       
       </div>
       
     </>

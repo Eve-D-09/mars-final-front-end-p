@@ -1,6 +1,6 @@
 import React from "react";
 import Intro from "./Intro";
-// import Timer from "./Timer";
+
 
 const Home = () => {
   return (

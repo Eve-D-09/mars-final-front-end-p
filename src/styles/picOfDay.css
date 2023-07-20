@@ -107,6 +107,9 @@
         width: 500px;
         margin: 0 auto;
         padding-bottom: 40px;
+        padding-top: 40px;
+        border-radius: var(--border-radius);
+        box-shadow: rgba(79, 129, 170, 0.3) 0px 10px 15px, rgba(105, 140, 185, 0.219) 0px 15px 15px;
     }
 
 

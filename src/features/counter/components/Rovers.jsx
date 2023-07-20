@@ -11,7 +11,7 @@ const Rovers = () => {
   let filtered = [...rovers];
 
   filtered = filtered.filter((item) => {
-    // console.log(sortRover, item.name, item.name.includes(sortRover));
+    
     return item.name === sortRover;
   });
   console.log(filtered);

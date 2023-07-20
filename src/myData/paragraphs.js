@@ -19,14 +19,18 @@ export const paragraphs = [
     title: `International missions`,
     content: `At the moment, there are 3 operational rovers on the surface of Mars, the Curiosity and Perseverance rovers,
     both operated by the American space agency NASA, as well as the Zhurong rover, part of the 
-     mission by the China National Space Administration (CNSA). Plus ESA and Indian orbiters`,
+     mission by the China National Space Administration (CNSA). European Space agency have sent Mars Express Orbiter on 2003. 
+     As of february 2021, there have been 18 spacecraft missions operating in Mars' orbit, 8 of which are currently active.
+     In 2022, contact was lost to India's Mars Orbiter Mission.  `,
   },
   {
     title: `Who is exploring now`,
-    content: `There are 7 orbiters surveying the planet. Maven, Odyssey and Mars Reconnaissance Orbiter are sent by NASA, 
+    content: `There are 7 orbiters surveying the planet. Maven, Odyssey and Mars Reconnaissance Orbiter, 
     including Ingenuity helicopter, which is scouting sites for Perseverance to study.
-    Various sample return missions are being planned  that will pick up the samples
-    currently being collected by the Perseverance rover.`,
+     Both rovers are operating in different parts of Mars and have slighly 
+    different missions. Only Perseverance rover is collecting samples. With planned launch dates for the Earth Return Orbiter 
+    and Sample Retrieval Lander in fall 2027 and 
+    summer 2028, respectively, the samples are expected to arrive on Earth in 2033. `,
   },
   
 ];

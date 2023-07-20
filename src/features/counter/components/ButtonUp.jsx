@@ -35,4 +35,3 @@ const ButtonUp = () => {
 export default ButtonUp;
 
 
-//  button: position: fixed, bottom: 50px, right: 50px, height: 50px, width: 50px;

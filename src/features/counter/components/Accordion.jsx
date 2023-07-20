@@ -10,7 +10,7 @@ const Accordion = ({ paragraph }) => {
     <div>
       <div className="accordionBody" onClick={() => setIsActive(!isActive)}>
         <p>{title}</p>
-        {/* <p>{isActive ? "-" : "+"}</p> */}
+       
         <p>
           {isActive ? (
             <PlusCircle
@@ -23,7 +23,7 @@ const Accordion = ({ paragraph }) => {
             <PlusCircle style={{ transform: "rotateZ(90deg)",transition: "0.5s ease-in"}}/>
           )}
         </p>
-        {/* {isActive && <div className="accordionContent">{content}</div>} */}
+       
       </div>
       {isActive && <div className="accordionContent"><p>{content}</p></div>}
     </div>

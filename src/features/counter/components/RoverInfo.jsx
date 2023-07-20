@@ -1,11 +1,11 @@
 import React from "react";
 import ThreeDots from "../../../img/svg/threedots-svgrepo-com-horizontal.svg";
-// import Messengers from "./Messengers";
+
 import {  useDispatch } from "react-redux";
 import { setScreenMode } from "../planetSlice";
 
 const RoverInfo = (props) => {
-  // const screenMode = useSelector(selectScreenMode);
+  
   const dispatch = useDispatch();
 
   const onNavClick = (e) => {
@@ -55,7 +55,7 @@ const RoverInfo = (props) => {
               <p>{rover.techSpecs.instruments}</p>
             </div>
 
-            {/* <button onClick={screenMode === 2 && <Messengers />}>get back to messengers</button> */}
+            
             <div className="linkBack">
               <a href="/#" onClick={onNavClick} id="2"> Back to Messengers </a>
             </div>

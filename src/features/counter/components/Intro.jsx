@@ -1,7 +1,7 @@
 import React from "react";
 import { paragraphs } from "../../../myData/paragraphs";
 import Accordion from "./Accordion";
-// import Background from "./Background";
+
 
 const Intro = () => {
   return (
