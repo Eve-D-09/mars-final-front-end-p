@@ -132,11 +132,17 @@
     width: 250px;
   }
 
- 
 
-  .navigation img {
+  .navigation  img {
     display: none;
   }
+
+  /* ------------------------- */
+  nav a:last-of-type img {
+    display: initial;
+  }
+/* ------------------------------- */
+  
 
   .navigation {
     /* width: 80%; */
@@ -182,7 +188,7 @@
 /* ------------------------------------------------------------------------- */
 @media (min-width: 1200px) {
   .headerContainer {
-    width: 80%;
+    width: 90%;
   }
 }
 

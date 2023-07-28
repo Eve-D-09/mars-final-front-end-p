@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import Picture from "./Picture";
 import Loading from "./Loading";
 import { getData } from "../../../controllers/dataControllers";
+import Subscribe from "./Subscribe";
 
 
 
@@ -37,19 +38,21 @@ const PicOfDay = () => {
       <p>Since 2022, July, James Webb telescope started his journey into space.</p>
       <p> Now we can provide you amazing photos from across universe each day!</p>
       <button onClick={handleClick}>Show me Picture</button>
-     
-     
     </div>
-    <div className="picOfDayResult">
-    {showPicture && (
+    {/* <div className="picOfDayResult"> */}
+     {showPicture && (
+      <div className="picOfDayResult">
         <Picture
           today={picOfDay.date}
           title={picOfDay.title}
           explanation={picOfDay.explanation}
           img={picOfDay.url}
         />
+        </div>
       )}
-    </div>
+    {/* </div> */}
+    <Subscribe />
+    
     </>
   );
 };

@@ -13,6 +13,9 @@ import Rovers from "./Rovers";
 import Orbiters from "./Orbiters";
 import Ingenuity from "./Ingenuity";
 import Insight from "./Insight";
+import Login from "./Login";
+import Register from "./Register";
+import CustomerAccount from "./CustomerAccount";
 
 const Main = () => {
   const screenMode = useSelector(selectScreenMode);
@@ -32,6 +35,9 @@ const Main = () => {
         {screenMode === 6 && <Orbiters />}
         <div className="ingenuityScreen">{screenMode === 7 && <Ingenuity />} </div>
         <div className="insightScreen">{screenMode === 8 && <Insight />}</div>
+        {screenMode === 9 && <Login />}
+        {screenMode === 10 && <Register />}
+        {screenMode === 11 && <CustomerAccount />}
       </>
       <div className="footer">
         <Footer />
