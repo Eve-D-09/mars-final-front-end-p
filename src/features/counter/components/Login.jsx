@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setScreenMode } from "../planetSlice";
-import { validate} from "../../../validation/index";
+import { validate } from "../../../validation/index";
 import { setToastMessage } from "../planetSlice";
 
 
@@ -22,7 +22,7 @@ const Login = () => {
     
     if (results === null) {
       try {
-        const { data } = await axios.post(`http://localhost:6001/user`, input);
+        const { data } = await axios.post(`http://localhost:6001/account/login`, input);
         if ( data.status === 1) {
           dispatch(setToastMessage("Success"));
         }
@@ -30,14 +30,14 @@ const Login = () => {
         console.log(error);
       }
     } else {
-      dispatch(setToastMessage("check your inputs")) ;
+      dispatch(setToastMessage("Please, check your e-mail or password")) ;
     }
     
   };
 
   return (
     <div>
-      {/*Q1-- a form or just a div? */}
+      
       <form onSubmit={login} onInput={(e) => {setInput({ ...input, [e.target.name]: e.target.value });}} >
         <div className="formLinks">
           <a href="/#" onClick={onNavClick} id="9"> LOG IN</a>
@@ -52,8 +52,9 @@ const Login = () => {
           <input type="password" name="password" placeholder="password" />
         </div>
 
+        {/* <button type="submit" onClick={onNavClick} id="11" >LOGIN</button> */}
         <button type="submit" >LOGIN</button>
-        {/* Q2 -- button or a take to Account component? can I pass both functions here ? */}
+        
        
       </form>
     </div>

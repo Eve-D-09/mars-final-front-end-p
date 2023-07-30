@@ -15,6 +15,7 @@ import Ingenuity from "./Ingenuity";
 import Insight from "./Insight";
 import Login from "./Login";
 import Register from "./Register";
+import RegisterDetails from "./RegisterDetails";
 import CustomerAccount from "./CustomerAccount";
 
 const Main = () => {
@@ -37,6 +38,7 @@ const Main = () => {
         <div className="insightScreen">{screenMode === 8 && <Insight />}</div>
         {screenMode === 9 && <Login />}
         {screenMode === 10 && <Register />}
+        {screenMode === 12 && <RegisterDetails />}
         {screenMode === 11 && <CustomerAccount />}
       </>
       <div className="footer">

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setScreenMode } from "../planetSlice";
-import { validate} from "../../../validation/index";
+import { validate } from "../../../validation/index";
 import { setToastMessage } from "../planetSlice";
 
 const Register = () => {
@@ -21,7 +21,7 @@ const Register = () => {
     console.log(results);
     if (results === null) {
       try {
-        const { data } = await axios.post(`http://localhost:6001/user`, input);
+        const { data } = await axios.post(`http://localhost:6001/account/register`, input);
         if ( data.status === 1) {
           dispatch(setToastMessage("Success"));
         }
@@ -53,23 +53,23 @@ const Register = () => {
           <input type="text" name="lastName" placeholder="" required />
         </div>
         <div>
-          <label>Email</label>
+          <label>Email *</label>
           <input type="text" name="email" placeholder="" required />
         </div>
         <div>
-          <label>Confirm e-mail</label>
+          <label>Confirm e-mail *</label>
           <input type="text" name="email" placeholder="" required />
         </div>
         <div>
-            <label>Password</label>
+            <label>Password *</label>
             <input type="text" name="password" placeholder="" required />
         </div>
         <div>
-            <label>Confirm Password</label>
+            <label>Confirm Password *</label>
             <input type="text" name="password" placeholder="" required />
         </div>
-        <button type="submit" >REGISTER</button>
-        {/* ? button login take to Account component? */}
+        <button type="submit" onClick={onNavClick} id="12" >REGISTER</button>
+        
         <p>By creating an account I agree to <a href="/" >Terms & Conditions</a> and 
         <a href="/" >Privacy Policy</a> </p>
       </form>

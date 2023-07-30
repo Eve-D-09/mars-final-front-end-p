@@ -5,7 +5,7 @@ export const login = {
     .string()
     .required()
     .email({ tlds: { allows: false } }),
-  password: joi.string().required().min(8).max(16),
+  password: joi.string().required().min(6).max(64),
 };
 
 export const register = {
@@ -13,11 +13,21 @@ export const register = {
     .string()
     .required()
     .email({ tlds: { allows: false } }),
-  password: joi.string().required().min(8).max(16),
-  firstName: joi.string().required().min(3).max(16),
-  lastName: joi.string().required().min(8).max(16),
+  password: joi.string().required().min(8).max(64),
+  firstName: joi.string().required().min(3).max(64),
+  lastName: joi.string().required().min(3).max(64),
 };
 
 export const subscribe = {
-    email: joi.string().required().email({tlds: { allows: false }})
-}
+    email: joi.string().required().email({tlds: { allows: false }}),
+    
+};
+
+export const registerDetails = {
+  addressLine1: joi.string(), 
+  addressLine2: joi.string(),
+  city: joi.string(),
+  postcode: joi.number(),
+  country: joi.string(),
+  phoneNumber: joi.number(),
+};
