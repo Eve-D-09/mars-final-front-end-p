@@ -24,6 +24,7 @@ const Register = () => {
         const { data } = await axios.post(`http://localhost:6001/account/register`, input);
         if ( data.status === 1) {
           dispatch(setToastMessage("Success"));
+          dispatch(setScreenMode(12));
         }
       } catch (error) {
         console.log(error);

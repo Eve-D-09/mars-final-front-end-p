@@ -6,7 +6,7 @@ import { setToastMessage } from "../planetSlice";
 import ArrowRight from "../../../img/svg/arrow-right-white-svgrepo-com.svg";
 
 const Subscribe = () => {
-  const [input, setInput] = useState({});
+  const [input, setInput] = useState({ email: "" });
 
   const dispatch = useDispatch();
 
@@ -21,6 +21,9 @@ const Subscribe = () => {
         );
         if (data.status === 1) {
           dispatch(setToastMessage("Success"));
+          setInput({ email: "" });
+        } else {
+          dispatch(setToastMessage("duplicate entry"));
         }
       } catch (error) {
         console.log(error);
@@ -33,22 +36,28 @@ const Subscribe = () => {
   return (
     <div className="subscribeContainer">
       <h2>
-        New to Messengers? Subscribe for our newsletter and Pic of Day to your
-        e-mail
+        New to Messengers? Subscribe for our newsletter and get Pic of Day to
+        your e-mail
       </h2>
-      <form onSubmit={subscribe} onInput={(e) => { setInput({ ...input, [e.target.name]: e.target.value }); }} >
+      <form
+        onSubmit={subscribe}
+        onInput={(e) => {
+          setInput({ ...input, [e.target.name]: e.target.value });
+        }}
+      >
         <div className="subscribeInput">
-          <input type="text" name="email" placeholder="Email" />
-          <button><img src={ArrowRight}  alt="arrow-right" /></button>
+          <input
+          //  to stop react from errors
+            onChange={() => {}}
+            type="text"
+            name="email"
+            value={input.email}
+            placeholder="Email"
+          />
+          <button>
+            <img src={ArrowRight} alt="arrow-right" />
+          </button>
         </div>
-        {/* <div>
-          <label for="once">Once per week</label>
-          <input type="radio" name="frequency" value="once" />
-        </div>
-        <div>
-          <label for="three">Three times a week</label>
-          <input type="radio" name="frequency" value="three" />
-        </div> */}
 
         <div className="formPolicy">
           <p>

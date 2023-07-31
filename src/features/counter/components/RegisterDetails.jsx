@@ -16,19 +16,21 @@ const RegisterDetails = () => {
   };
 
   const registerDetails = async (e) => {
-    e.preventdefault();
+    e.preventDefault();
     const results = await validate(input, "registerDetails");
+    console.log(results);
     if (results === null) {
         try {
           const { data } = await axios.post(`http://localhost:6001/account/details`, input);
           if ( data.status === 1) {
             dispatch(setToastMessage("Success"));
+            dispatch(setScreenMode(9));
           }
         } catch (error) {
           console.log(error);
         }
       } else {
-        dispatch(setToastMessage("??")) ;
+        dispatch(setToastMessage("Please, check your form")) ;
       }
 
   }
@@ -36,7 +38,7 @@ const RegisterDetails = () => {
   return (
     <div className="formContainer">
       <h2>Please, fill the next bit</h2>
-      <form onSubmit={registerDetails} onInput={(e) => {setInput({...input, [e.target.value]: e.target.value})}}>
+      <form onSubmit={registerDetails} onInput={(e) => {setInput({...input, [e.target.name]: e.target.value})}}>
         <div className="formInputs">
           <label> Address line 1</label>
           <input type="text" name="addressLine1" placeholder="" required />
@@ -62,8 +64,8 @@ const RegisterDetails = () => {
           <input type="text" name="phoneNumber" placeholder="" required />
         </div>
         <div className="registerButtons">
-          <button onClick={onNavClick} id="11">Submit</button>
-          <button onClick={onNavClick} id="11">Skip</button>
+          <button type="submit" >Submit</button>
+          <button onClick={onNavClick} id="9">Skip</button>
         </div>
       </form>
     </div>

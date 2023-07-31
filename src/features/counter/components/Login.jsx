@@ -24,7 +24,8 @@ const Login = () => {
       try {
         const { data } = await axios.post(`http://localhost:6001/account/login`, input);
         if ( data.status === 1) {
-          dispatch(setToastMessage("Success"));
+          // dispatch(setToastMessage("Success"));
+          dispatch(setScreenMode(11));
         }
       } catch (error) {
         console.log(error);
@@ -52,7 +53,7 @@ const Login = () => {
           <input type="password" name="password" placeholder="password" />
         </div>
 
-        {/* <button type="submit" onClick={onNavClick} id="11" >LOGIN</button> */}
+       
         <div className="submitButton">
           <button type="submit" >Login</button>
         </div>

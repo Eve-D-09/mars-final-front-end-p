@@ -5,4 +5,5 @@
     background-color: var(--blue-color);
     opacity: 0.9;
     border: none;
+    z-index: 10;
 }
