@@ -29,12 +29,12 @@ const Register = () => {
         console.log(error);
       }
     } else {
-      dispatch(setToastMessage("check your inputs")) ;
+      dispatch(setToastMessage("Please, check your information")) ;
     }
     
   };
   return (
-    <div>
+    <div className="formContainer">
       <form onSubmit={register}
         onInput={(e) => {
           setInput({ ...input, [e.target.name]: e.target.value });
@@ -42,36 +42,42 @@ const Register = () => {
       >
         <div className="formLinks">
           <a href="/#" onClick={onNavClick} id="9">LOG IN</a>
-          <a href="/#" onClick={onNavClick} id="10">REGISTER </a>
+          <a href="/#" className="underlineLink" onClick={onNavClick} id="10">REGISTER </a>
         </div>
-        <div>
+        <div className="formInputs">
           <label>First Name *</label>
           <input type="text" name="firstName" placeholder="" required />
         </div>
-        <div>
+        <div className="formInputs">
           <label>Last Name *</label>
           <input type="text" name="lastName" placeholder="" required />
         </div>
-        <div>
+        <div className="formInputs">
           <label>Email *</label>
           <input type="text" name="email" placeholder="" required />
         </div>
-        <div>
+        <div className="formInputs">
           <label>Confirm e-mail *</label>
           <input type="text" name="email" placeholder="" required />
         </div>
-        <div>
+        <div className="formInputs">
             <label>Password *</label>
-            <input type="text" name="password" placeholder="" required />
+            <input type="password" name="password" placeholder="" required />
         </div>
-        <div>
+        <div className="formInputs">
             <label>Confirm Password *</label>
-            <input type="text" name="password" placeholder="" required />
+            <input type="password" name="password" placeholder="" required />
         </div>
-        <button type="submit" onClick={onNavClick} id="12" >REGISTER</button>
+        <div className="submitButton">
+           <button type="submit"  >REGISTER</button>
+        </div>
+        {/* onClick={onNavClick} id="12"  */}
         
-        <p>By creating an account I agree to <a href="/" >Terms & Conditions</a> and 
-        <a href="/" >Privacy Policy</a> </p>
+        <div className="formPolicy">
+          <p>By creating an account You agree to <a href="/" >Terms & Conditions</a> and 
+          <a href="/" > Privacy Policy</a> </p>
+        </div>
+        
       </form>
     </div>
   );

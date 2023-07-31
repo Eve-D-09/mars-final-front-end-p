@@ -28,42 +28,42 @@ const RegisterDetails = () => {
           console.log(error);
         }
       } else {
-        dispatch(setToastMessage("check your inputs")) ;
+        dispatch(setToastMessage("??")) ;
       }
 
   }
 
   return (
-    <div>
+    <div className="formContainer">
       <h2>Please, fill the next bit</h2>
       <form onSubmit={registerDetails} onInput={(e) => {setInput({...input, [e.target.value]: e.target.value})}}>
-        <div>
+        <div className="formInputs">
           <label> Address line 1</label>
           <input type="text" name="addressLine1" placeholder="" required />
         </div>
-        <div>
+        <div className="formInputs">
           <label> Address line 2</label>
           <input type="text" name="addressLine2" placeholder="" required />
         </div>
-        <div>
+        <div className="formInputs">
           <label> City</label>
           <input type="text" name="city" placeholder="" required />
         </div>
-        <div>
+        <div className="formInputs">
           <label> Postcode</label>
           <input type="text" name="postcode" placeholder="" required />
         </div>
-        <div>
+        <div className="formInputs">
           <label> Country</label>
           <input type="text" name="country" placeholder="" required />
         </div>
-        <div>
+        <div className="formInputs">
           <label> Phone Number</label>
           <input type="text" name="phoneNumber" placeholder="" required />
         </div>
-        <div className="formLinks">
+        <div className="registerButtons">
           <button onClick={onNavClick} id="11">Submit</button>
-          <button onClick={onNavClick} id="11">Skip for later</button>
+          <button onClick={onNavClick} id="11">Skip</button>
         </div>
       </form>
     </div>

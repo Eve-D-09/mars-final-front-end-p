@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import Picture from "./Picture";
 import Loading from "./Loading";
 import { getData } from "../../../controllers/dataControllers";
-import Subscribe from "./Subscribe";
+
 
 
 
@@ -51,7 +51,7 @@ const PicOfDay = () => {
         </div>
       )}
     {/* </div> */}
-    <Subscribe />
+    
     
     </>
   );

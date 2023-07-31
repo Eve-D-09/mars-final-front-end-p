@@ -36,24 +36,27 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="formContainer">
       
       <form onSubmit={login} onInput={(e) => {setInput({ ...input, [e.target.name]: e.target.value });}} >
         <div className="formLinks">
-          <a href="/#" onClick={onNavClick} id="9"> LOG IN</a>
+          <a href="/#" className="underlineLink" onClick={onNavClick} id="9"> LOG IN</a>
           <a href="/#" onClick={onNavClick} id="10"> REGISTER</a>
         </div>
-        <div>
+        <div className="formInputs">
           <label>E-mail *</label>
           <input type="text" name="email" placeholder="email" />
         </div>
-        <div>
+        <div className="formInputs">
           <label>Password *</label>
           <input type="password" name="password" placeholder="password" />
         </div>
 
         {/* <button type="submit" onClick={onNavClick} id="11" >LOGIN</button> */}
-        <button type="submit" >LOGIN</button>
+        <div className="submitButton">
+          <button type="submit" >Login</button>
+        </div>
+        
         
        
       </form>
