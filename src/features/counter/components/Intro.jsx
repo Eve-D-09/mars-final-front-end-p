@@ -3,6 +3,7 @@ import { paragraphs } from "../../../myData/paragraphs";
 import Accordion from "./Accordion";
 
 
+
 const Intro = () => {
   return (
     <div className="introContainer">
@@ -12,6 +13,8 @@ const Intro = () => {
           return <Accordion key={index} paragraph={paragraph} />;
         })}
       </div>
+
+      
     </div>
   );
 };

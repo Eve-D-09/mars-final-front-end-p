@@ -13,10 +13,14 @@ import Rovers from "./Rovers";
 import Orbiters from "./Orbiters";
 import Ingenuity from "./Ingenuity";
 import Insight from "./Insight";
-import Login from "./Login";
-import Register from "./Register";
-import RegisterDetails from "./RegisterDetails";
-import CustomerAccount from "./CustomerAccount";
+// import Login from "./Login";
+// import Register from "./Register";
+import Login from "../accountComponents/Login";
+import Register from "../accountComponents/Register";
+// import RegisterDetails from "./RegisterDetails";
+// import CustomerAccount from "./CustomerAccount";
+import RegisterDetails from "../accountComponents/RegisterDetails";
+import CustomerAccount from "../accountComponents/CustomerAccount";
 
 const Main = () => {
   const screenMode = useSelector(selectScreenMode);

@@ -60,9 +60,12 @@ export const planetSlice = createSlice({
 
       state.slides[indexOf].liked = !state.slides[indexOf].liked;
     },
-    setToastMessage: ( state,action) => {
+    setToastMessage: (state, action) => {
       state.toastMessage = action.payload;
-    }
+    },
+    setToken: (state, action) => {
+      state.token = action.payload;
+    },
   },
 });
 
@@ -77,6 +80,7 @@ export const {
   toggleClicked,
   setFavoriteSlide,
   setToastMessage,
+  setToken,
 } = planetSlice.actions;
 
 export const selectPicOfDay = (state) => state.counter.picOfDay;
@@ -91,5 +95,6 @@ export const selectParagraphs = (state) => state.counter.paragraphs;
 export const selectIngenuity = (state) => state.counter.ingenuity;
 export const selectInsight = (state) => state.counter.insight;
 export const selectToastMessage = (state) => state.counter.toastMessage;
+export const selectToken = (state) => state.counter.token;
 
 export default planetSlice.reducer;

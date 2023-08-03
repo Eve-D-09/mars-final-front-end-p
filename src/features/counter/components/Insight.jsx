@@ -53,7 +53,6 @@ const Insight = () => {
         </div>
         <div className="linkBack">
           <a href="/#" onClick={onNavClick} id="2">
-            
             Back to Messengers
           </a>
         </div>
