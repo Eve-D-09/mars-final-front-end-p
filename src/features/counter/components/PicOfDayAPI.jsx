@@ -6,9 +6,6 @@ import Loading from "./Loading";
 import { getData } from "../../../controllers/dataControllers";
 
 
-
-
-
 const PicOfDay = () => {
   const [showPicture, setShowPicture] = useState(false);
 

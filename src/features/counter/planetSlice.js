@@ -17,6 +17,7 @@ const initialState = {
   orbiters: orbiters,
   paragraphs: paragraphs,
   rovers: rovers,
+  user: [],
 };
 
 export const planetSlice = createSlice({
@@ -66,6 +67,9 @@ export const planetSlice = createSlice({
     setToken: (state, action) => {
       state.token = action.payload;
     },
+    setUser: (state, action) => {
+      state.user = action.payload;
+    }
   },
 });
 
@@ -81,6 +85,7 @@ export const {
   setFavoriteSlide,
   setToastMessage,
   setToken,
+  setUser,
 } = planetSlice.actions;
 
 export const selectPicOfDay = (state) => state.counter.picOfDay;
@@ -96,5 +101,6 @@ export const selectIngenuity = (state) => state.counter.ingenuity;
 export const selectInsight = (state) => state.counter.insight;
 export const selectToastMessage = (state) => state.counter.toastMessage;
 export const selectToken = (state) => state.counter.token;
+export const selectUser = (state) => state.counter.user;
 
 export default planetSlice.reducer;

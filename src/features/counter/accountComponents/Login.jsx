@@ -4,9 +4,15 @@ import { useDispatch } from "react-redux";
 import { setScreenMode } from "../planetSlice";
 import { validate } from "../../../validation/index";
 import { setToastMessage, setToken } from "../planetSlice";
+import EyeIcon from "../../../img/svg/view-eye-interface-symbol-svgrepo-com.svg";
 
 const Login = () => {
   const [input, setInput] = useState({});
+
+  const [passwordShown, setPasswordShown] = useState(false);
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  }
 
   const dispatch = useDispatch();
 
@@ -47,14 +53,8 @@ const Login = () => {
         }}
       >
         <div className="formLinks">
-          <a href="/#" className="underlineLink" onClick={onNavClick} id="9">
-            {" "}
-            LOG IN
-          </a>
-          <a href="/#" onClick={onNavClick} id="10">
-            {" "}
-            REGISTER
-          </a>
+          <a href="/#" className="underlineLink" onClick={onNavClick} id="9">LOG IN</a>
+          <a href="/#" onClick={onNavClick} id="10"> REGISTER </a>
         </div>
         <div className="formInputs">
           <label>E-mail *</label>
@@ -62,7 +62,8 @@ const Login = () => {
         </div>
         <div className="formInputs">
           <label>Password *</label>
-          <input type="password" name="password" placeholder="password" />
+          <input  name="password" placeholder="password" type={passwordShown ? "text" : "password"} />
+          <button onClick={togglePassword}><img src={EyeIcon} alt="eye-icon" /></button>
         </div>
         <div className="submitButton">
           <button type="submit">Login</button>

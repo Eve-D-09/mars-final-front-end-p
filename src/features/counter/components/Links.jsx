@@ -15,12 +15,10 @@ const Links = () => {
 
   return (
     <div className="linksContainer">
-      {/* <a href="/#" className="overlayLink" onClick={onNavClick} id="5"> */}
+     
       <p>Perseverance Rover</p>
       <img src={RoverImg} alt="" />
-      <a href="/#" className="overlayLink" onClick={onNavClick} id="5">
-        .
-      </a>
+      <a href="/#" className="overlayLink" onClick={onNavClick} id="5">.</a>
       <p className="hoverable">Perseverance, our newest rover on Mars</p>
     </div>
   );

@@ -28,6 +28,7 @@ const Nav = () => {
           <a href="/#" onClick={onNavClick} id="3"> Raw Images <img src={ArrowRight} alt="arrow-right"  /></a>
           <a href="/#" onClick={onNavClick} id="4"> Best Images <img src={ArrowRight} alt="arrow-right"  /></a>
           <a href="/#" onClick={onNavClick} id="9">Login/Register<img src={UserIcon} alt="user-icon" /></a>
+          <a href="/#" onClick={onNavClick} id="11"> <img src={UserIcon} alt="user-icon" /></a>
          
         </nav>
       </div>
