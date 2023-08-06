@@ -44,7 +44,7 @@ const RawImagesAPI = () => {
     }
   };
 
-  console.log(rawImages);
+  console.log( rawImages);
 
   if (!gettingData) return <Loading />;
 
@@ -84,6 +84,7 @@ const RawImagesAPI = () => {
         </div>
       </div>
       {rawImages && <RawImages rawImages={rawImages} key={rawImages.id} />}
+      
     </>
   );
 };

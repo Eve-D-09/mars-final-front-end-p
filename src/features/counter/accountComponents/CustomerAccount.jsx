@@ -16,11 +16,6 @@ const CustomerAccount = () => {
   const token = useSelector(selectToken);
   const user = useSelector(selectUser);
 
-  // const onNavClick = (e) => {
-  //   e.preventDefault();
-  //   dispatch(setScreenMode(Number(e.target.id)));
-  // };
-
   // 3.
   const userData = useCallback(async () => {
     try {
@@ -28,6 +23,7 @@ const CustomerAccount = () => {
         headers: { token },
       });
       dispatch(setUser(data.results));
+      //  or just data ? 
     } catch (error) {
       console.log(error);
     }
@@ -43,7 +39,8 @@ const CustomerAccount = () => {
 
   return (
     <>
-        <Profile user={user} />
+     
+      <Profile user={user} />
     </>
   );
 };

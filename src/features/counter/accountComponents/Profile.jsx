@@ -3,19 +3,33 @@ import { useDispatch } from "react-redux";
 import { setScreenMode } from "../planetSlice";
 import LogoutIcon from "../../../img/svg/logout-svgrepo-com.svg";
 
-const Profile = (props) => {
+const Profile = ({user}) => {
   const dispatch = useDispatch();
 
-  const { user } = props;
+  // const {  email, firstName, lastname } = user;
   console.log(user);
-
+  
+  let firstName = user[0].first_name;
+  let email = user[0].email;
+  let lastName = user[0].last_name;
+  
+  console.log(email, firstName, lastName);
+  
   const onNavClick = (e) => {
     e.preventDefault();
     dispatch(setScreenMode(Number(e.target.id)));
   };
 
+//  https://devsheet.com/loop-through-an-object-using-map-in-react/   
+//   <div> 
+//   {Object.entries(user).map(([key, value]) => 
+//     <div key={key}> {key}: {value} </div>
+//   )} 
+// </div>
+  
   return (
     <>
+     
       <div className="accountWrapper">
         <div className="account">
           <div className="accountLinks">
@@ -24,7 +38,7 @@ const Profile = (props) => {
           </div>
           <div className="customerConstacts">
             <div className="greeting">
-              <h3>Hello, Daniela ! </h3>
+              <h3>Hello, {firstName} ! </h3>
               <button onClick={() => dispatch(setScreenMode(9))}>
                 <img src={LogoutIcon} alt="logout-icon" />
               </button>
@@ -32,11 +46,13 @@ const Profile = (props) => {
             <div className="personalInfo">
               <div>
                 <h4>First Name / Last Name :</h4>
-                <p>Daniela Jones</p>
+                {/* <p>Daniela Jones</p> */}
+                <p>{firstName} {lastName}</p>
               </div>
               <div>
                 <p> <small>E-mail :</small></p>
-                <p>daniela@gmail.com</p>
+                {/* <p>daniela@gmail.com</p> */}
+                <p>{email}</p>
               </div>
             </div>
             <div className="customerAddress">
