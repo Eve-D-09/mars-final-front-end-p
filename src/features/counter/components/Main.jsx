@@ -13,14 +13,13 @@ import Rovers from "./Rovers";
 import Orbiters from "./Orbiters";
 import Ingenuity from "./Ingenuity";
 import Insight from "./Insight";
-// import Login from "./Login";
-// import Register from "./Register";
 import Login from "../accountComponents/Login";
 import Register from "../accountComponents/Register";
-// import RegisterDetails from "./RegisterDetails";
-// import CustomerAccount from "./CustomerAccount";
+
 import RegisterDetails from "../accountComponents/RegisterDetails";
 import CustomerAccount from "../accountComponents/CustomerAccount";
+import Wishlist from "../accountComponents/Wishlist";
+import Profile from "../accountComponents/Profile";
 
 const Main = () => {
   const screenMode = useSelector(selectScreenMode);
@@ -44,6 +43,8 @@ const Main = () => {
         {screenMode === 10 && <Register />}
         {screenMode === 12 && <RegisterDetails />}
         {screenMode === 11 && <CustomerAccount />}
+        {screenMode === 13 && <Profile />}
+        {screenMode === 14 && <Wishlist />}
       </>
       <div className="footer">
         <Footer />

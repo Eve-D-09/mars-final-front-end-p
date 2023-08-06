@@ -1,13 +1,17 @@
 .formContainer {
     width: 90%;
     margin: 0 auto;
+    height: auto;
+    padding: 50px 0 150px;
+    
 }
 
 form {
     width: 100%;
-    margin: 50px 0;
+    height: auto;
+    /* margin: 50px 0 150px; */
     background-color: var(--orange-color);
-    opacity: 0.9;
+    opacity: 0.8;
     border-radius: var(--border-radius);
 }
 
@@ -41,9 +45,26 @@ form {
     height: 35px;
 }
 
+.formInputs label {
+    padding: 5px 0;
+    margin: 5px 0;
+}
+
 .formInputs input {
     border-radius: var(--border-radius);
     border-color: var(--blue-color);
+}
+
+.passwordEye {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.passwordEye button {
+    background-color: inherit;
+    cursor: pointer;
+    border: none;
 }
 
 .submitButton {
@@ -92,5 +113,47 @@ form {
     background-color:  rgb(27, 78, 172);
     color: white;
     text-transform: uppercase;
+}
+
+.forgotPasswordLink {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.forgotPasswordLink a {
+    text-decoration: none;
+    color: rgb(27, 78, 172);
+}
+
+/* ---------------------------------------------------- */
+
+@media (min-width: 600px) {
+    /* .formContainer {
+        width: 520px;
+    } */
+
+    form {
+        width: 520px;
+    }
+}
+
+@media (min-width: 990px) {
+    .formContainer {
+        width: 95%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .formContainer {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .formContainer {
+        width: 1100px;
+    }
 }
 

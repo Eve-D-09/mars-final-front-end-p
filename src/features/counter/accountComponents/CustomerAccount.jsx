@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { setScreenMode } from "../planetSlice";
+// import { setScreenMode } from "../planetSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 // 1.
@@ -16,10 +16,10 @@ const CustomerAccount = () => {
   const token = useSelector(selectToken);
   const user = useSelector(selectUser);
 
-  const onNavClick = (e) => {
-    e.preventDefault();
-    dispatch(setScreenMode(Number(e.target.id)));
-  };
+  // const onNavClick = (e) => {
+  //   e.preventDefault();
+  //   dispatch(setScreenMode(Number(e.target.id)));
+  // };
 
   // 3.
   const userData = useCallback(async () => {
@@ -39,20 +39,12 @@ const CustomerAccount = () => {
     userData();
   }, [userData]);
 
-  
+  //  if  user loged-in -> set profile, if not - p tag you are not loged-in
 
   return (
-    <div>
-      <div>
-        <h2>Welcome to account page</h2>
-        <div>
-          <a href="/#" className="underlineLink" > PROFILE</a>
-          <a href="/#" onClick={onNavClick} id=""> WISHLIST</a>
-        </div>
-      </div>
-      {user && <Profile user={user} />}
-      
-    </div>
+    <>
+        <Profile user={user} />
+    </>
   );
 };
 

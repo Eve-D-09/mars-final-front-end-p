@@ -3,8 +3,9 @@ import { useDispatch } from "react-redux";
 import { setScreenMode } from "../planetSlice";
 import ArrowRight from "../../../img/svg/arrow-right-sm-svgrepo-com.svg";
 import MenuIcon from "../../../img/svg/menu-dots-svgrepo-com.svg";
-import UserIcon from "../../../img/svg/user-svgrepo-com.svg";
+// import UserIcon from "../../../img/svg/user-svgrepo-com.svg";
 // import User from "./User";
+import { ReactComponent as UserIcon } from "../../../img/svg/user-svgrepo-com.svg";
 
 const Nav = () => {
   
@@ -27,9 +28,9 @@ const Nav = () => {
           <a href="/#" onClick={onNavClick} id="2"> Messengers <img src={ArrowRight} alt="arrow-right"  /></a>
           <a href="/#" onClick={onNavClick} id="3"> Raw Images <img src={ArrowRight} alt="arrow-right"  /></a>
           <a href="/#" onClick={onNavClick} id="4"> Best Images <img src={ArrowRight} alt="arrow-right"  /></a>
-          <a href="/#" onClick={onNavClick} id="9">Login/Register<img src={UserIcon} alt="user-icon" /></a>
-          <a href="/#" onClick={onNavClick} id="11"> <img src={UserIcon} alt="user-icon" /></a>
-         
+          <a href="/#" onClick={onNavClick} id="9">Login/Register</a>
+          {/* <a href="/#" onClick={onNavClick} id="11"> <img src={UserIcon} alt="user-icon" /></a> */}
+          <a href="/#" onClick={onNavClick} id="13"><UserIcon /></a>
         </nav>
       </div>
       

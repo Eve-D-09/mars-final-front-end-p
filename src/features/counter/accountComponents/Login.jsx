@@ -61,12 +61,17 @@ const Login = () => {
           <input type="text" name="email" placeholder="email" />
         </div>
         <div className="formInputs">
-          <label>Password *</label>
-          <input  name="password" placeholder="password" type={passwordShown ? "text" : "password"} />
-          <button onClick={togglePassword}><img src={EyeIcon} alt="eye-icon" /></button>
+          <div className="passwordEye">
+            <label>Password *</label>
+            <button type="button" onClick={togglePassword}><img src={EyeIcon} alt="eye-icon" /></button>
+          </div>
+          <input  name="password" placeholder="password" type={passwordShown ? "text" : "password"}  />
         </div>
         <div className="submitButton">
           <button type="submit">Login</button>
+        </div>
+        <div className="forgotPasswordLink">
+          <a href="/#">Password Forgotten?</a>
         </div>
       </form>
     </div>

@@ -48,9 +48,9 @@
 
 /* tablets 600x990 px */
 @media (min-width: 600px) {
-    .homeContainer {
+    /* .homeContainer {
       height: 80vh;
-    }
+    } */
 
     .introContainer {
       height: max-content;
@@ -71,6 +71,8 @@
 
 
 }
+
+
 
 @media (min-width: 990px) {
     .homeContainer {

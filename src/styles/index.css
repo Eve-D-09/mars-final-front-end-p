@@ -2,7 +2,7 @@
 @import url(./normalise.css);
 @import url(./global.css);
 @import url(./spinner.css);
-@import url(./interval.css);
+/* @import url(./interval.css); */
 @import url(./nav.css);
 @import url(./footer.css);
 @import url(./header.css);
@@ -17,6 +17,7 @@
 @import url(./rawImages.css);
 @import url(./timer.css);
 @import url(./forms.css);
+@import url(./customerAccount.css);
 
 
 

@@ -1,0 +1,93 @@
+
+.accountWrapper {
+    margin: 50px 0 50px;
+}
+
+
+
+.account {
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(245, 234, 220);
+    opacity: 0.8;
+    border-radius: var(--border-radius);
+}
+.accountLinks {
+    width: 100%;
+    display: flex;
+}
+
+.accountLinks a {
+    text-decoration: none;
+    flex-basis: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(23, 77, 179);
+    font-weight: bolder;
+    padding: 15px 0;
+    font-family: var(--font-lorenza);
+}
+
+
+
+.greeting {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.greeting h3 {
+    font-family: var(--font-lorenza);
+    margin: 0;
+    padding: 15px 5px;
+}
+
+.greeting button {
+    border: none;
+    background: inherit;
+    width: 35px;
+    height: 35px;
+}
+
+.personalInfo, .customerAddress, .editLink {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.personalInfo h4, .customerAddress h4 {
+    margin: 0;
+    padding: 10px 0;
+    font-family: var(--font-lost-ages);
+}
+
+.personalInfo small {
+    font-size: 0.75rem;
+    font-family: var(--font-lost-ages);
+}
+
+.personalInfo p, .customerAddress p {
+    margin: 0;
+}
+
+.personalInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.editLink a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(23, 77, 179);
+    color: white;
+    width: 50%;
+    padding: 10px 5px;
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+    font-family: var(--font-lorenza);
+}
+
