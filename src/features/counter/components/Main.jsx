@@ -19,7 +19,8 @@ import Register from "../accountComponents/Register";
 import RegisterDetails from "../accountComponents/RegisterDetails";
 import CustomerAccount from "../accountComponents/CustomerAccount";
 import Wishlist from "../accountComponents/Wishlist";
-import Profile from "../accountComponents/Profile";
+// import Profile from "../accountComponents/Profile";
+import EditUserInfo from "../accountComponents/EditUserInfo";
 
 const Main = () => {
   const screenMode = useSelector(selectScreenMode);
@@ -43,8 +44,9 @@ const Main = () => {
         {screenMode === 10 && <Register />}
         {screenMode === 12 && <RegisterDetails />}
         {screenMode === 11 && <CustomerAccount />}
-        {screenMode === 13 && <Profile />}
+        {/* {screenMode === 13 && <Profile />} */}
         {screenMode === 14 && <Wishlist />}
+        {screenMode === 15 && <EditUserInfo />}
       </>
       <div className="footer">
         <Footer />

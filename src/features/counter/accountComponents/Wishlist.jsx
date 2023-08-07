@@ -16,8 +16,8 @@ const Wishlist = () => {
     return ( <>
     <div className="account">
         <div className="accountLinks">
-          <a href="/#" onClick={onNavClick} id="13" className="underlineLink"> PROFILE</a>
-          <a href="/#" onClick={onNavClick} id="14"> WISHLIST</a>
+          <a href="/#" onClick={onNavClick} id="11" > PROFILE</a>
+          <a href="/#" onClick={onNavClick} id="14"className="underlineLink"> WISHLIST</a>
         </div>
         <p>This should be wishlist </p>
       </div>

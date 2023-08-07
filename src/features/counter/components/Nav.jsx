@@ -13,9 +13,10 @@ const Nav = () => {
 
   const onNavClick = (e) => {
     e.preventDefault();
-    dispatch(setScreenMode(Number(e.target.id)));
+    dispatch(setScreenMode(Number(e.currentTarget.id)));
   };
 
+  // dispatch(setScreenMode(Number(e.target.id))); this works if only 
 
   return (
     <>
@@ -29,8 +30,7 @@ const Nav = () => {
           <a href="/#" onClick={onNavClick} id="3"> Raw Images <img src={ArrowRight} alt="arrow-right"  /></a>
           <a href="/#" onClick={onNavClick} id="4"> Best Images <img src={ArrowRight} alt="arrow-right"  /></a>
           <a href="/#" onClick={onNavClick} id="9">Login/Register</a>
-          {/* <a href="/#" onClick={onNavClick} id="11"> <img src={UserIcon} alt="user-icon" /></a> */}
-          <a href="/#" onClick={onNavClick} id="13"><UserIcon /></a>
+          <a href="/#" onClick={onNavClick} id="11"><UserIcon /></a>
         </nav>
       </div>
       

@@ -22,6 +22,7 @@ const CustomerAccount = () => {
       const { data } = await axios.get(`http://localhost:6001/account/users`, {
         headers: { token },
       });
+      console.log("token", token, "data", data);
       dispatch(setUser(data.results));
       //  or just data ? 
     } catch (error) {
@@ -33,13 +34,13 @@ const CustomerAccount = () => {
 
   useEffect(() => {
     userData();
+    console.log("getting data");
   }, [userData]);
 
-  //  if  user loged-in -> set profile, if not - p tag you are not loged-in
+  
 
   return (
     <>
-     
       <Profile user={user} />
     </>
   );
