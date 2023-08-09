@@ -1,15 +1,21 @@
 
 .accountWrapper {
-    margin: 50px 0 50px;
+    /* margin: 50px 0 50px; */
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+    padding: 50px 0 150px;
 }
 
 
 
 .account {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
-    background-color: rgb(245, 234, 220);
-    opacity: 0.8;
+    /* background-color: rgb(245, 234, 220); */
+    background-color: var(--verylight-blue);
+    
+    opacity: 1;
     border-radius: var(--border-radius);
 }
 .accountLinks {
@@ -49,6 +55,7 @@
     background: inherit;
     width: 35px;
     height: 35px;
+    cursor: pointer;
 }
 
 .personalInfo, .customerAddress, .editLink {
@@ -89,5 +96,75 @@
     margin: 0 auto;
     border-radius: var(--border-radius);
     font-family: var(--font-lorenza);
+}
+
+.unlogedUser {
+    margin: 50px 0;
+    width: 100%;
+    padding: 50px 0 50px;
+    display: grid;
+    place-items: center;
+    /* border: 1px solid black; */
+}
+
+.unlogedUser p {
+    padding: 50px 25px;
+    /* border: 1px solid black; */
+    font-size: 1.2rem;
+    font-family: var(--font-lorenza);
+    background-color: var(--orange-color);
+    border-radius: var(--border-radius);
+}
+
+/* --------------------------------------------------- */
+
+@media (min-width: 600px) {
+
+    .account {
+        width: 520px;
+        margin-left: 0;
+    }
+    .personalInfo p, .customerAddress p {
+        font-size: 1.2rem;
+    }
+
+    .greeting h3 {
+        font-size: 1.5rem;
+    }
+
+    .accountLinks a {
+        font-size: 1.2rem;
+    }
+
+    .unlogedUser {
+        margin: 120px 0;
+    }
+}
+
+@media (min-width: 990px) {
+    
+    .account {
+        width: 520px;
+        margin-left: 0;
+    }
+    .personalInfo p, .customerAddress p {
+        font-size: 1.4rem;
+    }
+    .greeting h3 {
+        font-size: 1.7rem;
+    }
+    .unlogedUser p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    
+}
+
+@media (min-width: 1400px) {
+    .accountWrapper {
+        width: 1100px;
+    }
 }
 

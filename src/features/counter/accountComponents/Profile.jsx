@@ -14,7 +14,10 @@ const Profile = () => {
     dispatch(setScreenMode(Number(e.target.id)));
   };
 
-  if (!user) return <p>Please, log in</p>;
+  
+  if (!user) return (<div className="unlogedUser">
+                          <p>Looks like you're not loged in...</p>
+                               </div>);
 
   return (
     <>
@@ -24,9 +27,9 @@ const Profile = () => {
             <a href="/#" onClick={onNavClick} id="11" className="underlineLink">PROFILE</a>
             <a href="/#" onClick={onNavClick} id="14">WISHLIST</a>
           </div>
-          <div className="customerConstacts">
+          <div className="customerContacts">
             <div className="greeting">
-              <h3>Hello, {user.firstName}! </h3>
+              <h3>Hello, {user.first_name}! </h3>
               <button
                 onClick={() => {
                   dispatch(setScreenMode(9));
@@ -39,7 +42,7 @@ const Profile = () => {
             <div className="personalInfo">
               <div>
                 <h4>First Name / Last Name :</h4>
-                <p> {user.firstName} {user.lastName}</p>
+                <p> {user.first_name} {user.last_name}</p>
               </div>
               <div>
                 <p> <small>E-mail :</small> </p>
@@ -48,15 +51,19 @@ const Profile = () => {
             </div>
             <div className="customerAddress">
               <h4>Address :</h4>
-              <p>User address</p>
+              <p>{user.address_line_1} {user.address_line_2}, {user.postcode} {user.city}, {user.country}</p>
+            </div>
+            <div className="customerAddress">
+              <h4>Phone Number :</h4>
+              <p>{user.phone_number}</p>
             </div>
             <div className="editLink">
               <a href="/#" onClick={onNavClick} id="15"> EDIT
               </a>
             </div>
-            <div className="personalSubscribes">
+            {/* <div className="personalSubscribes">
               <p> subscribe/unsubscribe</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

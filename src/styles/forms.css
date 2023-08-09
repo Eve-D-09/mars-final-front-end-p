@@ -15,6 +15,10 @@ form {
     border-radius: var(--border-radius);
 }
 
+.formContainer .update {
+    background-color: var(--blue-color);
+}
+
 .formLinks {
     width: 100%;
     display: flex;

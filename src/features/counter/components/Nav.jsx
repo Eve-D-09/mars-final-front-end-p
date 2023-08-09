@@ -4,7 +4,6 @@ import { setScreenMode } from "../planetSlice";
 import ArrowRight from "../../../img/svg/arrow-right-sm-svgrepo-com.svg";
 import MenuIcon from "../../../img/svg/menu-dots-svgrepo-com.svg";
 // import UserIcon from "../../../img/svg/user-svgrepo-com.svg";
-// import User from "./User";
 import { ReactComponent as UserIcon } from "../../../img/svg/user-svgrepo-com.svg";
 
 const Nav = () => {
@@ -16,7 +15,8 @@ const Nav = () => {
     dispatch(setScreenMode(Number(e.currentTarget.id)));
   };
 
-  // dispatch(setScreenMode(Number(e.target.id))); this works if only 
+  // dispatch(setScreenMode(Number(e.target.id))); this works if only a tag is a text based
+  //  
 
   return (
     <>

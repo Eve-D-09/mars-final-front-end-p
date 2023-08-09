@@ -33,16 +33,16 @@ export const registerDetails = {
 };
 
 export const updateUser = {
+  firstName: joi.string().required().min(3).max(64),
+  lastName: joi.string().required().min(3).max(64),
   email: joi
     .string()
     .required()
     .email({ tlds: { allows: false } }),
-  firstName: joi.string().required().min(3).max(64),
-  lastName: joi.string().required().min(3).max(64),
-  addressLine1: joi.string(), 
-  addressLine2: joi.string(),
-  city: joi.string(),
-  postcode: joi.number(),
-  country: joi.string(),
-  phoneNumber: joi.number(),
-}
+  // addressLine1: joi.string(), 
+  // addressLine2: joi.string(),
+  // city: joi.string(),
+  // postcode: joi.number(),
+  // country: joi.string(),
+  // phoneNumber: joi.number(),
+};

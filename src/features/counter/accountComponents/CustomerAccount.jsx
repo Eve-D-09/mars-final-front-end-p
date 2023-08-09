@@ -22,7 +22,7 @@ const CustomerAccount = () => {
       const { data } = await axios.get(`http://localhost:6001/account/users`, {
         headers: { token },
       });
-      console.log("token", token, "data", data);
+      // console.log("token", token, "data", data);
       dispatch(setUser(data.results));
       //  or just data ? 
     } catch (error) {
