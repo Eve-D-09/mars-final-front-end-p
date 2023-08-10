@@ -29,7 +29,7 @@ const Profile = () => {
           </div>
           <div className="customerContacts">
             <div className="greeting">
-              <h3>Hello, {user.first_name}! </h3>
+              <h3>Hello, {user.firstName}! </h3>
               <button
                 onClick={() => {
                   dispatch(setScreenMode(9));
@@ -42,11 +42,14 @@ const Profile = () => {
             <div className="personalInfo">
               <div>
                 <h4>First Name / Last Name :</h4>
-                <p> {user.first_name} {user.last_name}</p>
+                <p> {user.firstName} {user.lastName}</p>
               </div>
               <div>
                 <p> <small>E-mail :</small> </p>
                 <p>{user.email}</p>
+              </div>
+              <div className="editLink">
+                <a href="/#" onClick={onNavClick} id="15"> EDIT</a>
               </div>
             </div>
             <div className="customerAddress">
@@ -58,7 +61,7 @@ const Profile = () => {
               <p>{user.phone_number}</p>
             </div>
             <div className="editLink">
-              <a href="/#" onClick={onNavClick} id="15"> EDIT
+              <a href="/#" onClick={onNavClick} id="16"> EDIT
               </a>
             </div>
             {/* <div className="personalSubscribes">

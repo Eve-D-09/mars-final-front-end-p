@@ -21,6 +21,7 @@ import CustomerAccount from "../accountComponents/CustomerAccount";
 import Wishlist from "../accountComponents/Wishlist";
 // import Profile from "../accountComponents/Profile";
 import EditUserInfo from "../accountComponents/EditUserInfo";
+import EditUserDetails from "../accountComponents/EditUserDetails";
 
 const Main = () => {
   const screenMode = useSelector(selectScreenMode);
@@ -47,6 +48,7 @@ const Main = () => {
         {/* {screenMode === 13 && <Profile />} */}
         {screenMode === 14 && <Wishlist />}
         {screenMode === 15 && <EditUserInfo />}
+        {screenMode === 16 && <EditUserDetails />}
       </>
       <div className="footer">
         <Footer />

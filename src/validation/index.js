@@ -1,5 +1,5 @@
 import joi from "joi";
-import { login, register, subscribe, registerDetails, updateUser } from "../validation/schemas";
+import { login, register, subscribe, registerDetails, updateUser, updateDetails } from "../validation/schemas";
 
 export const validate = async (payload, type) => {
   let result;
@@ -25,6 +25,10 @@ export const validate = async (payload, type) => {
     case "updateUser":
       result = joi.object(updateUser);
       break;
+
+    case "updateDetails": 
+       result = joi.object(updateDetails);
+       break;
       
   }
 

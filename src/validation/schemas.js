@@ -39,10 +39,13 @@ export const updateUser = {
     .string()
     .required()
     .email({ tlds: { allows: false } }),
-  // addressLine1: joi.string(), 
-  // addressLine2: joi.string(),
-  // city: joi.string(),
-  // postcode: joi.number(),
-  // country: joi.string(),
-  // phoneNumber: joi.number(),
 };
+
+export const updateDetails = {
+   addressLine1: joi.string(), 
+  addressLine2: joi.string(),
+  city: joi.string(),
+  postcode: joi.number(),
+  country: joi.string(),
+  phoneNumber: joi.number(),
+}

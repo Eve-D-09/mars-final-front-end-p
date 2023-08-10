@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { setScreenMode } from "../planetSlice";
-import { selectUser } from "../planetSlice";
+import { selectUser, selectToken } from "../planetSlice";
 import { validate } from "../../../validation/index";
 import { setToastMessage } from "../planetSlice";
 
 const EditUserInfo = () => {
-  const [input, setInput] = useState({});
+  // const [input, setInput] = useState({});
 
   const dispatch = useDispatch();
 
   const user = useSelector(selectUser);
+  const token = useSelector(selectToken);
 
   const onNavClick = (e) => {
     e.preventDefault();
@@ -20,15 +21,9 @@ const EditUserInfo = () => {
   // ----------------------------------------------------------
   //  for prepopulating users data: define default values and handle on change
   const [inputs, setInputs] = useState({
-    firstname: user.first_name,
-    lastname: user.last_name,
+    firstName: user.firstName,
+    lastName: user.lastName,
     email: user.email,
-    addressline1: user.address_line_1,
-    addressline2: user.address_line_2,
-    city: user.city,
-    postcode: user.postcode,
-    country: user.country,
-    phonenumber: user.phone_number,
   });
   const handleChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
@@ -36,14 +31,17 @@ const EditUserInfo = () => {
   // ----------------------------------------------------------
   const updateUser = async (e) => {
     e.preventDefault();
-    console.log(input);
-    const results = await validate(input, "updateUser");
-    if (results === 0) {
+    console.log(inputs);
+    const errors = await validate(inputs, "updateUser");
+    // console.log(results);
+    if (!errors) {
       try {
         const { data } = await axios.patch(
           `http://localhost:6001/account/update`,
-          input
+          inputs,
+          { headers: { token } }
         );
+        console.log(data);
         if (data.status === 1) {
           dispatch(setToastMessage("Success"));
           dispatch(setScreenMode(11));
@@ -60,45 +58,50 @@ const EditUserInfo = () => {
   return (
     <>
       <div className="formContainer">
-        <form onSubmit={updateUser}  onInput={(e) => {  setInput({ ...input, [e.target.name]: e.target.value }); }}>
+        <form
+          onSubmit={updateUser}
+          onInput={(e) => {
+            setInputs({ ...inputs, [e.target.name]: e.target.value });
+          }}
+        >
           <div className="formInputs">
             <label>First Name *</label>
-            <input type="text" name="firstname" onChange={handleChange}  placeholder=""  value={inputs.firstname} required/>
+            <input
+              type="text"
+              name="firstName"
+              onChange={handleChange}
+              placeholder=""
+              value={inputs.firstName}
+              required
+            />
           </div>
           <div className="formInputs">
             <label>Last Name *</label>
-            <input type="text" name="lastname"  onChange={handleChange} placeholder=""  value={inputs.lastname} required/>
+            <input
+              type="text"
+              name="lastName"
+              onChange={handleChange}
+              placeholder=""
+              value={inputs.lastName}
+              required
+            />
           </div>
           <div className="formInputs">
             <label>Email *</label>
-            <input type="text" name="email" onChange={handleChange}  placeholder="" value={inputs.email}  required />
-          </div>
-          <div className="formInputs">
-            <label>Address line 1</label>
-            <input type="text" name="addressline1" onChange={handleChange}  value={inputs.addressline1} placeholder="" />
-          </div>
-          <div className="formInputs">
-            <label>Address line 2</label>
-            <input type="text" name="addressline2" onChange={handleChange} value={inputs.addressline2}  placeholder=""/>
-          </div>
-          <div className="formInputs">
-            <label>City</label>
-            <input type="text"  name="city" onChange={handleChange} value={inputs.city} placeholder=""/>
-          </div>
-          <div className="formInputs">
-            <label> Postcode</label>
-            <input type="text" name="postcode" onChange={handleChange} value={inputs.postcode} placeholder=""/>
-          </div>
-          <div className="formInputs">
-            <label> Country</label>
-            <input type="text" name="country" onChange={handleChange} value={inputs.country} placeholder=""/>
-          </div>
-          <div className="formInputs">
-            <label> Phone Number</label>
-            <input type="text" name="phonenumber" onChange={handleChange} value={inputs.phonenumber} placeholder=""/>
+            <input
+              type="text"
+              name="email"
+              onChange={handleChange}
+              placeholder=""
+              value={inputs.email}
+              required
+            />
           </div>
           <div className="registerButtons">
-            <button onClick={onNavClick} id="11"> CANCEL</button>
+            <button onClick={onNavClick} id="11">
+              {" "}
+              CANCEL
+            </button>
             <button type="submit">SUBMIT</button>
           </div>
         </form>
