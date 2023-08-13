@@ -5,6 +5,7 @@ import { setScreenMode } from "../planetSlice";
 import { selectUser, selectToken } from "../planetSlice";
 import { validate } from "../../../validation/index";
 import { setToastMessage } from "../planetSlice";
+import ToggleSubscribe from "./ToggleSubscribe";
 
 const EditUserInfo = () => {
   // const [input, setInput] = useState({});
@@ -24,6 +25,7 @@ const EditUserInfo = () => {
     firstName: user.firstName,
     lastName: user.lastName,
     email: user.email,
+    subscriber: user.subscriber,
   });
   const handleChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
@@ -98,13 +100,14 @@ const EditUserInfo = () => {
             />
           </div>
           <div className="registerButtons">
-            <button onClick={onNavClick} id="11">
-              {" "}
-              CANCEL
-            </button>
+            <button onClick={onNavClick} id="11"> CANCEL </button>
             <button type="submit">SUBMIT</button>
           </div>
         </form>
+        {/* <form>
+          <input type="checkbox"  checked={inputs.subscriber ? true : false}/>
+        </form> */}
+        <ToggleSubscribe />
       </div>
     </>
   );

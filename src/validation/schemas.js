@@ -42,7 +42,7 @@ export const updateUser = {
 };
 
 export const updateDetails = {
-   addressLine1: joi.string(), 
+  addressLine1: joi.string(), 
   addressLine2: joi.string(),
   city: joi.string(),
   postcode: joi.number(),
