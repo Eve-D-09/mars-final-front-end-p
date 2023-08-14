@@ -48,4 +48,4 @@ const CustomerAccount = () => {
 
 export default CustomerAccount;
 
-// https://stackoverflow.com/questions/51586458/how-to-pass-header-jwt-token-with-axios-react
+

@@ -19,14 +19,14 @@ const EditUserDetails = () => {
   };
 
   // ----------------------------------------------------------
-  //  for prepopulating users data:  default values and handle on change
+  
   const [inputs, setInputs] = useState({
-    addressline1: user.addressline1,
-    addressline2: user.addressline2,
+    addressLine1: user.address_line_1,
+    addressLine2: user.address_line_2,
     city: user.city,
     postcode: user.postcode,
     country: user.country,
-    phoneNumber: user.phoneNumber,
+    phoneNumber: user.phone_number,
   });
   const handleChange = (e) => {
     setInputs({ ...inputs, [e.target.name]: e.target.value });
@@ -71,8 +71,9 @@ const EditUserDetails = () => {
               type="text"
               name="addressLine1"
               onChange={handleChange}
-              value={inputs.addressline1}
               placeholder=""
+              value={inputs.addressLine1}
+              
             />
           </div>
           <div className="formInputs">
@@ -81,7 +82,7 @@ const EditUserDetails = () => {
               type="text"
               name="addressLine2"
               onChange={handleChange}
-              value={inputs.addressline2}
+              value={inputs.addressLine2}
               placeholder=""
             />
           </div>
@@ -127,7 +128,7 @@ const EditUserDetails = () => {
           </div>
           <div className="registerButtons">
             <button onClick={onNavClick} id="11">
-              {" "}
+             
               CANCEL
             </button>
             <button type="submit">SUBMIT</button>

@@ -1,58 +1,68 @@
-import React, { useState } from "react";
-import { selectToken, selectUser } from "../planetSlice";
+import React, { useState, useCallback } from "react";
+import { selectToken, selectUser, setUser } from "../planetSlice";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { setToastMessage } from "../planetSlice";
+import { validate } from "../../../validation/index";
 
 const ToggleSubscribe = () => {
-    const dispatch = useDispatch();
-    const user = useSelector(selectUser);
-    const token = useSelector(selectToken);
+  const dispatch = useDispatch();
+  const user = useSelector(selectUser);
+  const token = useSelector(selectToken);
 
-    const [input, setInput] = useState({
-    subscriber: user.subscriber,
-    email: user.email,
-  });
+  
 
-  const [ subscriber, setSubscriber ] = useState();
+  const userData = useCallback(async () => {
+    try {
+      const { data } = await axios.get(`http://localhost:6001/account/users`, {
+        headers: { token },
+      });
 
+      dispatch(setUser(data.results));
+    } catch (error) {
+      console.log(error);
+    }
+  }, [dispatch, token]);
 
-  const toggleSubscribe = async (e) => {
-    
-    e.preventDefault();
+  const handleChange = async (e) => {
+    console.log(e.target.checked);
 
-    if (subscriber === true) {
+    if (e.target.checked === true) {
       try {
-        const { data } = await axios.delete(
-          `http://localhost:6001/account/subscribe`,input,{ headers: { token } });
-          if (data.status === 1) {
-            dispatch(setToastMessage("You successfully unsubscribed"));
-          }
+        await axios.post(`http://localhost:6001/account/subscribe`, {
+          email: user.email,
+        });
+        dispatch(setToastMessage("You successfully subscribed"));
+        userData();
       } catch (error) {
-        console.log(error);
+        dispatch(setToastMessage("something went wrong"));
       }
-    } else if (subscriber === false) {
+    } else {
       try {
-        const { data } = await axios.post(
-          `http://localhost:6001/account/subscribe`, input, { headers: { token } });
-          if ( data) {
-            dispatch(setToastMessage("You successfully subscribed"));
-          }
+        await axios.delete(`http://localhost:6001/account/subscribe`, {
+          headers: { token },
+        });
+        dispatch(setToastMessage("You successfully unsubscribed"));
+        userData();
       } catch (error) {
-        console.log(error);
+        dispatch(setToastMessage("something went wrong"));
       }
     }
   };
 
   return (
-    <>
-      <form onSubmit={toggleSubscribe} >
-        <input type="text" name="email" placeholder="" value={input.email} required
+    <div className="toggleSubscribeBox">
+      <h3>Subscribtion to newsletter:</h3>
+
+      <div className="subscriberBox">
+        <label> {user.subscriber ? "Subscribed :" : "Unsubscribed"}</label>
+        <input
+          type="checkbox"
+          checked={user.subscriber ? true : false}
+          onChange={handleChange}
         />
-        <label> {input.subscriber ? "Subscribed" : "Unsubscribed"}</label>
-        <input type="checkbox" checked={input.subscriber ? true : false} />
-      </form>
-    </>
+      </div>
+    </div>
   );
 };
 
