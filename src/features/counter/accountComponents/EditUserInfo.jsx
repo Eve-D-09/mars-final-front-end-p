@@ -104,9 +104,6 @@ const EditUserInfo = () => {
             <button type="submit">SUBMIT</button>
           </div>
         </form>
-        {/* <form>
-          <input type="checkbox"  checked={inputs.subscriber ? true : false}/>
-        </form> */}
         <ToggleSubscribe />
       </div>
     </>

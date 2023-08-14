@@ -1,9 +1,9 @@
-import React, { useState, useCallback } from "react";
+import React, { useCallback } from "react";
 import { selectToken, selectUser, setUser } from "../planetSlice";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { setToastMessage } from "../planetSlice";
-import { validate } from "../../../validation/index";
+import { url } from "../../../config";
 
 const ToggleSubscribe = () => {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ const ToggleSubscribe = () => {
 
   const userData = useCallback(async () => {
     try {
-      const { data } = await axios.get(`http://localhost:6001/account/users`, {
+      const { data } = await axios.get(`${url}/account/users`, {
         headers: { token },
       });
 

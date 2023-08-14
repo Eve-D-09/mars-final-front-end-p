@@ -64,9 +64,6 @@ const Profile = () => {
               <a href="/#" onClick={onNavClick} id="16"> EDIT
               </a>
             </div>
-            {/* <div className="personalSubscribes">
-              <p> subscribe/unsubscribe</p>
-            </div> */}
           </div>
         </div>
       </div>
