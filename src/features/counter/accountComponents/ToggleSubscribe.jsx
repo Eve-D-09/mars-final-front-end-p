@@ -29,7 +29,7 @@ const ToggleSubscribe = () => {
 
     if (e.target.checked === true) {
       try {
-        await axios.post(`http://localhost:6001/account/subscribe`, {
+        await axios.post(`${url}/account/subscribe`, {
           email: user.email,
         });
         dispatch(setToastMessage("You successfully subscribed"));
@@ -39,7 +39,7 @@ const ToggleSubscribe = () => {
       }
     } else {
       try {
-        await axios.delete(`http://localhost:6001/account/subscribe`, {
+        await axios.delete(`${url}/account/subscribe`, {
           headers: { token },
         });
         dispatch(setToastMessage("You successfully unsubscribed"));

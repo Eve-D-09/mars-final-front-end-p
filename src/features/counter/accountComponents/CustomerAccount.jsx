@@ -8,6 +8,7 @@ import { selectUser, setUser } from "../planetSlice";
 import axios from "axios";
 import { useEffect } from "react";
 import Profile from "./Profile";
+import { url } from "../../../config";
 
 const CustomerAccount = () => {
   const dispatch = useDispatch();
@@ -19,9 +20,7 @@ const CustomerAccount = () => {
   // 3.
   const userData = useCallback(async () => {
     try {
-      const { data } = await axios.get(`http://localhost:6001/account/users`, {
-        headers: { token },
-      });
+      const { data } = await axios.get(`${url}/account/users`, { headers: { token },});
       // console.log("token", token, "data", data);
       dispatch(setUser(data.results));
       //  or just data ? 

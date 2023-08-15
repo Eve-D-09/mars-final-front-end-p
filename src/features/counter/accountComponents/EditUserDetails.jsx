@@ -5,6 +5,7 @@ import { setScreenMode } from "../planetSlice";
 import { selectUser, selectToken } from "../planetSlice";
 import { validate } from "../../../validation/index";
 import { setToastMessage } from "../planetSlice";
+import { url } from "../../../config";
 
 const EditUserDetails = () => {
   // const [input, setInput] = useState({});
@@ -40,7 +41,7 @@ const EditUserDetails = () => {
     if (!errors) {
       try {
         const { data } = await axios.patch(
-          `http://localhost:6001/account/update_details`,
+          `${url}/account/update_details`,
           inputs,
           { headers: { token } }
         );

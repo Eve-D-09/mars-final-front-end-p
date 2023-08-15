@@ -6,6 +6,7 @@ import { selectUser, selectToken } from "../planetSlice";
 import { validate } from "../../../validation/index";
 import { setToastMessage } from "../planetSlice";
 import ToggleSubscribe from "./ToggleSubscribe";
+import { url } from "../../../config";
 
 const EditUserInfo = () => {
   // const [input, setInput] = useState({});
@@ -39,7 +40,7 @@ const EditUserInfo = () => {
     if (!errors) {
       try {
         const { data } = await axios.patch(
-          `http://localhost:6001/account/update`,
+          `${url}/account/update`,
           inputs,
           { headers: { token } }
         );

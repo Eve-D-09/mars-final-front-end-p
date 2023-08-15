@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { setScreenMode } from "../planetSlice";
 import { validate } from "../../../validation/index";
 import { setToastMessage } from "../planetSlice";
+import { url } from "../../../config";
 
 const RegisterDetails = () => {
   const [input, setInput] = useState({});
@@ -21,7 +22,7 @@ const RegisterDetails = () => {
     console.log(results);
     if (results === null) {
         try {
-          const { data } = await axios.post(`http://localhost:6001/account/details`, input);
+          const { data } = await axios.post(`${url}/account/details`, input);
           if ( data.status === 1) {
             dispatch(setToastMessage("Success"));
             dispatch(setScreenMode(9));

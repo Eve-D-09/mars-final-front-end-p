@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { validate } from "../../../validation/index";
 import { setToastMessage } from "../planetSlice";
 import ArrowRight from "../../../img/svg/arrow-right-white-svgrepo-com.svg";
+import { url } from "../../../config";
 
 const Subscribe = () => {
   const [input, setInput] = useState({ email: "" });
@@ -16,7 +17,7 @@ const Subscribe = () => {
     if (results === null) {
       try {
         const { data } = await axios.post(
-          `http://localhost:6001/account/subscribe`,
+          `${url}/account/subscribe`,
           input
         );
         if (data.status === 1) {
