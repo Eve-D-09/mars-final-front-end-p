@@ -39,11 +39,7 @@ const EditUserInfo = () => {
     // console.log(results);
     if (!errors) {
       try {
-        const { data } = await axios.patch(
-          `${url}/account/update`,
-          inputs,
-          { headers: { token } }
-        );
+        const { data } = await axios.patch(`${url}/account/update`, inputs,{ headers: { token } });
         console.log(data);
         if (data.status === 1) {
           dispatch(setToastMessage("Success"));

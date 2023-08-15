@@ -26,4 +26,4 @@ export const url = `https://api.marsmessengers.co.uk`;
 //  RegisterDetails.jsx
 //  line 24: await axios.post(`http://localhost:6001/account/details)
 
-//  Change Insomnia
+//   Insomnia

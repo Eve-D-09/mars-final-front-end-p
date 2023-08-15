@@ -40,11 +40,7 @@ const EditUserDetails = () => {
     const errors = await validate(inputs, "updateDetails");
     if (!errors) {
       try {
-        const { data } = await axios.patch(
-          `${url}/account/update_details`,
-          inputs,
-          { headers: { token } }
-        );
+        const { data } = await axios.patch(`${url}/account/update_details`,inputs, { headers: { token } });
         if (data.status === 1) {
           dispatch(setToastMessage("Success"));
           dispatch(setScreenMode(11));
