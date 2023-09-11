@@ -48,4 +48,4 @@ export const updateDetails = {
   postcode: joi.number(),
   country: joi.string(),
   phoneNumber: joi.number(),
-}
+};

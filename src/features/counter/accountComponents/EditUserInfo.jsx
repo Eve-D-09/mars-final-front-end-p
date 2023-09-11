@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { setScreenMode } from "../planetSlice";
+import { setScreenMode } from "../screenSlice";
 import { selectUser, selectToken } from "../planetSlice";
 import { validate } from "../../../validation/index";
 import { setToastMessage } from "../planetSlice";
@@ -36,7 +36,7 @@ const EditUserInfo = () => {
     e.preventDefault();
     console.log(inputs);
     const errors = await validate(inputs, "updateUser");
-    // console.log(results);
+    console.log(errors);
     if (!errors) {
       try {
         const { data } = await axios.patch(`${url}/account/update`, inputs,{ headers: { token } });

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from "react-redux";
-import { setScreenMode } from "../planetSlice";
+import { setScreenMode } from "../screenSlice";
 
 const Wishlist = () => {
 

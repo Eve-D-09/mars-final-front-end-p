@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { setScreenMode } from "../planetSlice";
+import { setScreenMode } from "../screenSlice";
 import { validate } from "../../../validation/index";
 import { setToastMessage, setToken } from "../planetSlice";
 import EyeIcon from "../../../img/svg/view-eye-interface-symbol-svgrepo-com.svg";

@@ -2,7 +2,7 @@ import React from "react";
 import ThreeDots from "../../../img/svg/threedots-svgrepo-com-horizontal.svg";
 
 import {  useDispatch } from "react-redux";
-import { setScreenMode } from "../planetSlice";
+import { setScreenMode } from "../screenSlice";
 
 const RoverInfo = (props) => {
   

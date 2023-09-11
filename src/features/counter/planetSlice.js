@@ -9,7 +9,7 @@ import { rovers } from "../../myData/rovers";
 
 const initialState = {
   value: 0,
-  screenMode: 0,
+ 
   slides: slides,
   ingenuity: ingenuity,
   insight: insight,
@@ -19,6 +19,7 @@ const initialState = {
   rovers: rovers,
   user: [],
   token: localStorage.getItem("token"),
+  
 };
 
 export const planetSlice = createSlice({
@@ -34,9 +35,6 @@ export const planetSlice = createSlice({
       state.rawImages = action.payload;
     },
 
-    setScreenMode: (state, action) => {
-      state.screenMode = action.payload;
-    },
 
     setRover: (state, action) => {
       state.rover = action.payload;
@@ -78,7 +76,7 @@ export const planetSlice = createSlice({
 export const {
   setPicOfDay,
   setRawImages,
-  setScreenMode,
+ 
   setRover,
   setOrbiter,
   setSearch,
@@ -92,7 +90,7 @@ export const {
 
 export const selectPicOfDay = (state) => state.counter.picOfDay;
 export const selectRawImages = (state) => state.counter.rawImages;
-export const selectScreenMode = (state) => state.counter.screenMode;
+
 export const selectRover = (state) => state.counter.rover;
 export const selectOrbiter = (state) => state.counter.orbiter;
 export const selectSearch = (state) => state.counter.search;

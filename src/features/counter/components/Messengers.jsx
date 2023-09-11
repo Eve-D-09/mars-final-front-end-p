@@ -2,7 +2,7 @@ import React from "react";
 import MoreInfo from "../../../img/svg/more-grid-small-svgrepo-com.svg";
 import Timer from "./Timer";
 import {useDispatch} from "react-redux";
-import { setScreenMode} from "../planetSlice";
+import { setScreenMode} from "../screenSlice";
 
 const Messengers = () => {
   

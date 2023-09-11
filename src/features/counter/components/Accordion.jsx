@@ -1,31 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import { ReactComponent as PlusCircle } from "../../../img/svg/add-plus-circle-svgrepo-com.svg";
 
-const Accordion = ({ paragraph }) => {
+const Accordion = ({ paragraph, toggle, open }) => {
   const { title, content } = paragraph;
-
-  const [isActive, setIsActive] = useState(false);
 
   return (
     <div>
-      <div className="accordionBody" onClick={() => setIsActive(!isActive)}>
+      <div className="accordionBody" onClick={() => toggle(paragraph)}>
         <p>{title}</p>
        
         <p>
-          {isActive ? (
+          { !open ? (
+            <PlusCircle style={{ transform: "rotateZ(90deg)",transition: "0.5s ease-in"}}/>
+          ) : (
             <PlusCircle
               style={{
                 transform: "rotateZ(135deg)",
                 transition: "0.5s ease-in",
               }}
             />
-          ) : (
-            <PlusCircle style={{ transform: "rotateZ(90deg)",transition: "0.5s ease-in"}}/>
           )}
         </p>
        
       </div>
-      {isActive && <div className="accordionContent"><p>{content}</p></div>}
+      { open && <div className="accordionContent"><p>{content}</p></div>}
     </div>
   );
 };

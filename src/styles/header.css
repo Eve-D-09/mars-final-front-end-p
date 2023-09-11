@@ -70,15 +70,23 @@
     height: 40px;
   }
 
+  .navigation button {
+    background: none;
+    border: none;
+  }
+  /* bring back  these 2 rules for navigation on hover */
 
-.navigation nav {
+/* .navigation nav {
     display: none;
-}
+} */
 
-
-.navigation:hover img ~ nav {
+/* .navigation:hover img ~ nav {
     display: flex;
-}
+} */
+
+
+
+
 
 /* -------------------------------------------------------- */
 
@@ -150,6 +158,9 @@
     justify-content: space-around;
     position: unset;
     height: auto;
+  }
+  .navigation button {
+    display: none;
   }
 
   .navigation nav {

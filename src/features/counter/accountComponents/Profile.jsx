@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setScreenMode, selectUser, setToken } from "../planetSlice";
+import { selectUser, setToken } from "../planetSlice";
+import { setScreenMode } from "../screenSlice";
 import LogoutIcon from "../../../img/svg/logout-svgrepo-com.svg";
 
 const Profile = () => {

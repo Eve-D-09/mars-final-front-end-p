@@ -18,7 +18,7 @@ const ButtonUp = () => {
     const scrollUp = () => {
         window.scrollTo({
             top: 0, 
-            behaviour: "smooth",
+            behaviour: 'smooth',
         })
     }
 

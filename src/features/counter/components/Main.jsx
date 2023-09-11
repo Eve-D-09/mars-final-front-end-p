@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { useSelector } from "react-redux";
-import { selectScreenMode } from "../planetSlice";
+import { selectScreenMode } from "../screenSlice";
 import Home from "./Home";
 import PicOfDay from "./PicOfDayAPI";
 import Messengers from "./Messengers";
@@ -23,12 +23,15 @@ import Wishlist from "../accountComponents/Wishlist";
 import EditUserInfo from "../accountComponents/EditUserInfo";
 import EditUserDetails from "../accountComponents/EditUserDetails";
 
-const Main = () => {
+
+const Main = (props) => {
+  
   const screenMode = useSelector(selectScreenMode);
+  console.log(screenMode);
   return (
     <div className="mainContainer">
       <div className="header">
-        <Header />
+        <Header domClick={props.domClick} />
       </div>
       <>
         <div className="homeScreen">{screenMode === 0 && <Home />}</div>

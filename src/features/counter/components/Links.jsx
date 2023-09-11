@@ -1,6 +1,6 @@
 import React from "react";
 // import { intro } from "../../../myData/intro";
-import { setScreenMode } from "../planetSlice";
+import { setScreenMode } from "../screenSlice";
 import { useDispatch } from "react-redux";
 import RoverImg from "../../../img/img-for-interval/perseverance-rover.jpg";
 

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { setScreenMode } from "../planetSlice";
+import { setScreenMode } from "../screenSlice";
 import { validate } from "../../../validation/index";
 import { setToastMessage } from "../planetSlice";
+import {url } from "../../../config";
 
 
 const Login = () => {
@@ -22,7 +23,7 @@ const Login = () => {
     
     if (results === null) {
       try {
-        const { data } = await axios.post(`http://localhost:6001/account/login`, input);
+        const { data } = await axios.post(`${url}/account/login`, input);
         if ( data.status === 1) {
           // dispatch(setToastMessage("Success"));
           dispatch(setScreenMode(11));

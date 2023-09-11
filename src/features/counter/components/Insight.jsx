@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectInsight, setScreenMode } from "../planetSlice";
+import { selectInsight} from "../planetSlice";
+import { setScreenMode } from "../screenSlice";
 
 import ThreeDotsWhite from "../../../img/svg/three-dots-horizontal-white.svg";
 

@@ -5,29 +5,30 @@ export const validate = async (payload, type) => {
   let result;
   switch (type) {
     case "login":
-      result = joi.object(login);
+      result = joi.object(login).options({ allowUnknown: true});
       break;
       
 
     case "register":
-      result = joi.object(register);
+      result = joi.object(register).options({ allowUnknown: true});
       break;
       
 
     case "subscribe":
-      result = joi.object(subscribe);
+      result = joi.object(subscribe).options({ allowUnknown: true});
       break;
 
     case "registerDetails": 
-    result = joi.object(registerDetails);
+    result = joi.object(registerDetails).options({ allowUnknown: true});
     break;
 
     case "updateUser":
-      result = joi.object(updateUser);
+      result = joi.object(updateUser).options({ allowUnknown: true});
+
       break;
 
     case "updateDetails": 
-       result = joi.object(updateDetails);
+       result = joi.object(updateDetails).options({ allowUnknown: true});
        break;
       
   }

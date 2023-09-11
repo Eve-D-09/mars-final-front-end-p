@@ -22,8 +22,4 @@ export const getData = async (type, verb, url) => {
   }
 };
 
-// if (data) {
-  // store.dispatch(setPicOfDay(data));
-// } else {
-  // store.dispatch(setToastMessage("We are sorry, there is no picture today"));
-// }
+

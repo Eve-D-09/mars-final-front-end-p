@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { selectIngenuity, setScreenMode } from "../planetSlice";
+import { selectIngenuity } from "../planetSlice";
+import { setScreenMode } from "../screenSlice";
 import ThreeDots from "../../../img/svg/threedots-svgrepo-com-horizontal.svg";
 
 const Ingenuity = () => {
