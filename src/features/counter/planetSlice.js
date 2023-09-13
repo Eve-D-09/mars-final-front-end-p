@@ -9,7 +9,6 @@ import { rovers } from "../../myData/rovers";
 
 const initialState = {
   value: 0,
- 
   slides: slides,
   ingenuity: ingenuity,
   insight: insight,

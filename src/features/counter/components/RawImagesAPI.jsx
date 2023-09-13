@@ -12,6 +12,8 @@ import {
 import RawImages from "./RawImages";
 import Loading from "./Loading";
 
+// import LatestPhotosAPI from "./LatestPhotosAPI";
+
 const RawImagesAPI = () => {
   const today = new Date();
   const month =
@@ -50,6 +52,7 @@ const RawImagesAPI = () => {
 
   return (
     <>
+      {/* <LatestPhotosAPI /> */}
       <div className="searchWrapper">
         <div className="searchContainer">
           <div>

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState,useRef, useEffect, useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { setScreenMode } from "../screenSlice";
 import ArrowRight from "../../../img/svg/arrow-right-sm-svgrepo-com.svg";
@@ -8,7 +8,7 @@ import { ReactComponent as UserIcon } from "../../../img/svg/user-svgrepo-com.sv
 
 const Nav = (props) => {
   // ----------------------------------------------------------
-  const navRef = useRef();
+  const ref = useRef();
   const [isOpen, setIsOpen] = useState(false);
 
   const [width, setWidth] = useState(window.innerWidth);
@@ -24,19 +24,36 @@ const Nav = (props) => {
 
   const toggleOpen = () => setIsOpen(!isOpen);
 
-  useEffect(() => {
-    console.log(props.domClick);
-    if (isOpen) {
+  // -------trying to fix navigation----------------
+  
+   const outsideClick = useCallback((e) => {
+     if ( ref.current && !ref.current.contains(e.target)) {
       setIsOpen(false);
+     } 
+   }, []);
+
+   useEffect(() => {
+    document.addEventListener("mousedown", outsideClick );
+    return () => {
+      document.removeEventListener("mousedown", outsideClick)
     }
-  }, [props.domClick]);
+   })
+
+  // --------------------------------------------------------------------------------------
+  // useEffect((e) => {
+  //   console.log(props.domClick);
+  //   if ( isOpen ) {
+  //     setIsOpen(false);
+  //   }
+  // }, [props.domClick]);
+  //  removed from dep.array isOpen - and then navigation works
 
   //  --------------------------------------------------------------------------------------
   const onNavClick = (e) => {
     console.log("nav clicked");
     e.preventDefault();
     dispatch(setScreenMode(Number(e.currentTarget.id)));
-    // setIsOpen(false);
+    setIsOpen(false);
   };
   console.log(isOpen);
   // dispatch(setScreenMode(Number(e.target.id))); this works if only a tag is a text-based
@@ -44,7 +61,7 @@ const Nav = (props) => {
 
   return (
     <>
-      <div className="navigation" ref={navRef}>
+      <div className="navigation" ref={ref}>
         <button onClick={toggleOpen}>
           <img src={MenuIcon} alt="menuIcon" />
         </button>

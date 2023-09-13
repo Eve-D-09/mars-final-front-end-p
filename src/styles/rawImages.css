@@ -136,7 +136,12 @@
     line-height: 35px;
     text-align: center;
     font-family: var(--queen-sides-medium);
-    
+    cursor: pointer;
+}
+
+.rawImagesList li:hover {
+    background-color: rgb(243, 226, 207);
+    border-radius:50%;
 }
 
 .rawImagesList button {
@@ -145,6 +150,7 @@
     border-radius: 50%;
     background-color: var(--orange-color);
     border: none;
+    cursor: pointer;
 }
 
 .activePage {
