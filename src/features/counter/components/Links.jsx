@@ -26,20 +26,4 @@ const Links = () => {
 
 export default Links;
 
-// {intro.map((i) => {
-//   // return <LinksTags introLink={i} />
-//   return (
-//     <div className="linksContainer">
-//       <a href="/#"  onClick={onNavClick}  >
-//         <p>{i.title}</p>
-//         <img src={i.img} alt={i.title} />
-//       </a>
-//     </div>
-//   );
-// })}
 
-// if ( title === "Rerseverance Rover") {
-//   dispatch(setScreenMode(5));
-// } else if (title === "Ingenuity helicopter") {
-//   dispatch(setScreenMode(7));
-// };
