@@ -3,8 +3,12 @@ import ButtonUp from "./ButtonUp";
 import  ArrowRight  from "../../../img/svg/arrow-right-sm-svgrepo-com.svg";
 import ArrowLeft from "../../../img/svg/arrow-left-sm-svgrepo-com.svg";
 
+import ToggleFavoriteButton from "../toggleFavorites/ToggleFavoriteButton";
+
+
 const RawImages = (props) => {
   const [pageNumber, setPageNumber] = useState(1);
+ 
 
   const rawImages = [...props.rawImages];
   const resultsPerPage = 10;
@@ -37,7 +41,7 @@ const RawImages = (props) => {
               <li
                 className={pageNumber === index + 1 && "activePage"}
                 onClick={pageChange}
-                id={index + 1} >
+                id={index + 1} key={index}>
                 {index + 1}
               </li>
             
@@ -54,6 +58,7 @@ const RawImages = (props) => {
           <>
             <div className="rawImagesContainer">
               <div className="rawImagesTitle">
+                <ToggleFavoriteButton id={image.id} liked={image.liked}/>
                 <p>Taken by: {image.rover.name}</p>
                 <p>On: {image.earth_date}</p>
                 <p>Camera: {image.camera.full_name}</p>

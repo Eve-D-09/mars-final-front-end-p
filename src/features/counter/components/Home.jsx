@@ -1,6 +1,6 @@
 import React from "react";
 import Intro from "./Intro";
-// import Links from "./Links";
+
 
 
 const Home = () => {
@@ -10,9 +10,7 @@ const Home = () => {
       <Intro />
       
     </div>
-    {/* <div className="intervalContainer">
-    <Links />
-    </div> */}
+    
     </>
   );
 };

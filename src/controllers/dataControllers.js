@@ -1,5 +1,6 @@
 import axios from "axios";
-import { setPicOfDay, setRawImages } from "../features/counter/planetSlice";
+import { setPicOfDay } from "../features/counter/planetSlice";
+import { setRawImages } from "../features/counter/rawImagesSlice";
 import { store } from "../app/store";
 import { setToastMessage } from "../features/counter/planetSlice";
 

@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 // import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
-import { selectRawImages } from "../planetSlice";
+// import { selectRawImages } from "../planetSlice";
+import { selectRawImages } from "../rawImagesSlice";
 import { getData } from "../../../controllers/dataControllers";
 import {
   setSearch,
@@ -12,7 +13,6 @@ import {
 import RawImages from "./RawImages";
 import Loading from "./Loading";
 
-// import LatestPhotosAPI from "./LatestPhotosAPI";
 // 3 import selectLatestPhotos
 import { selectLatestPhotos } from "../latestPhotosSlice";
 import LatestPhotos from "./LatestPhotos";
@@ -35,7 +35,6 @@ const RawImagesAPI = () => {
 
   // 4. select latest photos
   const latestPhotos = useSelector(selectLatestPhotos);
-  
 
   const dispatch = useDispatch();
 
@@ -50,25 +49,25 @@ const RawImagesAPI = () => {
         `get`,
         `https://api.nasa.gov/mars-photos/api/v1/rovers/${search}/photos?earth_date=${calendar}&api_key=Mmse3giht0jkNDr9PqbdtsAnvxXdRAo0fzrSXcB4`
       );
-    } 
-   
+    }
   };
 
   useEffect(() => {
-      getData(`latestPhotos`, 
-              `get`, 
-              `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=Mmse3giht0jkNDr9PqbdtsAnvxXdRAo0fzrSXcB4`)
-  }, [])
+    getData(
+      `latestPhotos`,
+      `get`,
+      `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=Mmse3giht0jkNDr9PqbdtsAnvxXdRAo0fzrSXcB4`
+    );
+  }, []);
 
-  console.log( rawImages);
+  console.log(rawImages);
   // console.log(latestPhotos);
-  
-  
+
   if (!latestPhotos) return <Loading />;
 
   return (
     <>
-      {/* <LatestPhotosAPI /> */}
+      
       <div className="searchWrapper">
         <div className="searchContainer">
           <div>
@@ -99,13 +98,12 @@ const RawImagesAPI = () => {
               <button onClick={gettingData}>Search</button>
             )}
           </div>
-         
         </div>
       </div>
       {rawImages && <RawImages rawImages={rawImages} key={rawImages.id} />}
-      {!rawImages && latestPhotos && <LatestPhotos latestPhotos={latestPhotos.latest_photos} />}
-       
-      
+      {!rawImages && latestPhotos && (
+        <LatestPhotos latestPhotos={latestPhotos.latest_photos} key={latestPhotos.latest_photos.id}/>
+      )}
     </>
   );
 };
