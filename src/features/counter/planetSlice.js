@@ -75,7 +75,6 @@ export const planetSlice = createSlice({
 export const {
   setPicOfDay,
   setRawImages,
- 
   setRover,
   setOrbiter,
   setSearch,
@@ -89,7 +88,6 @@ export const {
 
 export const selectPicOfDay = (state) => state.counter.picOfDay;
 export const selectRawImages = (state) => state.counter.rawImages;
-
 export const selectRover = (state) => state.counter.rover;
 export const selectOrbiter = (state) => state.counter.orbiter;
 export const selectSearch = (state) => state.counter.search;

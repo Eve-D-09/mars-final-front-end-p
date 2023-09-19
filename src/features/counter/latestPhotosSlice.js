@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: 0,
+  latestPhotos: 0,
 };
 
-export const photosSlice = createSlice({
+export const latestPhotosSlice = createSlice({
   name: "photos",
   initialState,
   reducers: {
@@ -14,8 +14,8 @@ export const photosSlice = createSlice({
   },
 });
 
-export const { setLatestPhotos } = photosSlice.actions;
+export const { setLatestPhotos } = latestPhotosSlice.actions;
 
 export const selectLatestPhotos = (state) => state.photos.latestPhotos;
 
-export default photosSlice.reducer;
+export default latestPhotosSlice.reducer;

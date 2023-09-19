@@ -27,7 +27,8 @@ export const registerDetails = {
   addressLine1: joi.string(), 
   addressLine2: joi.string(),
   city: joi.string(),
-  postcode: joi.number(),
+  postcode: joi.string(),
+  //  postcode change from number to string, in updateDetails too
   country: joi.string(),
   phoneNumber: joi.number(),
 };
@@ -45,7 +46,7 @@ export const updateDetails = {
   addressLine1: joi.string(), 
   addressLine2: joi.string(),
   city: joi.string(),
-  postcode: joi.number(),
+  postcode: joi.string(),
   country: joi.string(),
   phoneNumber: joi.number(),
 };
