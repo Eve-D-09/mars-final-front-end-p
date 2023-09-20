@@ -11,7 +11,6 @@ const Rovers = () => {
   let filtered = [...rovers];
 
   filtered = filtered.filter((item) => {
-    
     return item.name === sortRover;
   });
   console.log(filtered);

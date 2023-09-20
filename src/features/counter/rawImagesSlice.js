@@ -15,6 +15,11 @@ export const rawImagesSlice = createSlice({
       const indexOf = state.rawImages.findIndex((image) => {
         return image.id === action.payload;
       });
+      if (state.favoritesImages.includes(action.payload)) {
+        state.favoritesImages.splice(indexOf, 1);
+      } else {
+        state.favoritesImages.push(action.payload);
+      }
       state.rawImages[indexOf].liked = !state.rawImages[indexOf].liked;
     },
   },

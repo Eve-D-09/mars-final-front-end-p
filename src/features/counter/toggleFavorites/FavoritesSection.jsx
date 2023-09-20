@@ -13,26 +13,28 @@ const FavoritesSection = () => {
 
   console.log(favorites);
 
-  favoritesImages.map((image) => {
-    return (
-    
-        <div className="rawImagesContainer">
-          <div className="rawImagesTitle">
-            <ToggleFavoriteButton id={image.id} liked={image.liked} />
-            <p>Taken by: {image.rover.name}</p>
-            <p>On: {image.earth_date}</p>
-            <p>Camera: {image.camera.full_name}</p>
-          </div>
+  
 
-          <div className="rawImage">
-            <img src={image.img_src} alt="mars-images" />
-          </div>
-        </div>
-   
-    );
-  });
+  return (
+    <>
+      {favorites.map((image) => {
+        return (
+          <div className="rawImagesContainer">
+            <div className="rawImagesTitle">
+              <ToggleFavoriteButton id={image.id} liked={image.liked} />
+              <p>Taken by: {image.rover.name}</p>
+              <p>On: {image.earth_date}</p>
+              <p>Camera: {image.camera.full_name}</p>
+            </div>
 
-  return <></>;
+            <div className="rawImage">
+              <img src={image.img_src} alt="mars-images" />
+            </div>
+          </div>
+        );
+      })}
+    </>
+  );
 };
 
 export default FavoritesSection;

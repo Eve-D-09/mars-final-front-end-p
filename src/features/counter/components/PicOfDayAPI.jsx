@@ -37,10 +37,7 @@ const PicOfDay = () => {
       <p> Now we can provide you amazing photos from across universe each day!</p>
       <button onClick={handleClick}>Show me Picture</button>
     </div>
-    {/* ------------------------------------------- */}
-    <div>hello there</div>
-    <FavoritesSection />
-    {/* ------------------------------------------- */}
+    
     {/* <div className="picOfDayResult"> */}
      {showPicture && (
       <div className="picOfDayResult">
@@ -53,7 +50,8 @@ const PicOfDay = () => {
         </div>
       )}
     {/* </div> */}
-    
+    <div>hello there</div>
+    <FavoritesSection />
     
     </>
   );
