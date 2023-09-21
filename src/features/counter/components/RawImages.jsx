@@ -29,7 +29,7 @@ const RawImages = (props) => {
     if (pageNumber + 1 > pages.length) return;
     setPageNumber(pageNumber + 1);
   };
-  console.log(pageNumber);
+  // console.log(pageNumber);
   return (
     <div className="rawImagesBox">
       <ul className="rawImagesList">
@@ -58,7 +58,8 @@ const RawImages = (props) => {
           <>
             <div className="rawImagesContainer">
               <div className="rawImagesTitle">
-                <ToggleFavoriteButton id={image.id} liked={image.liked}/>
+                {/* bring back image.img_src */}
+                <ToggleFavoriteButton id={image.id} img={image} liked={image.liked}/>
                 <p>Taken by: {image.rover.name}</p>
                 <p>On: {image.earth_date}</p>
                 <p>Camera: {image.camera.full_name}</p>

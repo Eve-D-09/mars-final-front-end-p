@@ -10,8 +10,8 @@ const Links = () => {
 
   const onNavClick = (e) => {
     e.preventDefault();
-    dispatch(setScreenMode(Number(e.target.id)));
-    //  set to currentTarget to make a link tag overlay
+    dispatch(setScreenMode(Number(e.currentTarget.id)));
+    //  set to currentTarget.id to make a link tag overlay
   };
 
   return (

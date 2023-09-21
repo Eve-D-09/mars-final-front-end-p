@@ -18,7 +18,6 @@ const initialState = {
   rovers: rovers,
   user: [],
   token: localStorage.getItem("token"),
-  
 };
 
 export const planetSlice = createSlice({

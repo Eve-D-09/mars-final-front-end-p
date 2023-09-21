@@ -22,7 +22,7 @@ const RawImagesAPI = () => {
   const month =
     today.getMonth() > 9 ? today.getMonth() + 1 : "0" + (today.getMonth() + 1);
   const day = today.getDate() > 9 ? today.getDate() : "0" + today.getDate();
-  console.log(day);
+  // console.log(day);
 
   const dateRanges = {
     perseverance: ["2021-02-18", `${today.getFullYear()}-${month}-${day}`],
@@ -61,7 +61,7 @@ const RawImagesAPI = () => {
   }, []);
 
   console.log(rawImages);
-  // console.log(latestPhotos);
+  console.log(latestPhotos);
 
   if (!latestPhotos) return <Loading />;
 

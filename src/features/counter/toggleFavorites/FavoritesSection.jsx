@@ -4,20 +4,39 @@ import { selectRawImages, selectFavoritesImages } from "../rawImagesSlice";
 import ToggleFavoriteButton from "./ToggleFavoriteButton";
 
 const FavoritesSection = () => {
+
   const rawImages = useSelector(selectRawImages);
   const favoritesImages = useSelector(selectFavoritesImages);
 
-  const favorites = rawImages.filter((image) => {
-    return favoritesImages.includes(image.id);
-  });
+  
 
-  console.log(favorites);
+  // rawImages.filter((image) => {
+  //   return favoritesImages.includes(image.id);
+  // });
 
+  //  const getFavoritesImages = () => {
+  //   const favoritesImages = JSON.parse(localStorage.getItem("favoritesImages"));
+  //   return favoritesImages ? favoritesImages: {};
+  // }
+
+   const storageData = JSON.parse(localStorage.getItem("favoriteUrl"));
+  
+  //   useEffect would prevent from rerendering everytime
+  // useEffect(() => {
+  //   localStorage.setItem("favoriteUrl", JSON.stringify(imageUrl))
+  //   console.log(storageData);
+  // }, [favoriteUrl]);
+  
+  
+
+ console.log(favoritesImages);
+ console.log(storageData);
+  
   
 
   return (
     <>
-      {favorites.map((image) => {
+      {storageData.map((image) => {
         return (
           <div className="rawImagesContainer">
             <div className="rawImagesTitle">
@@ -33,6 +52,7 @@ const FavoritesSection = () => {
           </div>
         );
       })}
+      {storageData.length === 0 && <p>there are no favorites pictures</p>}
     </>
   );
 };

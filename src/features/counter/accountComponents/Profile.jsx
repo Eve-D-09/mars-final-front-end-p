@@ -2,7 +2,8 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser, setToken } from "../planetSlice";
 import { setScreenMode } from "../screenSlice";
-import LogoutIcon from "../../../img/svg/logout-svgrepo-com.svg";
+// import LogoutIcon from "../../../img/svg/logout-svgrepo-com.svg";
+// import Logout from "../../../img/svg/logout-icon.jpg";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -36,8 +37,8 @@ const Profile = () => {
                   dispatch(setScreenMode(9));
                   dispatch(setToken(null));
                   localStorage.clear();
-                }}>
-                <img src={LogoutIcon} alt="logout-icon" />
+                }}> Log out
+                {/* <img src={Logout} alt="logout-icon" /> */}
               </button>
             </div>
             <div className="personalInfo">
