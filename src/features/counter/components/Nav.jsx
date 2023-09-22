@@ -50,12 +50,13 @@ const Nav = (props) => {
 
   //  --------------------------------------------------------------------------------------
   const onNavClick = (e) => {
-    console.log("nav clicked");
+    // console.log("nav clicked");
     e.preventDefault();
     dispatch(setScreenMode(Number(e.currentTarget.id)));
     setIsOpen(false);
   };
-  console.log(isOpen);
+  // console.log(isOpen);
+  
   // dispatch(setScreenMode(Number(e.target.id))); this works if only a tag is a text-based
   //  e.currentTarget.id - covers  image inside link to be clickable
 

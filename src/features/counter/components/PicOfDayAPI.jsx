@@ -6,8 +6,10 @@ import Loading from "./Loading";
 import { getData } from "../../../controllers/dataControllers";
 import FavoritesSection from "../toggleFavorites/FavoritesSection";
 
+
 const PicOfDay = () => {
   const [showPicture, setShowPicture] = useState(false);
+  console.log();
 
   const picOfDay = useSelector(selectPicOfDay);
 
@@ -54,7 +56,7 @@ const PicOfDay = () => {
       )}
 
       <div>Should Be Favorites Images Section</div>
-      <FavoritesSection />
+      <FavoritesSection   />
     </>
   );
 };

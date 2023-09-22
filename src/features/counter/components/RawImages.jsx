@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import ButtonUp from "./ButtonUp";
 import  ArrowRight  from "../../../img/svg/arrow-right-sm-svgrepo-com.svg";
 import ArrowLeft from "../../../img/svg/arrow-left-sm-svgrepo-com.svg";
-
 import ToggleFavoriteButton from "../toggleFavorites/ToggleFavoriteButton";
 
 
@@ -58,7 +57,7 @@ const RawImages = (props) => {
           <>
             <div className="rawImagesContainer">
               <div className="rawImagesTitle">
-                {/* bring back image.img_src */}
+                
                 <ToggleFavoriteButton id={image.id} img={image} liked={image.liked}/>
                 <p>Taken by: {image.rover.name}</p>
                 <p>On: {image.earth_date}</p>

@@ -1,23 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { selectRawImages, selectFavoritesImages } from "../rawImagesSlice";
+import { selectRawImages } from "../rawImagesSlice";
 import ToggleFavoriteButton from "./ToggleFavoriteButton";
+import { ReactComponent as HeartIcon } from "../../../img/svg/heart-like-svgrepo-com.svg";
 
-const FavoritesSection = () => {
+const FavoritesSection = (props) => {
 
   const rawImages = useSelector(selectRawImages);
-  const favoritesImages = useSelector(selectFavoritesImages);
-
-  
-
-  // rawImages.filter((image) => {
-  //   return favoritesImages.includes(image.id);
-  // });
-
-  //  const getFavoritesImages = () => {
-  //   const favoritesImages = JSON.parse(localStorage.getItem("favoritesImages"));
-  //   return favoritesImages ? favoritesImages: {};
-  // }
+ 
 
    const storageData = JSON.parse(localStorage.getItem("favoriteUrl"));
   
@@ -27,20 +17,24 @@ const FavoritesSection = () => {
   //   console.log(storageData);
   // }, [favoriteUrl]);
   
-  
 
- console.log(favoritesImages);
- console.log(storageData);
-  
+  //  console.log(favoritesImages);
+  console.log(storageData);
+  console.log();
+  // ------------------------------
+  const { id, liked } = props;
+  console.log(id, liked);
   
 
   return (
     <>
+    {!storageData && <p>there are no favorites pictures yet</p>}
       {storageData.map((image) => {
         return (
-          <div className="rawImagesContainer">
+          <div className="rawImagesContainer" >
             <div className="rawImagesTitle">
-              <ToggleFavoriteButton id={image.id} liked={image.liked} />
+              
+              <ToggleFavoriteButton  id={props.id} liked={liked ? <HeartIcon style={{ fill: "#fc037b" }} /> : <HeartIcon />}/>
               <p>Taken by: {image.rover.name}</p>
               <p>On: {image.earth_date}</p>
               <p>Camera: {image.camera.full_name}</p>
@@ -52,9 +46,11 @@ const FavoritesSection = () => {
           </div>
         );
       })}
-      {storageData.length === 0 && <p>there are no favorites pictures</p>}
+     
     </>
+    
   );
+  
 };
 
 export default FavoritesSection;

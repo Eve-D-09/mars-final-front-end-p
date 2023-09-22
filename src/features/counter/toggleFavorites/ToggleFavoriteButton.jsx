@@ -7,15 +7,16 @@ import { setFavoriteUrl } from "../rawImagesSlice";
 //  props id and liked  come from RawImages
 
 const ToggleFavoriteButton = (props) => {
-  const { id, liked, img } = props;
-
   const dispatch = useDispatch();
+  const { id, liked, img } = props;
 
   const onHeartClick = () => {
     dispatch(toggleFavoriteImage(id, img, liked));
     dispatch(setFavoriteUrl(img, liked));
     // localStorage.setItem("favoritesUrl", img);
   };
+ 
+  
 
   return (
     <>
