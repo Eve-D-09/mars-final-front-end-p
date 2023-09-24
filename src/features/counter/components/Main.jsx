@@ -27,7 +27,7 @@ import EditUserDetails from "../accountComponents/EditUserDetails";
 const Main = (props) => {
   
   const screenMode = useSelector(selectScreenMode);
-  console.log(screenMode);
+  // console.log(screenMode);
   return (
     <div className="mainContainer">
       <div className="header">

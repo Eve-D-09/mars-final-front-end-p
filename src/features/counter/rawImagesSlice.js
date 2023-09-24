@@ -2,8 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   // rawImages: [],
-  // favoritesImages: [],
-  imageUrl: [],
+  // imageUrl: [],
+  // favoriteUrl: [],
+  favoriteUrl: JSON.parse(localStorage.getItem("favoriteUrl")),
 };
 
 export const rawImagesSlice = createSlice({
@@ -29,8 +30,9 @@ export const rawImagesSlice = createSlice({
       
     },
     setFavoriteUrl: (state, action) => {
-      state.imageUrl.push(action.payload);
-      localStorage.setItem("favoriteUrl", JSON.stringify(state.imageUrl))
+      state.favoriteUrl.push(action.payload);
+      localStorage.setItem("favoriteUrl", JSON.stringify(state.favoriteUrl));
+      
     }
   },
 });
@@ -38,7 +40,7 @@ export const rawImagesSlice = createSlice({
 export const { setRawImages, toggleFavoriteImage, setFavoriteUrl } = rawImagesSlice.actions;
 
 export const selectRawImages = (state) => state.images.rawImages;
-export const selectFavoriteUrl = (state) => state.images.imageUrl;
+export const selectFavoriteUrl = (state) => state.images.favoriteUrl;
 
 export default rawImagesSlice.reducer;
 

@@ -1,40 +1,54 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { selectRawImages } from "../rawImagesSlice";
+// import { selectRawImages } from "../rawImagesSlice";
 import ToggleFavoriteButton from "./ToggleFavoriteButton";
 import { ReactComponent as HeartIcon } from "../../../img/svg/heart-like-svgrepo-com.svg";
+import { selectFavoriteUrl } from "../rawImagesSlice";
 
 const FavoritesSection = (props) => {
+  //   do not delete this line:
+  // const storageData = JSON.parse(localStorage.getItem("favoriteUrl"));
 
-  const rawImages = useSelector(selectRawImages);
- 
+  //  and change storageData.map
+  // console.log(storageData);
+  // -------------------------------
 
-   const storageData = JSON.parse(localStorage.getItem("favoriteUrl"));
-  
-  //   useEffect would prevent from rerendering everytime
-  // useEffect(() => {
-  //   localStorage.setItem("favoriteUrl", JSON.stringify(imageUrl))
-  //   console.log(storageData);
-  // }, [favoriteUrl]);
-  
+  const favoriteUrl = useSelector(selectFavoriteUrl);
 
-  //  console.log(favoritesImages);
-  console.log(storageData);
-  console.log();
+  //   useEffect(() => {
+  //     if (storageData) {
+  //         setFavoriteUrl(storageData);
+  //     }
+  // }, [storageData]);
+
+  // useEffect(()=>{
+  //   if (favoriteUrl.length > 0) {
+  //       localStorage.setItem("favoriteUrl", JSON.stringify(favoriteUrl))
+  //   }  },[favoriteUrl]);
+
+  console.log(favoriteUrl);
+
   // ------------------------------
   const { id, liked } = props;
-  console.log(id, liked);
-  
+  // console.log(id, liked);
 
   return (
     <>
-    {!storageData && <p>there are no favorites pictures yet</p>}
-      {storageData.map((image) => {
+      {!favoriteUrl && <p>there are no favorites pictures yet</p>}
+      {favoriteUrl.map((image) => {
         return (
-          <div className="rawImagesContainer" >
+          <div className="rawImagesContainer">
             <div className="rawImagesTitle">
-              
-              <ToggleFavoriteButton  id={props.id} liked={liked ? <HeartIcon style={{ fill: "#fc037b" }} /> : <HeartIcon />}/>
+              <ToggleFavoriteButton
+                id={id}
+                liked={
+                  liked ? (
+                    <HeartIcon style={{ fill: "#fc037b" }} />
+                  ) : (
+                    <HeartIcon />
+                  )
+                }
+              />
               <p>Taken by: {image.rover.name}</p>
               <p>On: {image.earth_date}</p>
               <p>Camera: {image.camera.full_name}</p>
@@ -46,11 +60,8 @@ const FavoritesSection = (props) => {
           </div>
         );
       })}
-     
     </>
-    
   );
-  
 };
 
 export default FavoritesSection;
