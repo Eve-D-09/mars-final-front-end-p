@@ -1,12 +1,14 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 // import { selectRawImages } from "../rawImagesSlice";
 import ToggleFavoriteButton from "./ToggleFavoriteButton";
 import { ReactComponent as HeartIcon } from "../../../img/svg/heart-like-svgrepo-com.svg";
 import { selectFavoriteUrl } from "../rawImagesSlice";
+import { removeFavorite } from "../rawImagesSlice";
 
 const FavoritesSection = (props) => {
-  //   do not delete this line:
+  const { id, liked } = props;
+  //   do not delete next line:
   // const storageData = JSON.parse(localStorage.getItem("favoriteUrl"));
 
   //  and change storageData.map
@@ -14,52 +16,50 @@ const FavoritesSection = (props) => {
   // -------------------------------
 
   const favoriteUrl = useSelector(selectFavoriteUrl);
+  // console.log(favoriteUrl);
 
-  //   useEffect(() => {
-  //     if (storageData) {
-  //         setFavoriteUrl(storageData);
-  //     }
-  // }, [storageData]);
-
-  // useEffect(()=>{
-  //   if (favoriteUrl.length > 0) {
-  //       localStorage.setItem("favoriteUrl", JSON.stringify(favoriteUrl))
-  //   }  },[favoriteUrl]);
-
-  console.log(favoriteUrl);
+  const dispatch = useDispatch();
 
   // ------------------------------
-  const { id, liked } = props;
-  // console.log(id, liked);
 
   return (
     <>
-      {!favoriteUrl && <p>there are no favorites pictures yet</p>}
-      {favoriteUrl.map((image) => {
-        return (
-          <div className="rawImagesContainer">
-            <div className="rawImagesTitle">
-              <ToggleFavoriteButton
-                id={id}
-                liked={
-                  liked ? (
-                    <HeartIcon style={{ fill: "#fc037b" }} />
-                  ) : (
-                    <HeartIcon />
-                  )
-                }
-              />
-              <p>Taken by: {image.rover.name}</p>
-              <p>On: {image.earth_date}</p>
-              <p>Camera: {image.camera.full_name}</p>
+      {favoriteUrl.length === 0 ? (
+        <p>there are no favorites pictures yet</p>
+      ) : (
+        favoriteUrl.map((image) => {
+          console.log(image);
+          return (
+            
+            <div className="rawImagesContainer">
+              <div className="rawImagesTitle">
+                <button
+                  onClick={() => dispatch(removeFavorite(image.id))}
+                  style={{ width: 75, height: "auto" }}
+                >
+                  Remove
+                </button>
+                <ToggleFavoriteButton
+                  id={id}
+                  liked={
+                    liked ? (
+                      <HeartIcon style={{ fill: "#fc037b" }} />
+                    ) : (
+                      <HeartIcon />
+                    )
+                  }
+                />
+                <p>Taken by: {image.rover.name}</p>
+                <p>On: {image.earth_date}</p>
+                <p>Camera: {image.camera.full_name}</p>
+              </div>
+              <div className="rawImage">
+                <img src={image.img_src} alt="mars-images" />
+              </div>
             </div>
-
-            <div className="rawImage">
-              <img src={image.img_src} alt="mars-images" />
-            </div>
-          </div>
-        );
-      })}
+          );
+        })
+      )}
     </>
   );
 };
