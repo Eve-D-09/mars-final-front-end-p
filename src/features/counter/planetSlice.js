@@ -28,12 +28,6 @@ export const planetSlice = createSlice({
       state.picOfDay = action.payload;
     },
 
-    // setRawImages: (state, action) => {
-    //   console.log(`reducer received data`);
-    //   state.rawImages = action.payload;
-    // },
-
-
     setRover: (state, action) => {
       state.rover = action.payload;
     },
@@ -73,7 +67,6 @@ export const planetSlice = createSlice({
 
 export const {
   setPicOfDay,
-  // setRawImages,
   setRover,
   setOrbiter,
   setSearch,
@@ -86,7 +79,6 @@ export const {
 } = planetSlice.actions;
 
 export const selectPicOfDay = (state) => state.counter.picOfDay;
-// export const selectRawImages = (state) => state.counter.rawImages;
 export const selectRover = (state) => state.counter.rover;
 export const selectOrbiter = (state) => state.counter.orbiter;
 export const selectSearch = (state) => state.counter.search;

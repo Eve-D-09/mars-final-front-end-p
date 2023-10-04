@@ -36,19 +36,13 @@ const RawImages = (props) => {
         {pages.map((item, index) => {
           // console.log(index);
           return (
-            
-              <li
-                className={pageNumber === index + 1 && "activePage"}
-                onClick={pageChange}
+              <li  className={pageNumber === index + 1 && "activePage"}  onClick={pageChange}
                 id={index + 1} key={index}>
                 {index + 1}
               </li>
-            
           );
         })}
-        
-          <button onClick={next}><img src={ArrowRight} alt="arrow-right" /></button>
-        
+         <button onClick={next}><img src={ArrowRight} alt="arrow-right" /></button>
       </ul>
       {rawImages.map((image, index) => {
         const item = resultsPerPage * pageNumber;

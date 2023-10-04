@@ -1,8 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
+
 const initialState = {
   favoriteImages: JSON.parse(localStorage.getItem("favoriteImages")) || [],
-  // total: 0,
+  // totalLikes: JSON.parse(localStorage.getItem("favoriteImages")),
 };
 
 export const rawImagesSlice = createSlice({
@@ -35,13 +37,22 @@ export const rawImagesSlice = createSlice({
 
     // --------------------------------------------------------------------------------
     // working 02/10/2023
+    setTotalLikes: ( state, action ) => {
+      state.totalLikes = action.payload;
+      localStorage.setItem("favoriteImages", JSON.stringify(state.favoriteImages));
+    },
+
     addLikes: (state, action) => {
       const index = state.favoriteImages.findIndex((image) => {
         return image.id === action.payload;
       });
       state.favoriteImages[index].liked = !state.favoriteImages[index].liked;
-      // state.total++;
+      // --------------------------------------------------------------------
+      state.favoriteImages[index].totalLikes += 1;
+      localStorage.setItem("favoriteImages", JSON.stringify(state.favoriteImages));
     },
+
+    
     
   },
 });
@@ -52,13 +63,15 @@ export const {
   setFavoriteImages,
   removeFavorite,
   addLikes,
+  setTotalLikes,
 } = rawImagesSlice.actions;
 
 export const selectRawImages = (state) => state.images.rawImages;
 export const selectFavoriteImages = (state) => state.images.favoriteImages;
-export const selectTotal = (state) => state.images.total;
 
-// export const selectTotal = (state) => state.favoriteUrl.total;
+
+
+
 
 
 
