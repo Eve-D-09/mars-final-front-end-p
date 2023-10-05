@@ -4,6 +4,8 @@ import { ReactComponent as HeartIcon } from "../../../img/svg/heart-like-svgrepo
 import { toggleFavoriteImage } from "../rawImagesSlice";
 import { setFavoriteImages } from "../rawImagesSlice";
 
+
+
 //  props id and liked  come from RawImages
 
 const ToggleFavoriteButton = (props) => {
@@ -11,6 +13,7 @@ const ToggleFavoriteButton = (props) => {
   const { id, liked, img } = props;
 
   const onHeartClick = () => {
+    
     dispatch(toggleFavoriteImage(id, img, liked));
     dispatch(setFavoriteImages(img, liked));
     // localStorage.setItem("favoritesUrl", img);

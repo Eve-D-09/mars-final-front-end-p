@@ -33,7 +33,7 @@ const RawImagesAPI = () => {
   console.log(dateRanges);
   const rawImages = useSelector(selectRawImages);
 
-  // 4. select latest photos
+  // 4. select latest photos: was named latestPhotos
   const latestPhotos = useSelector(selectLatestPhotos);
 
   const dispatch = useDispatch();
@@ -62,6 +62,7 @@ const RawImagesAPI = () => {
 
   console.log(rawImages);
   console.log(latestPhotos);
+ 
 
   if (!latestPhotos) return <Loading />;
 
@@ -102,7 +103,7 @@ const RawImagesAPI = () => {
       </div>
       {rawImages && <RawImages rawImages={rawImages} key={rawImages.id} />}
       {!rawImages && latestPhotos && (
-        <LatestPhotos latestPhotos={latestPhotos.latest_photos} key={latestPhotos.latest_photos.id}/>
+        <LatestPhotos photos={latestPhotos.latest_photos} key={latestPhotos.latest_photos.id}/>
       )}
     </>
   );

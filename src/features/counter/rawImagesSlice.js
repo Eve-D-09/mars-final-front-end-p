@@ -20,6 +20,8 @@ export const rawImagesSlice = createSlice({
       });
       state.rawImages[indexOf].liked = !state.rawImages[indexOf].liked;
     },
+
+    // move all functions below to favoriteImagesSlice
     setFavoriteImages: (state, action) => {
       state.favoriteImages.push(action.payload);
       localStorage.setItem("favoriteImages", JSON.stringify(state.favoriteImages));

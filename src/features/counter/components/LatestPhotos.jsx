@@ -1,7 +1,8 @@
 import React from "react";
+import ToggleFavoritePhoto from "../toggleFavorites/TogglefavoritePhoto";
 
 const LatestPhotos = (props) => {
-   const photos = [...props.latestPhotos];
+   const photos = [...props.photos];
   
   return (<>
       {photos.map((photo, index) => {
@@ -9,6 +10,7 @@ const LatestPhotos = (props) => {
           <>
           <div className="rawImagesContainer">
             <div className="rawImagesTitle">
+              <ToggleFavoritePhoto id={photo.id} img={photo} liked={photo.liked} key={photo.id}/>
               <p>Taken by: {photo.rover.name}</p>
               <p>On: {photo.earth_date}</p>
               <p>Camera: {photo.camera.full_name}</p>
@@ -21,7 +23,6 @@ const LatestPhotos = (props) => {
         </>
         )
       })}
-
   </>);
 };
 
