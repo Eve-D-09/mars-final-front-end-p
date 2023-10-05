@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
-  favoriteImages: JSON.parse(localStorage.getItem("favoriteImages")) || [],
+  // favoriteImages: JSON.parse(localStorage.getItem("favoriteImages")) || [],
 };
 
 export const rawImagesSlice = createSlice({
@@ -20,40 +20,6 @@ export const rawImagesSlice = createSlice({
       });
       state.rawImages[indexOf].liked = !state.rawImages[indexOf].liked;
     },
-
-    // move all functions below to favoriteImagesSlice
-    setFavoriteImages: (state, action) => {
-      state.favoriteImages.push(action.payload);
-      localStorage.setItem("favoriteImages", JSON.stringify(state.favoriteImages));
-      // ----------------------------------------------------------------------------
-    },
-    removeFavorite: (state, action) => {
-      console.log(action);
-      const indexOf = state.favoriteImages.findIndex((image) => {
-        return image.id === action.payload;
-      });
-      state.favoriteImages.splice(indexOf, 1);
-      localStorage.setItem("favoriteImages", JSON.stringify(state.favoriteImages));
-    },
-
-    // --------------------------------------------------------------------------------
-    // working 02/10/2023
-    setTotalLikes: ( state, action ) => {
-      state.totalLikes = action.payload;
-      localStorage.setItem("favoriteImages", JSON.stringify(state.favoriteImages));
-    },
-
-    addLikes: (state, action) => {
-      const index = state.favoriteImages.findIndex((image) => {
-        return image.id === action.payload;
-      });
-      state.favoriteImages[index].liked = !state.favoriteImages[index].liked;
-      // --------------------------------------------------------------------
-      state.favoriteImages[index].totalLikes += 1;
-      localStorage.setItem("favoriteImages", JSON.stringify(state.favoriteImages));
-    },
-
-    
     
   },
 });
@@ -61,14 +27,10 @@ export const rawImagesSlice = createSlice({
 export const {
   setRawImages,
   toggleFavoriteImage,
-  setFavoriteImages,
-  removeFavorite,
-  addLikes,
-  setTotalLikes,
 } = rawImagesSlice.actions;
 
 export const selectRawImages = (state) => state.images.rawImages;
-export const selectFavoriteImages = (state) => state.images.favoriteImages;
+
 
 
 

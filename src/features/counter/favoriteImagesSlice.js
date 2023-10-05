@@ -36,8 +36,8 @@ export const favoriteImagesSlice = createSlice({
     }
 });
 
-export const { setFavoriteImages, setTotalLikes, addlikes, removeFavorite } = favoriteImagesSlice.actions;
+export const { setFavoriteImages, setTotalLikes, addLikes, removeFavorite } = favoriteImagesSlice.actions;
 
-export const { selectFavoriteImages } = (state) => state.favorites.favoriteImages;
+export const selectFavoriteImages = (state) => state.favorites.favoriteImages;
 
 export default favoriteImagesSlice.reducer;

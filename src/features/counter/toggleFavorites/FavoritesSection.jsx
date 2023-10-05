@@ -1,14 +1,12 @@
 import React from "react";
-import { useSelector } from "react-redux";
-// import ToggleFavoriteButton from "./ToggleFavoriteButton";
-// import { ReactComponent as HeartIcon } from "../../../img/svg/heart-like-svgrepo-com.svg";
-// import { toggleFavoriteImage } from "../rawImagesSlice";
-import { selectFavoriteImages } from "../rawImagesSlice";
-import {  setTotalLikes } from "../rawImagesSlice";
+import { useSelector, useDispatch } from "react-redux";
 import FavoriteImage from "./FavoriteImage";
+
+import { selectFavoriteImages, setTotalLikes } from "../favoriteImagesSlice";
 
 const FavoritesSection = (props) => {
   const favoriteImages = useSelector(selectFavoriteImages);
+  const dispatch = useDispatch();
   
   // const { id, liked } = props;
  
@@ -21,7 +19,7 @@ const FavoritesSection = (props) => {
         if(image.liked) {
           calculateTotal++;
         }
-        setTotalLikes(calculateTotal);
+        dispatch(setTotalLikes(calculateTotal));
     });
  
   return (

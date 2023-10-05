@@ -1,7 +1,7 @@
 import React from "react";
-import { addLikes } from "../rawImagesSlice";
-import { removeFavorite } from "../rawImagesSlice";
 import { useDispatch } from "react-redux";
+import { addLikes, removeFavorite } from "../favoriteImagesSlice";
+
 
 const FavoriteImage = (props) => {
   const dispatch = useDispatch();

@@ -2,7 +2,9 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { ReactComponent as HeartIcon } from "../../../img/svg/heart-like-svgrepo-com.svg";
 import { toggleFavoriteImage } from "../rawImagesSlice";
-import { setFavoriteImages } from "../rawImagesSlice";
+// import { setFavoriteImages } from "../rawImagesSlice";
+
+import { setFavoriteImages } from "../favoriteImagesSlice";
 
 
 
@@ -13,7 +15,6 @@ const ToggleFavoriteButton = (props) => {
   const { id, liked, img } = props;
 
   const onHeartClick = () => {
-    
     dispatch(toggleFavoriteImage(id, img, liked));
     dispatch(setFavoriteImages(img, liked));
     // localStorage.setItem("favoritesUrl", img);
