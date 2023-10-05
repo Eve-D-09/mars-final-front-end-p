@@ -2,28 +2,18 @@ import React from "react";
 import { useSelector } from "react-redux";
 // import ToggleFavoriteButton from "./ToggleFavoriteButton";
 // import { ReactComponent as HeartIcon } from "../../../img/svg/heart-like-svgrepo-com.svg";
-import { selectFavoriteImages } from "../rawImagesSlice";
 // import { toggleFavoriteImage } from "../rawImagesSlice";
+import { selectFavoriteImages } from "../rawImagesSlice";
 import {  setTotalLikes } from "../rawImagesSlice";
-
-
-
 import FavoriteImage from "./FavoriteImage";
 
 const FavoritesSection = (props) => {
   const favoriteImages = useSelector(selectFavoriteImages);
   
-  
   // const { id, liked } = props;
-  //   do not delete next line:
-  // const storageData = JSON.parse(localStorage.getItem("favoriteUrl"));
-
-  //  and change storageData.map
-  // console.log(storageData);
-  
  
   console.log(favoriteImages);
-  // ------------------------------------
+ 
   
    let calculateTotal = 0;
 
@@ -33,9 +23,6 @@ const FavoritesSection = (props) => {
         }
         setTotalLikes(calculateTotal);
     });
-
-   
-    
  
   return (
     <>

@@ -4,7 +4,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   favoriteImages: JSON.parse(localStorage.getItem("favoriteImages")) || [],
-  // totalLikes: JSON.parse(localStorage.getItem("favoriteImages")),
 };
 
 export const rawImagesSlice = createSlice({

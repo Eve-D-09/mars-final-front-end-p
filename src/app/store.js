@@ -3,6 +3,7 @@ import counterReducer from '../features/counter/planetSlice';
 import screenReducer from "../features/counter/screenSlice";
 import photosReducer from '../features/counter/latestPhotosSlice';
 import imagesReducer from "../features/counter/rawImagesSlice";
+import favoritesReducer from "../features/counter/favoriteImagesSlice";
 
 export const store = configureStore({
   reducer: {
@@ -10,5 +11,6 @@ export const store = configureStore({
     screen: screenReducer,
     photos: photosReducer,
     images: imagesReducer,
+    favorites: favoritesReducer,
   },
 });
