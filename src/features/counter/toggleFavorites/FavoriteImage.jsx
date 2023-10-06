@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addLikes, removeFavorite } from "../favoriteImagesSlice";
+import { ReactComponent as HeartIcon } from "../../../img/svg/heart-like-svgrepo-com.svg";
 
 const FavoriteImage = (props) => {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const FavoriteImage = (props) => {
       <div className="favoriteImagesTitle">
         <div className="controlButton">
           <p>{image.totalLikes || 0}</p>
-          <button onClick={handleLike} > Like </button>
+          <button onClick={handleLike} ><HeartIcon style={{ fill: "#fc037b", width: "35", height: "35" }} /></button>
         </div>
         {/* <p>Image ID -- {id}</p> */}
         <p>Taken by: {image.rover.name}</p>

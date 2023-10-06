@@ -6,17 +6,15 @@ import { selectFavoriteImages, calculateTotal } from "../favoriteImagesSlice";
 const FavoritesSection = (props) => {
   const favoriteImages = useSelector(selectFavoriteImages);
   const dispatch = useDispatch();
-  
+
   // const { id, liked } = props;
- 
+
   console.log(favoriteImages);
 
   useEffect(() => {
     dispatch(calculateTotal());
-  }, [dispatch, favoriteImages])
+  }, [dispatch, favoriteImages]);
 
- 
-  
   //  let calculateTotal = 0;
 
   //   favoriteImages.forEach((image) => {
@@ -25,20 +23,28 @@ const FavoritesSection = (props) => {
   //       }
   //       dispatch(setTotalLikes(calculateTotal));
   //   });
- 
+
   return (
     <>
       <div className="favoriteImagesWrapper">
-        <h2>Take a look what photos people like the most</h2>
-      <div className="favoriteImagesBox">
-      {favoriteImages.length === 0 ? (
-        <p>there are no favorites pictures yet</p>
-      ) : (
-        favoriteImages.map((image, index) => {
-          return <FavoriteImage image={image} key={image.id}  id={image.id} liked={image.liked} total={calculateTotal} />
-        })
-      )}
-      </div>
+        <h2>most liked photos</h2>
+        <div className="favoriteImagesBox">
+          {favoriteImages.length === 0 ? (
+           <div className="noFavorites"><p>there are no favorites pictures yet</p></div>
+          ) : (
+            favoriteImages.map((image, index) => {
+              return (
+                <FavoriteImage
+                  image={image}
+                  key={image.id}
+                  id={image.id}
+                  liked={image.liked}
+                  total={calculateTotal}
+                />
+              );
+            })
+          )}
+        </div>
       </div>
     </>
   );

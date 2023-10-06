@@ -69,12 +69,19 @@
     text-align: center;
 }
 
+.boxWrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
 .rawImagesBox {
     background-color: #e9f3fd;
     border-radius: var(--border-radius);
     box-shadow: rgba(79, 129, 170, 0.3) 0px 10px 15px, rgba(105, 140, 185, 0.219) 0px 15px 15px;
     width: 90%;
     margin: 0 auto;
+    
   }
 
 .rawImagesContainer {
@@ -121,9 +128,7 @@
 
 .rawImagesList  {
     list-style: none;
-    /* border: 2px solid black; */
     width: 100%;
-    /* height: 225px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -219,8 +224,8 @@
     }
 
     .rawImagesContainer {
-        flex-basis: 32%;
-        border: 1px solid #bfdbf7;
+        flex-basis: 40%;
+        border: 1px solid #72afec;
         border-radius: var(--border-radius);
     }
 
@@ -241,7 +246,7 @@
     }
     .rawImagesContainer {
         width: 400px;
-        flex-basis: 25%;
+        flex-basis: 30%;
     }
 }
 

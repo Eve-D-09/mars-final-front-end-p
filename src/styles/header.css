@@ -126,7 +126,7 @@
 
 @media (min-width: 990px) {
   .headerContainer {
-    width: 95%;
+    width: 100%;
     padding: 15px 10px;
     display: flex;
     justify-content: space-between;
@@ -140,6 +140,9 @@
     width: 250px;
   }
 
+  nav a {
+    font-size: 1rem;
+  }
 
   .navigation  img {
     display: none;
@@ -205,6 +208,6 @@
 
 @media (min-width: 1400px) {
   .headerContainer {
-    width: 1100px;
+    width: 1350px;
   }
 }

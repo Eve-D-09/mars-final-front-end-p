@@ -2,8 +2,7 @@
   background-image: url(../img/img-for-interval/home-mars.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: auto;
-  
+  height: 100%;
 }
 
 .insightScreen {
@@ -36,7 +35,6 @@
 
 .favoriteImagesScreen {
   background-color: #f3ede3;
-  /* padding: 50px 0 50px; */
 }
 
 /* insight screen */
