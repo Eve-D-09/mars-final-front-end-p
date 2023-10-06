@@ -28,6 +28,9 @@ const FavoritesSection = (props) => {
  
   return (
     <>
+      <div className="favoriteImagesWrapper">
+        <h2>Take a look what photos people like the most</h2>
+      <div className="favoriteImagesBox">
       {favoriteImages.length === 0 ? (
         <p>there are no favorites pictures yet</p>
       ) : (
@@ -35,6 +38,8 @@ const FavoritesSection = (props) => {
           return <FavoriteImage image={image} key={image.id}  id={image.id} liked={image.liked} total={calculateTotal} />
         })
       )}
+      </div>
+      </div>
     </>
   );
 };

@@ -51,7 +51,7 @@ const Main = (props) => {
         {screenMode === 14 && <Wishlist />}
         {screenMode === 15 && <EditUserInfo />}
         {screenMode === 16 && <EditUserDetails />}
-        {screenMode === 17 && <FavoritesSection />}
+        <div className="favoriteImagesScreen">{screenMode === 17 && <FavoritesSection />}</div>
       </>
       <div className="footer">
         <Footer />

@@ -2,42 +2,41 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { addLikes, removeFavorite } from "../favoriteImagesSlice";
 
-
 const FavoriteImage = (props) => {
   const dispatch = useDispatch();
 
-  const { id,liked, image, total } = props;
+  const { id, liked, image, total } = props;
 
-
- const handleLike = () => {
+  const handleLike = () => {
     dispatch(addLikes(id, liked, total));
- };
+  };
 
- console.log(id, liked, image.totalLikes);
+  console.log(id, liked, image.totalLikes);
 
   return (
-    <div className="rawImagesBox">
-      <div className="rawImagesContainer">
-        <div className="rawImagesTitle">
-          <button
-            onClick={() => dispatch(removeFavorite(image.id))}
-            style={{ width: 75, height: "auto" }} >
-            Remove
-          </button>
-          <p>Image ID -- {id}</p>
-          <p>Total from localStorage: {image.totalLikes || 0}</p>
-          {/* <button onClick={() => dispatch(addLikes(image.id))} style={{ width: 75, height: "auto" }} > Like </button> */}
-          <button onClick={handleLike}  style={{ width: 75, height: "auto" }} > Like </button>
-          <p>Taken by: {image.rover.name}</p>
-          <p>On: {image.earth_date}</p>
-          <p>Camera: {image.camera.full_name}</p>
+    
+    <div className="favoriteImagesContainer">
+      <div className="favoriteImagesTitle">
+        <div className="controlButton">
+          <p>{image.totalLikes || 0}</p>
+          <button onClick={handleLike} > Like </button>
         </div>
-        <div className="rawImage">
-          <img src={image.img_src} alt="mars-images" />
-        </div>
+        {/* <p>Image ID -- {id}</p> */}
+        <p>Taken by: {image.rover.name}</p>
+        <p>On: {image.earth_date}</p>
+        <p>Camera: {image.camera.full_name}</p>
+      </div>
+      <div className="favoriteImage">
+        <img src={image.img_src} alt="mars-images" />
+      </div>
+      <div className="removeButton">
+         <button onClick={() => dispatch(removeFavorite(image.id))}  > Remove </button>
       </div>
     </div>
+    
   );
 };
 
 export default FavoriteImage;
+
+/* <button onClick={() => dispatch(addLikes(image.id))} style={{ width: 75, height: "auto" }} > Like </button> */

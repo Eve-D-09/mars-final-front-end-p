@@ -1,5 +1,4 @@
 .mainContainer {
-  /* background-image: url(../img/introImages/intro-mars.jpg); */
   background-image: url(../img/img-for-interval/home-mars.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -32,8 +31,12 @@
 }
 
 .rawImagesScreen {
-  /* background: rgba(245, 250, 252, 0.989) 52%; */
   background-color: #f3ede3;
+}
+
+.favoriteImagesScreen {
+  background-color: #f3ede3;
+  /* padding: 50px 0 50px; */
 }
 
 /* insight screen */
