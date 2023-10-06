@@ -5,6 +5,7 @@ import { toggleLatestPhoto } from "../latestPhotosSlice";
 import { setFavoriteImages } from "../favoriteImagesSlice";
 
 const ToggleFavoritePhoto = (props) => {
+    //  props are comming from LatestPhotos.jsx
   const dispatch = useDispatch();
   const { id, img, liked } = props;
 
@@ -17,7 +18,6 @@ const ToggleFavoritePhoto = (props) => {
     <div className="heartButton">
       <button onClick={heartClick}>
         {liked ? <HeartIcon style={{ fill: "#fc037b" }} /> : <HeartIcon />}
-        {/* <HeartIcon /> */}
       </button>
     </div>
   );

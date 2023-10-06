@@ -5,6 +5,7 @@ import ArrowRight from "../../../img/svg/arrow-right-sm-svgrepo-com.svg";
 import MenuIcon from "../../../img/svg/menu-dots-svgrepo-com.svg";
 // import UserIcon from "../../../img/svg/user-svgrepo-com.svg";
 import { ReactComponent as UserIcon } from "../../../img/svg/user-svgrepo-com.svg";
+import { ReactComponent as HeartIcon } from "../../../img/svg/heart-like-svgrepo-com.svg";
 
 const Nav = (props) => {
   // ----------------------------------------------------------
@@ -89,6 +90,9 @@ const Nav = (props) => {
             </a>
             <a href="/#" onClick={onNavClick} id="11">
               <UserIcon />
+            </a>
+            <a href="/#" onClick={onNavClick} id="17">
+              { width > 990 ? "Peoples Favorites" : <HeartIcon />}
             </a>
           </nav>
         )}

@@ -13,7 +13,7 @@ const FavoriteImage = (props) => {
     dispatch(addLikes(id, liked, total));
  };
 
-//  console.log(id, liked, total);
+ console.log(id, liked, image.totalLikes);
 
   return (
     <div className="rawImagesBox">
@@ -24,7 +24,8 @@ const FavoriteImage = (props) => {
             style={{ width: 75, height: "auto" }} >
             Remove
           </button>
-          <p>Total likes: {total}</p>
+          <p>Image ID -- {id}</p>
+          <p>Total from localStorage: {image.totalLikes || 0}</p>
           {/* <button onClick={() => dispatch(addLikes(image.id))} style={{ width: 75, height: "auto" }} > Like </button> */}
           <button onClick={handleLike}  style={{ width: 75, height: "auto" }} > Like </button>
           <p>Taken by: {image.rover.name}</p>

@@ -8,20 +8,19 @@ import PicOfDay from "./PicOfDayAPI";
 import Messengers from "./Messengers";
 import RawImagesAPI from "./RawImagesAPI";
 import BestImages from "./BestImages";
-
 import Rovers from "./Rovers";
 import Orbiters from "./Orbiters";
 import Ingenuity from "./Ingenuity";
 import Insight from "./Insight";
 import Login from "../accountComponents/Login";
 import Register from "../accountComponents/Register";
-
 import RegisterDetails from "../accountComponents/RegisterDetails";
 import CustomerAccount from "../accountComponents/CustomerAccount";
 import Wishlist from "../accountComponents/Wishlist";
 // import Profile from "../accountComponents/Profile";
 import EditUserInfo from "../accountComponents/EditUserInfo";
 import EditUserDetails from "../accountComponents/EditUserDetails";
+import FavoritesSection from "../toggleFavorites/FavoritesSection";
 
 
 const Main = (props) => {
@@ -52,6 +51,7 @@ const Main = (props) => {
         {screenMode === 14 && <Wishlist />}
         {screenMode === 15 && <EditUserInfo />}
         {screenMode === 16 && <EditUserDetails />}
+        {screenMode === 17 && <FavoritesSection />}
       </>
       <div className="footer">
         <Footer />

@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import FavoriteImage from "./FavoriteImage";
-
-import { selectFavoriteImages, setTotalLikes } from "../favoriteImagesSlice";
+import { selectFavoriteImages, calculateTotal } from "../favoriteImagesSlice";
 
 const FavoritesSection = (props) => {
   const favoriteImages = useSelector(selectFavoriteImages);
@@ -11,16 +10,21 @@ const FavoritesSection = (props) => {
   // const { id, liked } = props;
  
   console.log(favoriteImages);
+
+  useEffect(() => {
+    dispatch(calculateTotal());
+  }, [dispatch, favoriteImages])
+
  
   
-   let calculateTotal = 0;
+  //  let calculateTotal = 0;
 
-    favoriteImages.forEach((image) => {
-        if(image.liked) {
-          calculateTotal++;
-        }
-        dispatch(setTotalLikes(calculateTotal));
-    });
+  //   favoriteImages.forEach((image) => {
+  //       if(image.liked) {
+  //         calculateTotal++;
+  //       }
+  //       dispatch(setTotalLikes(calculateTotal));
+  //   });
  
   return (
     <>
@@ -28,7 +32,6 @@ const FavoritesSection = (props) => {
         <p>there are no favorites pictures yet</p>
       ) : (
         favoriteImages.map((image, index) => {
-          console.log(image.id, calculateTotal );
           return <FavoriteImage image={image} key={image.id}  id={image.id} liked={image.liked} total={calculateTotal} />
         })
       )}

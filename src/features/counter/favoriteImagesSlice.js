@@ -24,6 +24,9 @@ export const favoriteImagesSlice = createSlice({
             });
             state.favoriteImages[index].liked = !state.favoriteImages[index].liked;
             state.favoriteImages[index].totalLikes += 1;
+            // -----------------------------------------------------------------------
+          
+            // -------------------------------------------------------------------------
             localStorage.setItem("favoriteImages", JSON.stringify(state.favoriteImages));
         },
         removeFavorite: (state, action) => {
@@ -32,11 +35,20 @@ export const favoriteImagesSlice = createSlice({
             });
             state.favoriteImages.splice(indexOf, 1);
             localStorage.setItem("favoriteImages", JSON.stringify(state.favoriteImages));
+        },
+        // -----------------------------------------------------------------------------------
+        calculateTotal: (state) => {
+            let total = 0;
+            state.favoriteImages.forEach((image) => {
+                total = image.totalLikes;
+            })
+            state.total = total;
+            localStorage.setItem("favoriteImages", JSON.stringify(state.favoriteImages));
         }
     }
 });
 
-export const { setFavoriteImages, setTotalLikes, addLikes, removeFavorite } = favoriteImagesSlice.actions;
+export const { setFavoriteImages, setTotalLikes, addLikes, removeFavorite, calculateTotal } = favoriteImagesSlice.actions;
 
 export const selectFavoriteImages = (state) => state.favorites.favoriteImages;
 
