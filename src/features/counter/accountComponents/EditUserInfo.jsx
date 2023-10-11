@@ -9,7 +9,6 @@ import ToggleSubscribe from "./ToggleSubscribe";
 import { url } from "../../../config";
 
 const EditUserInfo = () => {
-  // const [input, setInput] = useState({});
 
   const dispatch = useDispatch();
 

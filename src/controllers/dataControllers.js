@@ -3,9 +3,6 @@ import { setPicOfDay } from "../features/counter/planetSlice";
 import { setRawImages } from "../features/counter/rawImagesSlice";
 import { store } from "../app/store";
 import { setToastMessage } from "../features/counter/planetSlice";
-
-// 1. import latestPhotosSlice
-//  2. set else if block - lines 23-25
 import { setLatestPhotos } from "../features/counter/latestPhotosSlice";
 
 export const getData = async (type, verb, url) => {

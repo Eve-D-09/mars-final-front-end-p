@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser, setToken } from "../planetSlice";
 import { setScreenMode } from "../screenSlice";
+import { setToastMessage } from "../planetSlice";
 // import LogoutIcon from "../../../img/svg/logout-svgrepo-com.svg";
 // import Logout from "../../../img/svg/logout-icon.jpg";
 
@@ -27,7 +28,6 @@ const Profile = () => {
         <div className="account">
           <div className="accountLinks">
             <a href="/#" onClick={onNavClick} id="11" className="underlineLink">PROFILE</a>
-            <a href="/#" onClick={onNavClick} id="14">WISHLIST</a>
           </div>
           <div className="customerContacts">
             <div className="greeting">
@@ -36,6 +36,7 @@ const Profile = () => {
                 onClick={() => {
                   dispatch(setScreenMode(9));
                   dispatch(setToken(null));
+                  dispatch(setToastMessage("You are loged out now"));
                   localStorage.clear();
                 }}> Log out
                 {/* <img src={Logout} alt="logout-icon" /> */}

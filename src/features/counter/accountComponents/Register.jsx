@@ -5,9 +5,15 @@ import { setScreenMode } from "../screenSlice";
 import { validate } from "../../../validation/index";
 import { setToastMessage } from "../planetSlice";
 import { url } from "../../../config";
+import EyeIcon from "../../../img/svg/view-eye-interface-symbol-svgrepo-com.svg";
 
 const Register = () => {
   const [input, setInput] = useState({});
+
+  const [passwordShown, setPasswordShown] = useState(false);
+  const togglePassword = () => {
+    setPasswordShown(!passwordShown);
+  }
 
   const dispatch = useDispatch();
 
@@ -31,7 +37,7 @@ const Register = () => {
         console.log(error);
       }
     } else {
-      dispatch(setToastMessage("Please, check your information")) ;
+      dispatch(setToastMessage("Please, check your information"));
     }
     
   };
@@ -63,18 +69,19 @@ const Register = () => {
           <input type="text" name="email" placeholder="" required />
         </div>
         <div className="formInputs">
+        <div className="passwordEye">
             <label>Password *</label>
-            <input type="password" name="password" placeholder="" required />
+            <button type="button" onClick={togglePassword}><img src={EyeIcon} alt="eye-icon" /></button>
+          </div>
+          <input  name="password" placeholder="password" type={passwordShown ? "text" : "password"}  />
         </div>
         <div className="formInputs">
             <label>Confirm Password *</label>
-            <input type="password" name="password" placeholder="" required />
+            <input type={passwordShown ? "text" : "password"}  name="password" placeholder="confirm password" required />
         </div>
         <div className="submitButton">
            <button type="submit"  >REGISTER</button>
         </div>
-        {/* onClick={onNavClick} id="12"  */}
-        
         <div className="formPolicy">
           <p>By creating an account You agree to <a href="/" >Terms & Conditions</a> and 
           <a href="/" > Privacy Policy</a> </p>

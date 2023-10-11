@@ -8,7 +8,11 @@ import EyeIcon from "../../../img/svg/view-eye-interface-symbol-svgrepo-com.svg"
 import { url } from "../../../config";
 
 const Login = () => {
-  const [input, setInput] = useState({});
+  const [input, setInput] = useState({
+    email: "",
+    password: ""
+  });
+  // const [ errors, setErrors ] = useState(null);
 
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePassword = () => {
@@ -25,6 +29,7 @@ const Login = () => {
   const login = async (e) => {
     e.preventDefault();
     const results = await validate(input, "login");
+    
 
     if (results === null) {
       try {
@@ -56,14 +61,14 @@ const Login = () => {
         </div>
         <div className="formInputs">
           <label>E-mail *</label>
-          <input type="text" name="email" placeholder="email" />
+          <input value={input.email} type="text" name="email" placeholder="email" />
         </div>
         <div className="formInputs">
           <div className="passwordEye">
             <label>Password *</label>
             <button type="button" onClick={togglePassword}><img src={EyeIcon} alt="eye-icon" /></button>
           </div>
-          <input  name="password" placeholder="password" type={passwordShown ? "text" : "password"}  />
+          <input value={input.password} name="password" placeholder="password" type={passwordShown ? "text" : "password"}  />
         </div>
         <div className="submitButton">
           <button type="submit">Login</button>
